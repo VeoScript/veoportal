@@ -16,8 +16,8 @@ const NavBar = () => {
         />
       </Link>
       <div className="flex flex-row items-center justify-end w-full space-x-5 mr-10">
-        <p className="w-[10rem] font-prompt font-light text-xs">928 Bonifactio St. Brgy. Guerrero, Bato, Leyte</p>
-        <p className="w-[10rem] font-prompt font-light text-xs select-all">jeromevillaruel1998@gmail.com (+63) 9753286466</p>
+        <p className="w-[10rem] font-prompt font-light text-sm">928 Bonifactio St. Brgy. Guerrero, Bato, Leyte</p>
+        <p className="w-[10rem] font-prompt font-light text-sm select-all">jeromevillaruel1998@gmail.com (+63) 9753286466</p>
       </div>
     </div>
   )

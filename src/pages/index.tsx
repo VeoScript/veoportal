@@ -107,7 +107,7 @@ const Home = () => {
         <div className="flex flex-col items-center justify-center w-full h-screen px-5 border-t border-neutral-800 bg-accent-2">
           <div className="flex flex-col items-center w-full max-w-full space-y-24">
             <div className="flex flex-col items-center w-full">
-              <Text font='rock_salt' color='yellow' align='center' weight='bold' size='5xl'>Experiences</Text>
+              <Text font='rock_salt' color='pink' align='center' weight='bold' size='5xl'>Experiences</Text>
             </div>
             <div className="flex flex-col items-center w-full max-w-xl space-y-5">
               <div className="flex flex-row items-center w-full p-3 space-x-5 overflow-hidden rounded-xl border border-neutral-800">
@@ -120,7 +120,9 @@ const Home = () => {
                   quality={100}
                 />
                 <div className="flex flex-col w-full">
-                  <Text weight='bold' size='lg'>Halcyon Agile</Text>
+                  <Link href="https://halcyonagile.com.ph/" target="_blank">
+                    <Text weight='bold' size='lg'>Halcyon Agile</Text>
+                  </Link>
                   <Text weight='light' size='sm'>Software Developer</Text>
                   <Text weight='thin' size='xs'>June 2022 - Present</Text>
                 </div>
@@ -135,7 +137,9 @@ const Home = () => {
                   quality={100}
                 />
                 <div className="flex flex-col w-full">
-                  <Text weight='bold' size='lg'>Specialty Pulp Manufacturing, Inc.</Text>
+                  <Link href="https://www.spmi-pulp.com/" target="_blank">
+                    <Text weight='bold' size='lg'>Specialty Pulp Manufacturing, Inc.</Text>
+                  </Link>
                   <Text weight='light' size='sm'>IT Specialist</Text>
                   <Text weight='thin' size='xs'>February 2020 - June 2022</Text>
                 </div>
@@ -150,7 +154,9 @@ const Home = () => {
                   quality={100}
                 />
                 <div className="flex flex-col w-full">
-                  <Text weight='bold' size='lg'>Puregold Price Club, Inc.</Text>
+                  <Link href="https://www.puregold.com.ph/" target="_blank">
+                    <Text weight='bold' size='lg'>Puregold Price Club, Inc.</Text>
+                  </Link>
                   <Text weight='light' size='sm'>Graphic Artist</Text>
                   <Text weight='thin' size='xs'>August 2019 - December 2019</Text>
                 </div>

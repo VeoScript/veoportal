@@ -1,7 +1,7 @@
 import { w } from 'windstitch'
 
 export const Button = w.button(
-  `w-auto px-5 py-3 rounded-xl select-none transition ease-in-out duration-200 transform hover:scale-95`,
+  `w-auto px-5 py-3 outline-none rounded-xl select-none transition ease-in-out duration-200 transform hover:scale-95`,
   {
     variants: {
       color: {
