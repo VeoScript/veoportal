@@ -7,12 +7,14 @@ const prompt = Prompt({
   subsets: ['latin'],
   style: ['normal', 'italic'],
   weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+  preload: false,
 })
 
 const rock_salt = Rock_Salt({
   subsets: ['latin'],
   style: ['normal'],
-  weight: ['400']
+  weight: ['400'],
+  preload: false,
 })
 
 export default function App({ Component, pageProps }: AppProps) {
