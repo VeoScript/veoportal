@@ -23,7 +23,7 @@ const Home = () => {
             <div className="flex flex-col items-center w-full space-y-5">
               <Text align='center' weight='bold' size='5xl'>The Odyssey of a Full-Stack Developer</Text>
               <div className="flex flex-col items-center w-full max-w-xl space-y-5">
-                <Text align='center' weight='light' size='xl'>{`"Let's keep it simple and focus on what matters. Don't let yourself be overwhelmed." -Confucius`}</Text>
+                <Text align='center' weight='light' size='xl'>{`"Let's keep it simple and focus on what matters. Don't let yourself be overwhelmed." - Confucius`}</Text>
                 <Link href="/files/jeromevillaruel.pdf" target="_blank">
                   <Button weight='bold' background_color='black' color='white' size='xl'>
                   👋 Hire Me!
@@ -39,7 +39,7 @@ const Home = () => {
               <Image
                 src="/images/jeromevillaruel.jpg"
                 blurDataURL="/images/jeromevillaruel.jpg"
-                className="w-[20rem] h-[20rem] object-cover rounded-md bg-transparent"
+                className="w-[20rem] h-[20rem] object-cover rounded-ss-[5rem] rounded-ee-[5rem] bg-transparent"
                 alt="veoscript"
                 placeholder="blur"
                 width={500}
@@ -163,6 +163,92 @@ const Home = () => {
               </div>
             </div>
           </div>
+        </div>
+        <div className="flex flex-col items-center justify-center w-full h-screen px-5 border-t border-neutral-800 bg-accent-1">
+          <div className="flex flex-col items-center w-full max-w-full space-y-24">
+            <div className="flex flex-col items-center w-full">
+              <Text font='rock_salt' color='pink' align='center' weight='bold' size='5xl'>Tech Stacks</Text>
+            </div>
+            <div className="flex flex-col items-center w-full max-w-full space-y-10">
+              <div className="grid grid-cols-3 gap-10">
+                <Link href="https://react.dev/" target="_blank" className="w-full transition ease-in-out duration-200 transform hover:scale-90">
+                  <Image
+                    src="/images/techstacks/reactjs.png"
+                    className="w-[8rem] h-[8rem] object-cover bg-transparent"
+                    alt="ReactJS"
+                    width={500}
+                    height={500}
+                    quality={100}
+                  />
+                </Link>
+                <Link href="https://nextjs.org/" target="_blank" className="w-full transition ease-in-out duration-200 transform hover:scale-90">
+                  <Image
+                    src="/images/techstacks/nextjs.png"
+                    className="w-[8rem] h-[8rem] object-cover bg-transparent"
+                    alt="NextJS"
+                    width={500}
+                    height={500}
+                    quality={100}
+                  />
+                </Link>
+                <Link href="https://nestjs.com/" target="_blank" className="w-full transition ease-in-out duration-200 transform hover:scale-90">
+                  <Image
+                    src="/images/techstacks/nestjs.png"
+                    className="w-[8rem] h-[8rem] object-cover bg-transparent"
+                    alt="NestJS"
+                    width={500}
+                    height={500}
+                    quality={100}
+                  />
+                </Link>
+              </div>
+              <div className='grid grid-cols-4 gap-10'>
+                <Link href="https://tanstack.com/query/v3/" target="_blank" className="w-full transition ease-in-out duration-200 transform hover:scale-90">
+                  <Image
+                    src="/images/techstacks/reactquery.png"
+                    className="w-[8rem] h-[8rem] object-cover bg-transparent"
+                    alt="React Query"
+                    width={500}
+                    height={500}
+                    quality={100}
+                  />
+                </Link>
+                <Link href="https://tailwindcss.com/" target="_blank" className="w-full transition ease-in-out duration-200 transform hover:scale-90">
+                  <Image
+                    src="/images/techstacks/tailwindcss.png"
+                    className="w-[8rem] h-[8rem] object-cover bg-transparent"
+                    alt="TailwindCSS"
+                    width={500}
+                    height={500}
+                    quality={100}
+                  />
+                </Link>
+                <Link href="https://tauri.app/" target="_blank" className="w-full transition ease-in-out duration-200 transform hover:scale-90">
+                  <Image
+                    src="/images/techstacks/tauri.png"
+                    className="w-[8rem] h-[8rem] object-cover bg-transparent"
+                    alt="Tauri"
+                    width={500}
+                    height={500}
+                    quality={100}
+                  />
+                </Link>
+                <Link href="https://www.prisma.io/" target="_blank" className="w-full transition ease-in-out duration-200 transform hover:scale-90">
+                  <Image
+                    src="/images/techstacks/prisma.png"
+                    className="w-[8rem] h-[8rem] object-cover bg-transparent"
+                    alt="Prisma"
+                    width={500}
+                    height={500}
+                    quality={100}
+                  />
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="flex flex-row items-center justify-center w-full p-3 bg-accent-2">
+          <Text weight='light' size='xs'>&copy; {new Date().getFullYear()}, Jerome Villaruel (Veoscript). All rights reserved.</Text>
         </div>
       </MainTemplate>
     </>
