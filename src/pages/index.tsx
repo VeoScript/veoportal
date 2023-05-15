@@ -39,7 +39,7 @@ const Home = () => {
               <Image
                 src="/images/jeromevillaruel.jpg"
                 blurDataURL="/images/jeromevillaruel.jpg"
-                className="w-[20rem] h-[20rem] object-cover rounded-ss-[5rem] rounded-ee-[5rem] bg-transparent"
+                className="w-[20rem] h-[20rem] object-cover rounded-ss-[5rem] rounded-ee-[5rem] bg-white"
                 alt="veoscript"
                 placeholder="blur"
                 width={500}
