@@ -50,12 +50,12 @@ const Home = () => {
           </div>
         </div>
         <div className="flex flex-col items-center justify-start md:justify-center w-full h-screen border-t border-neutral-800 bg-black">
-          <div
-            className="flex flex-col md:flex-row items-start justify-center w-full max-w-full md:max-w-5xl space-x-0 md:space-x-10"
-            data-aos="fade-left"
-            data-aos-delay="200"
-          >
-            <div className="flex w-full max-w-full md:max-w-[20rem]">
+          <div className="flex flex-col md:flex-row items-start justify-center w-full max-w-full md:max-w-5xl space-x-0 md:space-x-10">
+            <div
+              className="flex w-full max-w-full md:max-w-[20rem]"
+              data-aos="fade-right"
+              data-aos-delay="200"
+            >
               <Image
                 src="/images/jeromevillaruel.jpg"
                 blurDataURL="/images/jeromevillaruel.jpg"
@@ -67,7 +67,11 @@ const Home = () => {
                 quality={100}
               />
             </div>
-            <div className="flex flex-col items-start w-full px-5 md:px-0 py-5 md:py-3 space-y-10">
+            <div
+              className="flex flex-col items-start w-full px-5 md:px-0 py-5 md:py-3 space-y-10"
+              data-aos="fade-left"
+              data-aos-delay="400"
+            >
               <div className="flex flex-col w-full">
                 <Text weight='bold' size='2xl'>Jerome Villaruel</Text>
                 <Text weight='light' size='base'>Software Developer</Text>
