@@ -4,7 +4,7 @@ import api from '../../../config/Axios'
 export const useGetProjects = () => {
   return useQuery(['projects'],
     async () => {
-      const projects = await api.get('api/content/veoportal/projects?q')
+      const projects = await api.get('api/content/veoportal/projects')
       return projects.data
     },
     {
