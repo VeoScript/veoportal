@@ -58,10 +58,8 @@ const Home = () => {
             >
               <Image
                 src="/images/jeromevillaruel.jpg"
-                blurDataURL="/images/jeromevillaruel.jpg"
                 className="w-full md:w-[20rem] h-[20rem] object-cover rounded-none md:rounded-ss-[5rem] md:rounded-ee-[5rem] bg-white"
                 alt="veoscript"
-                placeholder="blur"
                 width={500}
                 height={500}
                 quality={100}
@@ -222,7 +220,7 @@ const Home = () => {
               data-aos="zoom-in-up"
               data-aos-delay="200"
             >
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-10">
+              <div className="grid grid-cols-2 md:grid-cols-5 gap-10">
                 <Link href="https://react.dev/" target="_blank" className="w-full transition ease-in-out duration-200 transform hover:scale-90">
                   <Image
                     src="/images/techstacks/reactjs.png"
