@@ -1,7 +1,12 @@
+import React from 'react';
 import type { AppProps } from 'next/app'
 
 import '~/styles/tailwind.css'
+import "aos/dist/aos.css"
+
+import AOS from "aos"
 import { Prompt, Rock_Salt } from 'next/font/google'
+
 
 const prompt = Prompt({
   subsets: ['latin'],
@@ -17,7 +22,12 @@ const rock_salt = Rock_Salt({
   preload: false,
 })
 
-export default function App({ Component, pageProps }: AppProps) {
+export default function App({ Component, pageProps }: AppProps) {  
+
+  React.useEffect(() => {
+    AOS.init()
+  }, [])
+
   return (
     <>
       <style jsx global>

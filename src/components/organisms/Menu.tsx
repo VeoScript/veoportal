@@ -6,7 +6,7 @@ const Menu = () => {
   const [isCollapse, setIsCollapse] = React.useState<boolean>(false)
 
   return (
-    <div className={`fixed top-1/2 right-10 animate-pulse ${isCollapse ? 'h-[15rem] -mt-20 hover:scale-100' : 'h-auto hover:scale-95'} transition ease-in-out duration-200 transform flex flex-col items-center w-auto space-y-5 rounded-md p-3 backdrop-blur-xl bg-white bg-opacity-10`}>
+    <div className={`fixed top-1/2 right-10 z-20 animate-pulse ${isCollapse ? 'h-[15rem] -mt-20 hover:scale-100' : 'h-auto hover:scale-95'} transition ease-in-out duration-200 transform flex flex-col items-center w-auto space-y-5 rounded-md p-3 backdrop-blur-xl bg-white bg-opacity-10`}>
       <button
         className="outline-none"
         onClick={() => isCollapse ? setIsCollapse(false) : setIsCollapse(true)}

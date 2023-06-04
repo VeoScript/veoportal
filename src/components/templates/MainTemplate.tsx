@@ -11,9 +11,9 @@ type MainTemplateProps = (props: IProps) => JSX.Element
 
 const MainTemplate: MainTemplateProps = ({ children }) => {
   return (
-    <div className="flex flex-row items-center justify-center w-full h-screen overflow-hidden select-none bg-accent-2">
+    <div className="flex flex-row items-center justify-center w-full h-full select-none bg-accent-2">
       <SideBanner />
-      <div className="relative flex-1 flex-col items-center justify-center w-full max-w-[1700px] h-full overflow-y-auto font-prompt text-white bg-accent-1">
+      <div className="relative flex-1 flex-col items-center justify-center w-full max-w-[1920px] h-full font-prompt text-white bg-accent-1">
         <NavBar />
         <Menu />
         {children}
