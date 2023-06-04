@@ -35,7 +35,7 @@ const Menu = () => {
           <Link
             title="Portfolio"
             className={`${isCollapse ? 'block' : 'hide'}`}
-            href="/"
+            href="/portfolio"
             onClick={() => setIsCollapse(false)}
           >
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 md:w-10 h-8 md:h-10 text-white transition ease-in-out duration-200 transform hover:scale-90">
