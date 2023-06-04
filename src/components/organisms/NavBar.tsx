@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 const NavBar = () => {
   return (
-    <div className="sticky top-0 flex flex-row items-center justify-between w-full p-5 backdrop-blur-xl bg-transparent bg-opacity-50">
+    <div className="sticky top-0 z-20 flex flex-row items-center justify-between w-full p-5 backdrop-blur-xl bg-transparent bg-opacity-50">
       <Link href="/" className="w-full">
         <Image
           src="/images/veo.png"
