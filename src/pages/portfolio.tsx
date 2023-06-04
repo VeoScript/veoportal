@@ -1,7 +1,7 @@
 import React from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
-import Image from 'next/image'
+import Image from 'next/legacy/image'
 import MainTemplate from '~/components/templates/MainTemplate'
 import { Text } from '~/components/atoms/Text'
 import { Button } from '~/components/atoms/Button'
@@ -43,7 +43,7 @@ const Portfolio = () => {
                             blurDataURL={`${process.env.SQUIDEX_IMAGE_API_URL}${item.data.image[0]}`}
                             className="w-full h-[15rem] object-cover"
                             width={500}
-                            height={500}
+                            height={300}
                             alt="veoscript"
                             placeholder="blur"
                           />
