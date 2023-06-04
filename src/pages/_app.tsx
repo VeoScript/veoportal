@@ -1,5 +1,6 @@
 import React from 'react';
 import type { AppProps } from 'next/app'
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 
 import '~/styles/tailwind.css'
 import "aos/dist/aos.css"
@@ -22,6 +23,14 @@ const rock_salt = Rock_Salt({
   preload: false,
 })
 
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      retry: 3 // retry to refetch the data from api if the internet is slow or no internet connection.
+    }
+  }
+})
+
 export default function App({ Component, pageProps }: AppProps) {  
 
   React.useEffect(() => {
@@ -38,7 +47,9 @@ export default function App({ Component, pageProps }: AppProps) {
           }
         `}
       </style>
-      <Component {...pageProps} />
+      <QueryClientProvider client={queryClient}>
+        <Component {...pageProps} />
+      </QueryClientProvider>
     </>
   )
 }
