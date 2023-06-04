@@ -94,8 +94,8 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-col items-center justify-center w-full h-screen px-5 border-t border-neutral-800 bg-accent-1">
-          <div className="flex flex-col items-center w-full max-w-full space-y-24">
+        <div className="flex flex-col items-center justify-center w-full h-full md:h-screen px-5 border-t border-neutral-800 bg-accent-1">
+          <div className="flex flex-col items-center w-full max-w-full py-10 md:py-0 space-y-10 md:space-y-24">
             <div className="flex flex-col items-center w-full">
               <Text font='rock_salt' color='pink' align='center' weight='bold' size='5xl'>Skills and Services</Text>
             </div>
