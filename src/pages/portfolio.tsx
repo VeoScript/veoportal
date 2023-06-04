@@ -48,22 +48,26 @@ const Portfolio = () => {
                             placeholder="blur"
                           />
                           <div className="flex flex-col items-start w-full p-5 space-y-5">
-                            <Text font='prompt' size="xl">{item.data.title}</Text>
+                            <Text font='prompt' weight="bold" color="yellow" size="xl">{item.data.title}</Text>
                             <div
                               className="font-prompt font-light text-base text-white"
                               dangerouslySetInnerHTML={{ __html: item.data.description }}
                             />
                             <div className="flex flex-row items-center w-full space-x-2">
-                              <Link href={item.data.sourceCodeUrl} target="_blank">
-                                <Button weight='normal' background_color='black' color='white' size='sm'>
-                                  Source Code
-                                </Button>
-                              </Link>
-                              <Link href={item.data.demoUrl} target="_blank">
-                                <Button weight='normal' background_color='black' color='white' size='sm'>
-                                  Demo
-                                </Button>
-                              </Link>
+                              {item.data.sourceCodeUrl && (
+                                <Link href={item.data.sourceCodeUrl} target="_blank">
+                                  <Button weight='normal' background_color='black' color='white' size='sm'>
+                                    Source Code
+                                  </Button>
+                                </Link>
+                              )}
+                              {item.data.demoUrl && (
+                                <Link href={item.data.demoUrl} target="_blank">
+                                  <Button weight='normal' background_color='black' color='white' size='sm'>
+                                    Demo
+                                  </Button>
+                                </Link>
+                              )}
                             </div>
                           </div>
                         </div>
