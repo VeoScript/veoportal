@@ -57,7 +57,7 @@ const Home = () => {
               data-aos-delay="200"
             >
               <Image
-                src="/images/jeromevillaruel.jpg"
+                src="/images/jeromevillaruel.png"
                 className="w-full md:w-[20rem] h-[20rem] object-cover rounded-none md:rounded-ss-[5rem] md:rounded-ee-[5rem] bg-white"
                 alt="veoscript"
                 width={500}
@@ -97,7 +97,7 @@ const Home = () => {
           </div>
         </div>
         <div className="flex flex-col items-center justify-center w-full h-full md:h-screen px-5 border-t border-neutral-800 bg-accent-1">
-          <div className="flex flex-col items-center w-full max-w-full py-10 md:py-0 space-y-10 md:space-y-24">
+          <div className="flex flex-col items-center w-full max-w-full md:max-w-7xl py-10 md:py-0 space-y-10 md:space-y-24">
             <div className="flex flex-col items-center w-full">
               <Text font='rock_salt' color='pink' align='center' weight='bold' size='5xl'>Skills and Services</Text>
             </div>
@@ -220,8 +220,8 @@ const Home = () => {
               data-aos="zoom-in-up"
               data-aos-delay="200"
             >
-              <div className="grid grid-cols-2 md:grid-cols-5 gap-10">
-                <Link href="https://react.dev/" target="_blank" className="w-full transition ease-in-out duration-200 transform hover:scale-90">
+              <div className="flex flex-wrap items-center justify-center w-full max-w-2xl gap-10">
+                <Link href="https://react.dev/" target="_blank" className="transition ease-in-out duration-200 transform hover:scale-90">
                   <Image
                     src="/images/techstacks/reactjs.png"
                     className="w-[6rem] h-[6rem] object-cover bg-transparent"
@@ -231,7 +231,7 @@ const Home = () => {
                     quality={100}
                   />
                 </Link>
-                <Link href="https://nextjs.org/" target="_blank" className="w-full transition ease-in-out duration-200 transform hover:scale-90">
+                <Link href="https://nextjs.org/" target="_blank" className="transition ease-in-out duration-200 transform hover:scale-90">
                   <Image
                     src="/images/techstacks/nextjs.png"
                     className="w-[6rem] h-[6rem] object-cover bg-transparent"
@@ -241,18 +241,27 @@ const Home = () => {
                     quality={100}
                   />
                 </Link>
-                <Link href="https://nestjs.com/" target="_blank" className="w-full transition ease-in-out duration-200 transform hover:scale-90">
+                <Link href="https://vuejs.org/" target="_blank" className="transition ease-in-out duration-200 transform hover:scale-90">
                   <Image
-                    src="/images/techstacks/nestjs.png"
+                    src="/images/techstacks/vuejs.png"
                     className="w-[6rem] h-[6rem] object-cover bg-transparent"
-                    alt="NestJS"
+                    alt="NextJS"
                     width={500}
                     height={500}
                     quality={100}
                   />
                 </Link>
-                
-                <Link href="https://tanstack.com/query/v3/" target="_blank" className="w-full transition ease-in-out duration-200 transform hover:scale-90">
+                <Link href="https://nuxt.com/" target="_blank" className="transition ease-in-out duration-200 transform hover:scale-90">
+                  <Image
+                    src="/images/techstacks/nuxtjs.png"
+                    className="w-[6rem] h-[6rem] object-cover bg-transparent"
+                    alt="NextJS"
+                    width={500}
+                    height={500}
+                    quality={100}
+                  />
+                </Link>                
+                <Link href="https://tanstack.com/query/v3/" target="_blank" className="transition ease-in-out duration-200 transform hover:scale-90">
                   <Image
                     src="/images/techstacks/reactquery.png"
                     className="w-[6rem] h-[6rem] object-cover bg-transparent"
@@ -262,7 +271,7 @@ const Home = () => {
                     quality={100}
                   />
                 </Link>
-                <Link href="https://tailwindcss.com/" target="_blank" className="w-full transition ease-in-out duration-200 transform hover:scale-90">
+                <Link href="https://tailwindcss.com/" target="_blank" className="transition ease-in-out duration-200 transform hover:scale-90">
                   <Image
                     src="/images/techstacks/tailwindcss.png"
                     className="w-[6rem] h-[6rem] object-cover bg-transparent"
@@ -272,7 +281,7 @@ const Home = () => {
                     quality={100}
                   />
                 </Link>
-                <Link href="https://tauri.app/" target="_blank" className="w-full transition ease-in-out duration-200 transform hover:scale-90">
+                <Link href="https://tauri.app/" target="_blank" className="transition ease-in-out duration-200 transform hover:scale-90">
                   <Image
                     src="/images/techstacks/tauri.png"
                     className="w-[6rem] h-[6rem] object-cover bg-transparent"
@@ -282,7 +291,7 @@ const Home = () => {
                     quality={100}
                   />
                 </Link>
-                <Link href="https://ionicframework.com/" target="_blank" className="w-full transition ease-in-out duration-200 transform hover:scale-90">
+                <Link href="https://ionicframework.com/" target="_blank" className="transition ease-in-out duration-200 transform hover:scale-90">
                   <Image
                     src="/images/techstacks/ionic.png"
                     className="w-[6rem] h-[6rem] object-cover bg-transparent"
@@ -292,7 +301,17 @@ const Home = () => {
                     quality={100}
                   />
                 </Link>
-                <Link href="https://graphql.org/" target="_blank" className="w-full transition ease-in-out duration-200 transform hover:scale-90">
+                <Link href="https://nestjs.com/" target="_blank" className="transition ease-in-out duration-200 transform hover:scale-90">
+                  <Image
+                    src="/images/techstacks/nestjs.png"
+                    className="w-[6rem] h-[6rem] object-cover bg-transparent"
+                    alt="NestJS"
+                    width={500}
+                    height={500}
+                    quality={100}
+                  />
+                </Link>
+                <Link href="https://graphql.org/" target="_blank" className="transition ease-in-out duration-200 transform hover:scale-90">
                   <Image
                     src="/images/techstacks/graphql.png"
                     className="w-[6rem] h-[6rem] object-cover bg-transparent"
@@ -302,9 +321,9 @@ const Home = () => {
                     quality={100}
                   />
                 </Link>
-                <Link href="https://www.prisma.io/" target="_blank" className="w-full transition ease-in-out duration-200 transform hover:scale-90">
+                <Link href="https://www.prisma.io/" target="_blank" className="transition ease-in-out duration-200 transform hover:scale-90">
                   <Image
-                    src="/images/techstacks/prisma.png"
+                    src="/images/techstacks/prismaorm.png"
                     className="w-[6rem] h-[6rem] object-cover bg-transparent"
                     alt="Prisma"
                     width={500}
@@ -312,9 +331,17 @@ const Home = () => {
                     quality={100}
                   />
                 </Link>
+                <Link href="https://supabase.com/" target="_blank" className="transition ease-in-out duration-200 transform hover:scale-90">
+                  <Image
+                    src="/images/techstacks/supabase.png"
+                    className="w-[6rem] h-[6rem] object-cover bg-transparent"
+                    alt="Supabase"
+                    width={500}
+                    height={500}
+                    quality={100}
+                  />
+                </Link>
               </div>
-              {/* <div className='grid grid-cols-2 md:grid-cols-4 gap-10'>
-              </div> */}
             </div>
           </div>
         </div>
