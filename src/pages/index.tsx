@@ -220,7 +220,7 @@ const Home = () => {
               data-aos="zoom-in-up"
               data-aos-delay="200"
             >
-              <div className="grid grid-cols-2 md:grid-cols-5 gap-10">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-10">
                 <Link href="https://react.dev/" target="_blank" className="w-full transition ease-in-out duration-200 transform hover:scale-90">
                   <Image
                     src="/images/techstacks/reactjs.png"
@@ -241,17 +241,26 @@ const Home = () => {
                     quality={100}
                   />
                 </Link>
-                <Link href="https://nestjs.com/" target="_blank" className="w-full transition ease-in-out duration-200 transform hover:scale-90">
+                <Link href="https://vuejs.org/" target="_blank" className="w-full transition ease-in-out duration-200 transform hover:scale-90">
                   <Image
-                    src="/images/techstacks/nestjs.png"
+                    src="/images/techstacks/vuejs.png"
                     className="w-[6rem] h-[6rem] object-cover bg-transparent"
-                    alt="NestJS"
+                    alt="NextJS"
                     width={500}
                     height={500}
                     quality={100}
                   />
                 </Link>
-                
+                <Link href="https://nuxt.com/" target="_blank" className="w-full transition ease-in-out duration-200 transform hover:scale-90">
+                  <Image
+                    src="/images/techstacks/nuxtjs.png"
+                    className="w-[6rem] h-[6rem] object-cover bg-transparent"
+                    alt="NextJS"
+                    width={500}
+                    height={500}
+                    quality={100}
+                  />
+                </Link>                
                 <Link href="https://tanstack.com/query/v3/" target="_blank" className="w-full transition ease-in-out duration-200 transform hover:scale-90">
                   <Image
                     src="/images/techstacks/reactquery.png"
@@ -292,6 +301,16 @@ const Home = () => {
                     quality={100}
                   />
                 </Link>
+                <Link href="https://nestjs.com/" target="_blank" className="w-full transition ease-in-out duration-200 transform hover:scale-90">
+                  <Image
+                    src="/images/techstacks/nestjs.png"
+                    className="w-[6rem] h-[6rem] object-cover bg-transparent"
+                    alt="NestJS"
+                    width={500}
+                    height={500}
+                    quality={100}
+                  />
+                </Link>
                 <Link href="https://graphql.org/" target="_blank" className="w-full transition ease-in-out duration-200 transform hover:scale-90">
                   <Image
                     src="/images/techstacks/graphql.png"
@@ -304,7 +323,7 @@ const Home = () => {
                 </Link>
                 <Link href="https://www.prisma.io/" target="_blank" className="w-full transition ease-in-out duration-200 transform hover:scale-90">
                   <Image
-                    src="/images/techstacks/prisma.png"
+                    src="/images/techstacks/prismaorm.png"
                     className="w-[6rem] h-[6rem] object-cover bg-transparent"
                     alt="Prisma"
                     width={500}
