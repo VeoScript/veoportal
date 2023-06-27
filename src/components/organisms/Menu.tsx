@@ -8,6 +8,8 @@ const Menu = () => {
   return (
     <div className={`fixed top-1/2 right-5 md:right-10 z-20 animate-pulse flex flex-col items-center justify-center ${isCollapse ? 'h-auto -mt-24 hover:scale-100' : 'h-auto hover:scale-95'} transition ease-in-out duration-200 transform flex flex-col items-center w-auto space-y-5 rounded-md p-3 backdrop-blur-xl bg-white bg-opacity-10`}>
       <button
+        type="button"
+        aria-label="Menu"
         className="outline-none"
         onClick={() => isCollapse ? setIsCollapse(false) : setIsCollapse(true)}
       >
@@ -45,7 +47,7 @@ const Menu = () => {
           <Link
             title="Blog"
             className={`${isCollapse ? 'block' : 'hide'}`}
-            href="/"
+            href="/blog"
             onClick={() => setIsCollapse(false)}
           >
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 md:w-10 h-8 md:h-10 text-white transition ease-in-out duration-200 transform hover:scale-90">

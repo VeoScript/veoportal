@@ -8,3 +8,13 @@ export interface IProjects {
   createdAt: Date
   updatedAt: Date
 }
+
+export interface IBlogs {
+  id: string
+  image: string
+  title: string
+  topic: string
+  article: string
+  createdAt: Date
+  updatedAt: Date
+}

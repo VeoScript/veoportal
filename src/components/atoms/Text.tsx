@@ -1,6 +1,6 @@
 import { w } from 'windstitch'
 
-export const Text = w.text(
+export const Text = w.h1(
   `select-none`,
   {
     variants: {
