@@ -1,10 +1,10 @@
 import { useQuery } from '@tanstack/react-query'
-import api from '../../../config/Axios'
+import axios from 'axios'
 
 export const useGetProjects = () => {
   return useQuery(['projects'],
     async () => {
-      const projects = await api.get('api/content/veoportal/projects?$orderby=created desc')
+      const projects = await axios.get('/api/projects')
       return projects.data
     },
     {
