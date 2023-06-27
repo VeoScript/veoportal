@@ -11,6 +11,7 @@ const NavBar = () => {
       <div className="flex flex-row items-center justify-between w-full">
         <Link href="/" className="w-full">
           <Image
+            priority
             src="/images/veo.png"
             className="w-[3rem] h-[2rem] object-cover bg-transparent"
             alt="veoscript"
@@ -21,6 +22,7 @@ const NavBar = () => {
         </Link>
         <button
           type="button"
+          aria-label="Toggle"
           className="block md:hidden outline-none"
           onClick={() => isCollapse ? setIsCollapse(false) : setIsCollapse(true)}
         >
