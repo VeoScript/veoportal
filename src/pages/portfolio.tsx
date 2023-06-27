@@ -31,7 +31,7 @@ const Portfolio = () => {
                       <Text font='prompt' align='center' size='xl'>Loading...</Text>
                     </div>
                   : <>
-                      {projects.items.map((item: { id: string, data: IProjects }) => (
+                      {projects.map((item: IProjects) => (
                         <div
                           key={item.id}
                           className="flex flex-col w-full overflow-hidden bg-[#270091]"
@@ -39,8 +39,8 @@ const Portfolio = () => {
                         >
                           <Image
                             priority
-                            src={`${process.env.SQUIDEX_IMAGE_API_URL}${item.data.image[0]}`}
-                            blurDataURL={`${process.env.SQUIDEX_IMAGE_API_URL}${item.data.image[0]}`}
+                            src={item.image}
+                            blurDataURL={item.image}
                             className="w-full h-[15rem] object-cover"
                             width={500}
                             height={300}
@@ -48,21 +48,21 @@ const Portfolio = () => {
                             placeholder="blur"
                           />
                           <div className="flex flex-col items-start w-full p-5 space-y-5">
-                            <Text font='prompt' weight="bold" color="yellow" size="xl">{item.data.title}</Text>
+                            <Text font='prompt' weight="bold" color="yellow" size="xl">{item.title}</Text>
                             <div
                               className="font-prompt font-light text-base text-white"
-                              dangerouslySetInnerHTML={{ __html: item.data.description }}
+                              dangerouslySetInnerHTML={{ __html: item.description }}
                             />
                             <div className="flex flex-row items-center w-full space-x-2">
-                              {item.data.sourceCodeUrl && (
-                                <Link href={item.data.sourceCodeUrl} target="_blank">
+                              {item.sourceCode && (
+                                <Link href={item.sourceCode} target="_blank">
                                   <Button weight='normal' background_color='black' color='white' size='sm'>
                                     Source Code
                                   </Button>
                                 </Link>
                               )}
-                              {item.data.demoUrl && (
-                                <Link href={item.data.demoUrl} target="_blank">
+                              {item.demoUrl && (
+                                <Link href={item.demoUrl} target="_blank">
                                   <Button weight='normal' background_color='black' color='white' size='sm'>
                                     Demo
                                   </Button>
