@@ -56,7 +56,7 @@ const BlogDetails = () => {
                   >
                     {blog?.article ?? ''}
                   </ReactMarkdown>
-                  <div className="flex flex-row items-center w-full space-x-2">
+                  <div className="flex flex-row items-center w-full px-5 md:px-0 space-x-2">
                     <Link href="/blog">
                       <Button weight='normal' background_color='black' color='white' size='sm'>
                         Back to blogs
