@@ -12,6 +12,25 @@ const Home = () => {
     <>
       <Head>
         <title>Jerome Villaruel</title>
+        <meta name="description" content="Official website of Jerome Villaruel (VEOSCRIPT)" />
+        <meta name="author" content="Jerome Villaruel" />
+        <meta name="keywords" content="Jerome Villaruel" />
+        <meta name="viewport" content="width=device-width, initial-scale-1" />
+        
+        <meta name="url" property="og:url" content="https://jeromevillaruel.cf" />
+        <meta name="site_name" property="og:site_name" content="Jerome Villaruel (Veoscript)" />
+        <meta name="description" property="og:description" content="Official website of Jerome Villaruel (VEOSCRIPT)" />
+        <meta name="secure_url" property="og:secure_url" content="https://i.ibb.co/2t5Jk45/page-image.png" />
+        <meta name="image" property="og:image" content="https://i.ibb.co/2t5Jk45/page-image.png" />
+        <meta name="type" property="og:image:type" content="png" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="Jerome Villaruel (Veoscript)" />
+        <meta name="twitter:creator" content="Jerome Villaruel" />
+        <meta name="twitter:title" content="Jerome Villaruel (Veoscript)" />
+        <meta name="twitter:description" content="Official website of Jerome Villaruel (VEOSCRIPT)" />
+        <meta name="twitter:image" content="https://i.ibb.co/2t5Jk45/page-image.png" />
+        <meta name="twitter:domain" content="https://jeromevillaruel.cf" />
       </Head>
       <MainTemplate>
         <div className="flex flex-col items-center justify-center w-full h-screen">
