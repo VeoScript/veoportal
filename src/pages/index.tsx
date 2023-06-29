@@ -280,7 +280,7 @@ const Home = () => {
                     quality={100}
                   />
                 </Link>                
-                <Link href="https://tanstack.com/query/v3/" target="_blank" className="transition ease-in-out duration-200 transform hover:scale-110">
+                <Link href="https://tanstack.com/query/latest" target="_blank" className="transition ease-in-out duration-200 transform hover:scale-110">
                   <Image
                     src="/images/techstacks/reactquery.png"
                     className="w-[6rem] h-[6rem] object-cover bg-transparent"
