@@ -20,8 +20,8 @@ const Home = () => {
         <meta name="url" property="og:url" content="https://jeromevillaruel.cf" />
         <meta name="site_name" property="og:site_name" content="Jerome Villaruel (Veoscript)" />
         <meta name="description" property="og:description" content="Official website of Jerome Villaruel (VEOSCRIPT)" />
-        <meta name="secure_url" property="og:secure_url" content="https://i.ibb.co/2t5Jk45/page-image.png" />
-        <meta name="image" property="og:image" content="https://i.ibb.co/2t5Jk45/page-image.png" />
+        <meta name="secure_url" property="og:secure_url" content="https://i.ibb.co/5shcK8r/page-image.png" />
+        <meta name="image" property="og:image" content="https://i.ibb.co/5shcK8r/page-image.png" />
         <meta name="type" property="og:image:type" content="png" />
 
         <meta name="twitter:card" content="summary_large_image" />
@@ -29,7 +29,7 @@ const Home = () => {
         <meta name="twitter:creator" content="Jerome Villaruel" />
         <meta name="twitter:title" content="Jerome Villaruel (Veoscript)" />
         <meta name="twitter:description" content="Official website of Jerome Villaruel (VEOSCRIPT)" />
-        <meta name="twitter:image" content="https://i.ibb.co/2t5Jk45/page-image.png" />
+        <meta name="twitter:image" content="https://i.ibb.co/5shcK8r/page-image.png" />
         <meta name="twitter:domain" content="https://jeromevillaruel.cf" />
       </Head>
       <MainTemplate>
@@ -68,8 +68,8 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-col items-center justify-start md:justify-center w-full h-screen border-t border-neutral-800 bg-black">
-          <div className="flex flex-col md:flex-row items-center justify-center w-full max-w-full md:max-w-5xl h-full space-x-0 md:space-x-10">
+        <div className="flex flex-col items-center justify-start md:justify-center w-full h-full md:h-screen border-t border-neutral-800 bg-black">
+          <div className="flex flex-col md:flex-row items-center justify-start md:justify-center w-full max-w-full md:max-w-5xl h-full space-x-0 md:space-x-10">
             <div
               className="flex w-full max-w-full md:max-w-[20rem]"
               data-aos="fade-right"
@@ -95,7 +95,7 @@ const Home = () => {
               </div>
               <div className="flex flex-col w-full">
                 <Text weight='light'>
-                  {`👋 Hello, I'm Jerome Villaruel officially known as Veoscript, a software developer based in Philippines specializing in React, Next.js, Prisma, Supabase, and PlanetScale. I enjoy building dynamic web applications and leveraging these technologies to create robust and scalable solutions. Excited to collaborate on innovative projects and contribute to the world of software development.`}
+                  {`👋 Hello, I'm Jerome Villaruel officially known as Veoscript, a software developer based in Philippines specializing in React, NextJS, NestJS, RestAPI, GraphQL, Prisma, Supabase, and PlanetScale. I enjoy building dynamic web applications and leveraging these technologies to create robust and scalable solutions. Excited to collaborate on innovative projects and contribute to the world of software development.`}
                 </Text>
               </div>
               <div className="flex flex-row items-center w-full space-x-5">

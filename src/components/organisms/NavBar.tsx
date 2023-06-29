@@ -38,7 +38,10 @@ const NavBar = () => {
       </div>
       <div className={`${isCollapse ? 'flex' : 'hidden md:flex'} flex-col md:flex-row items-start md:items-center justify-start md:justify-end w-full space-x-0 md:space-x-5 space-y-3 md:space-y-0 mr-0 md:mr-[10rem] text-white`}>
         <p className="w-[10rem] font-prompt font-light text-sm">928 Bonifactio St. Brgy. Guerrero, Bato, Leyte</p>
-        <p className="w-[10rem] font-prompt font-light text-sm select-all">jeromevillaruel1998@gmail.com (+63) 9753286466</p>
+        <div className="flex flex-col w-[10rem] font-prompt font-light text-sm">
+          <Link href="mailto:jeromevillaruel1998@gmail.com">jeromevillaruel1998@gmail.com</Link>
+          <Link href="tel:+639753286466">+639753286466</Link>
+        </div>
       </div>
     </div>
   )

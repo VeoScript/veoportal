@@ -36,7 +36,7 @@ const Blog = () => {
                       {blogs.map((item: IBlogs) => (
                         <div
                           key={item.id}
-                          className="flex flex-col w-full max-w-md h-auto overflow-hidden bg-[#270091]"
+                          className="flex flex-col w-full max-w-md h-auto overflow-hidden bg-white bg-opacity-10"
                           data-aos="zoom-in-up"
                         >
                           <Image

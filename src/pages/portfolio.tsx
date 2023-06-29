@@ -34,7 +34,7 @@ const Portfolio = () => {
                       {projects.map((item: IProjects) => (
                         <div
                           key={item.id}
-                          className="flex flex-col w-full overflow-hidden bg-[#270091]"
+                          className="flex flex-col w-full overflow-hidden bg-white bg-opacity-10"
                           data-aos="zoom-in-up"
                         >
                           <Image
