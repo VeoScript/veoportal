@@ -12,10 +12,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        "accent-1": "#210076",
+        "accent-1": "#133C53",
         "accent-2": "#010101",
-        "accent-3": '#BBA2FF',
-        "accent-4": '#F4BD83',
+        "accent-3": "#84D2F6",
+        "accent-4": "#F4BD83",
+        "accent-5": "#386FA5",
       },
       fontFamily: {
         prompt: ['var(--prompt-font)', ...fontFamily.sans],

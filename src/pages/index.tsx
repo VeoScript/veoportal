@@ -20,8 +20,8 @@ const Home = () => {
         <meta name="url" property="og:url" content="https://jeromevillaruel.cf" />
         <meta name="site_name" property="og:site_name" content="Jerome Villaruel (Veoscript)" />
         <meta name="description" property="og:description" content="Official website of Jerome Villaruel (VEOSCRIPT)" />
-        <meta name="secure_url" property="og:secure_url" content="https://i.ibb.co/2t5Jk45/page-image.png" />
-        <meta name="image" property="og:image" content="https://i.ibb.co/2t5Jk45/page-image.png" />
+        <meta name="secure_url" property="og:secure_url" content="https://i.ibb.co/5shcK8r/page-image.png" />
+        <meta name="image" property="og:image" content="https://i.ibb.co/5shcK8r/page-image.png" />
         <meta name="type" property="og:image:type" content="png" />
 
         <meta name="twitter:card" content="summary_large_image" />
@@ -29,7 +29,7 @@ const Home = () => {
         <meta name="twitter:creator" content="Jerome Villaruel" />
         <meta name="twitter:title" content="Jerome Villaruel (Veoscript)" />
         <meta name="twitter:description" content="Official website of Jerome Villaruel (VEOSCRIPT)" />
-        <meta name="twitter:image" content="https://i.ibb.co/2t5Jk45/page-image.png" />
+        <meta name="twitter:image" content="https://i.ibb.co/5shcK8r/page-image.png" />
         <meta name="twitter:domain" content="https://jeromevillaruel.cf" />
       </Head>
       <MainTemplate>
