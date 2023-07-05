@@ -21,7 +21,8 @@ export const Text = w.h1(
       align: {
         'left': 'text-left',
         'right': 'text-right',
-        'center': 'text-center'
+        'center': 'text-center',
+        'justify': 'text-justify',
       },
       font: {
         'prompt': 'font-prompt',

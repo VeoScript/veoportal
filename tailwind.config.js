@@ -35,6 +35,10 @@ module.exports = {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      screens: {
+        "large-break-point": "1440px",
+        "extra-large-break-point": "1920px",
+      },
     },
   },
   plugins: [
