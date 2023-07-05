@@ -18,3 +18,17 @@ export interface IBlogs {
   createdAt: Date
   updatedAt: Date
 }
+
+export interface IExperience {
+  image: string
+  company: string
+  position: string
+  experienceDate: string
+  isCurrent: boolean
+}
+
+export interface ITechStacks {
+  icon: string
+  name: string
+  link: string
+}

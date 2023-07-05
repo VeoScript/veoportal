@@ -7,6 +7,10 @@ import { Facebook, Twitter, Github, LinkedIn } from '~/utils/Icons'
 import { Text } from '~/components/atoms/Text'
 import { Button } from '~/components/atoms/Button'
 
+import { IExperience, ITechStacks } from '~/shared/interfaces'
+import { experiences } from '../shared/mocks/experiences'
+import { techstacks } from '../shared/mocks/techstacks'
+
 const Home = () => {
   return (
     <>
@@ -32,6 +36,7 @@ const Home = () => {
         <meta name="twitter:image" content="https://i.ibb.co/5shcK8r/page-image.png" />
         <meta name="twitter:domain" content="https://jeromevillaruel.cf" />
       </Head>
+      
       <MainTemplate>
         <div className="flex flex-col items-center justify-center w-full h-screen">
           <div className="flex flex-col items-center w-full max-w-full mt-10 px-5 md:px-0 space-y-10">
@@ -163,69 +168,32 @@ const Home = () => {
               <Text font='rock_salt' color='pink' align='center' weight='bold' size='5xl'>Experiences</Text>
             </div>
             <div className="flex flex-col items-center w-full max-w-full space-y-5">
-              <div
-                className="flex flex-row items-center w-full p-3 space-x-5 overflow-hidden rounded-xl border border-neutral-800"
-                data-aos="fade-left"
-                data-aos-delay="200"
-              >
-                <Image
-                  src="https://firebasestorage.googleapis.com/v0/b/veoportfolio.appspot.com/o/44977563_1502404626526285_6391029430868770816_n.jpg?alt=media&token=6abef4e3-5415-4337-9178-96da70db20dd"
-                  className="w-[3rem] h-[3rem] object-cover rounded-full bg-transparent"
-                  alt="Halcyon Agile"
-                  width={100}
-                  height={100}
-                  quality={100}
-                />
-                <div className="flex flex-col items-start w-full">
-                  <Link href="https://halcyonagile.com.ph/" target="_blank">
-                    <Text weight='bold' size='lg'>Halcyon Agile</Text>
-                  </Link>
-                  <Text weight='light' size='sm'>Software Developer</Text>
-                  <Text weight='thin' size='xs'>June 2022 - Present</Text>
+              {experiences.map((experience: IExperience, index: number) => (
+                <div
+                  key={index}
+                  className="flex flex-row items-center justify-between w-full p-3 overflow-hidden rounded-xl border border-neutral-800"
+                  data-aos="fade-left"
+                  data-aos-delay="200"
+                >
+                  <div className="flex flex-row items-center w-auto space-x-5">
+                    <Image
+                      src={experience.image}
+                      className="w-[3rem] h-[3rem] object-cover rounded-full bg-transparent"
+                      alt={experience.image}
+                      width={100}
+                      height={100}
+                      quality={100}
+                    />
+                    <div className="flex flex-col items-start w-full">
+                      <Link href="https://halcyonagile.com.ph/" target="_blank">
+                        <Text weight='bold' size='lg'>{experience.company}</Text>
+                      </Link>
+                      <Text weight='light' size='sm'>{experience.position}</Text>
+                    </div>
+                  </div>
+                  <Text size='base' color={`${experience.isCurrent ? 'yellow' : 'white'}`}>{experience.experienceDate}</Text>
                 </div>
-              </div>
-              <div
-                className="flex flex-row items-center w-full p-3 space-x-5 overflow-hidden rounded-xl border border-neutral-800"
-                data-aos="fade-right"
-                data-aos-delay="400"
-              >
-                <Image
-                  src="https://firebasestorage.googleapis.com/v0/b/veoportfolio.appspot.com/o/spmi_icon.svg?alt=media&token=9a8bc5d0-2b5d-4dee-93ff-278e46248f6c"
-                  className="w-[3rem] h-[3rem] object-cover rounded-full bg-transparent"
-                  alt="Specialy Pulp Manufacturing, Inc."
-                  width={500}
-                  height={500}
-                  quality={100}
-                />
-                <div className="flex flex-col items-start w-full">
-                  <Link href="https://www.spmi-pulp.com/" target="_blank">
-                    <Text weight='bold' size='lg'>Specialty Pulp Manufacturing, Inc.</Text>
-                  </Link>
-                  <Text weight='light' size='sm'>IT Specialist</Text>
-                  <Text weight='thin' size='xs'>February 2020 - June 2022</Text>
-                </div>
-              </div>
-              <div
-                className="flex flex-row items-center w-full p-3 space-x-5 overflow-hidden rounded-xl border border-neutral-800"
-                data-aos="fade-up"
-                data-aos-delay="600"
-              >
-                <Image
-                  src="https://firebasestorage.googleapis.com/v0/b/veoportfolio.appspot.com/o/Puregold_logo%20(1).svg?alt=media&token=2096d215-71f3-4434-a2f5-176d7f9a8583"
-                  className="w-[3rem] h-[3rem] object-cover bg-transparent"
-                  alt="Puregold Price Club, Inc."
-                  width={500}
-                  height={500}
-                  quality={100}
-                />
-                <div className="flex flex-col items-start w-full">
-                  <Link href="https://www.puregold.com.ph/" target="_blank">
-                    <Text weight='bold' size='lg'>Puregold Price Club, Inc.</Text>
-                  </Link>
-                  <Text weight='light' size='sm'>Graphic Artist</Text>
-                  <Text weight='thin' size='xs'>August 2019 - December 2019</Text>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </div>
@@ -240,126 +208,23 @@ const Home = () => {
               data-aos-delay="200"
             >
               <div className="flex flex-wrap items-center justify-center w-full max-w-full gap-10">
-                <Link href="https://react.dev/" target="_blank" className="transition ease-in-out duration-200 transform hover:scale-110">
-                  <Image
-                    src="/images/techstacks/reactjs.png"
-                    className="w-[6rem] h-[6rem] object-cover bg-transparent"
-                    alt="ReactJS"
-                    width={500}
-                    height={500}
-                    quality={100}
-                  />
-                </Link>
-                <Link href="https://nextjs.org/" target="_blank" className="transition ease-in-out duration-200 transform hover:scale-110">
-                  <Image
-                    src="/images/techstacks/nextjs.png"
-                    className="w-[6rem] h-[6rem] object-cover bg-transparent"
-                    alt="NextJS"
-                    width={500}
-                    height={500}
-                    quality={100}
-                  />
-                </Link>
-                <Link href="https://vuejs.org/" target="_blank" className="transition ease-in-out duration-200 transform hover:scale-110">
-                  <Image
-                    src="/images/techstacks/vuejs.png"
-                    className="w-[6rem] h-[6rem] object-cover bg-transparent"
-                    alt="NextJS"
-                    width={500}
-                    height={500}
-                    quality={100}
-                  />
-                </Link>
-                <Link href="https://nuxt.com/" target="_blank" className="transition ease-in-out duration-200 transform hover:scale-110">
-                  <Image
-                    src="/images/techstacks/nuxtjs.png"
-                    className="w-[6rem] h-[6rem] object-cover bg-transparent"
-                    alt="NextJS"
-                    width={500}
-                    height={500}
-                    quality={100}
-                  />
-                </Link>                
-                <Link href="https://tanstack.com/query/latest" target="_blank" className="transition ease-in-out duration-200 transform hover:scale-110">
-                  <Image
-                    src="/images/techstacks/reactquery.png"
-                    className="w-[6rem] h-[6rem] object-cover bg-transparent"
-                    alt="React Query"
-                    width={500}
-                    height={500}
-                    quality={100}
-                  />
-                </Link>
-                <Link href="https://tailwindcss.com/" target="_blank" className="transition ease-in-out duration-200 transform hover:scale-110">
-                  <Image
-                    src="/images/techstacks/tailwindcss.png"
-                    className="w-[6rem] h-[6rem] object-cover bg-transparent"
-                    alt="TailwindCSS"
-                    width={500}
-                    height={500}
-                    quality={100}
-                  />
-                </Link>
-                <Link href="https://tauri.app/" target="_blank" className="transition ease-in-out duration-200 transform hover:scale-110">
-                  <Image
-                    src="/images/techstacks/tauri.png"
-                    className="w-[6rem] h-[6rem] object-cover bg-transparent"
-                    alt="Tauri"
-                    width={500}
-                    height={500}
-                    quality={100}
-                  />
-                </Link>
-                <Link href="https://ionicframework.com/" target="_blank" className="transition ease-in-out duration-200 transform hover:scale-110">
-                  <Image
-                    src="/images/techstacks/ionic.png"
-                    className="w-[6rem] h-[6rem] object-cover bg-transparent"
-                    alt="Tauri"
-                    width={500}
-                    height={500}
-                    quality={100}
-                  />
-                </Link>
-                <Link href="https://nestjs.com/" target="_blank" className="transition ease-in-out duration-200 transform hover:scale-110">
-                  <Image
-                    src="/images/techstacks/nestjs.png"
-                    className="w-[6rem] h-[6rem] object-cover bg-transparent"
-                    alt="NestJS"
-                    width={500}
-                    height={500}
-                    quality={100}
-                  />
-                </Link>
-                <Link href="https://graphql.org/" target="_blank" className="transition ease-in-out duration-200 transform hover:scale-110">
-                  <Image
-                    src="/images/techstacks/graphql.png"
-                    className="w-[6rem] h-[6rem] object-cover bg-transparent"
-                    alt="Tauri"
-                    width={500}
-                    height={500}
-                    quality={100}
-                  />
-                </Link>
-                <Link href="https://www.prisma.io/" target="_blank" className="transition ease-in-out duration-200 transform hover:scale-110">
-                  <Image
-                    src="/images/techstacks/prismaorm.png"
-                    className="w-[6rem] h-[6rem] object-cover bg-transparent"
-                    alt="Prisma"
-                    width={500}
-                    height={500}
-                    quality={100}
-                  />
-                </Link>
-                <Link href="https://supabase.com/" target="_blank" className="transition ease-in-out duration-200 transform hover:scale-110">
-                  <Image
-                    src="/images/techstacks/supabase.png"
-                    className="w-[6rem] h-[6rem] object-cover bg-transparent"
-                    alt="Supabase"
-                    width={500}
-                    height={500}
-                    quality={100}
-                  />
-                </Link>
+                {techstacks.map((techstack: ITechStacks, index: number) => (
+                  <Link
+                    key={index}
+                    href={techstack.link}
+                    target="_blank"
+                    className="transition ease-in-out duration-200 transform hover:scale-110"
+                  >
+                    <Image
+                      src={techstack.icon}
+                      className="w-[6rem] h-[6rem] object-cover bg-transparent"
+                      alt={techstack.name}
+                      width={500}
+                      height={500}
+                      quality={100}
+                    />
+                  </Link>
+                ))}
               </div>
             </div>
           </div>
