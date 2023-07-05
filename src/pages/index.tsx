@@ -185,7 +185,7 @@ const Home = () => {
                       quality={100}
                     />
                     <div className="flex flex-col items-start w-full">
-                      <Link href="https://halcyonagile.com.ph/" target="_blank">
+                      <Link href={experience.link} target="_blank">
                         <Text weight='bold' size='lg'>{experience.company}</Text>
                       </Link>
                       <Text weight='light' size='sm'>{experience.position}</Text>

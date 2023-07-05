@@ -23,6 +23,7 @@ export interface IExperience {
   image: string
   company: string
   position: string
+  link: string
   experienceDate: string
   isCurrent: boolean
 }
