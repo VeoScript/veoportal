@@ -191,7 +191,7 @@ const Home = () => {
                       <Text weight='light' size='sm'>{experience.position}</Text>
                     </div>
                   </div>
-                  <Text size='base' color={`${experience.isCurrent ? 'yellow' : 'white'}`}>{experience.experienceDate}</Text>
+                  <Text size='sm' color={`${experience.isCurrent ? 'yellow' : 'white'}`}>{experience.experienceDate}</Text>
                 </div>
               ))}
             </div>
