@@ -171,7 +171,7 @@ const Home = () => {
               {experiences.map((experience: IExperience, index: number) => (
                 <div
                   key={index}
-                  className="flex flex-row items-center justify-between w-full p-3 overflow-hidden rounded-xl border border-neutral-800"
+                  className="flex flex-col md:flex-row items-start md:items-center justify-between w-full p-3 space-y-3 md:space-y-0 overflow-hidden rounded-xl border border-neutral-800"
                   data-aos="fade-left"
                   data-aos-delay="200"
                 >
@@ -191,7 +191,9 @@ const Home = () => {
                       <Text weight='light' size='sm'>{experience.position}</Text>
                     </div>
                   </div>
-                  <Text size='sm' color={`${experience.isCurrent ? 'yellow' : 'white'}`}>{experience.experienceDate}</Text>
+                  <div className="flex flex-row items-center justify-start w-full md:w-auto ml-[4.2rem] md:ml-0">
+                    <Text size='sm' color={`${experience.isCurrent ? 'yellow' : 'gray'}`}>{experience.experienceDate}</Text>
+                  </div>
                 </div>
               ))}
             </div>

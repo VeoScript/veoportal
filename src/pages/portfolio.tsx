@@ -25,16 +25,16 @@ const Portfolio = () => {
               <Text font='rock_salt' color='pink' align='center' weight='bold' size='5xl'>Portfolio</Text>
             </div>
             <div className="flex flex-col items-center w-full max-w-full px-5 space-y-10">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-2 w-full">
+              <div className="flex flex-wrap justify-center gap-2 w-full">
                 {isLoading
-                  ? <div className="col-span-3 flex flex-row items-start justify-center w-full h-screen mt-20">
+                  ? <div className="flex flex-row items-start justify-center w-full h-screen mt-20">
                       <Text font='prompt' align='center' size='xl'>Loading...</Text>
                     </div>
                   : <>
                       {projects.map((item: IProjects) => (
                         <div
                           key={item.id}
-                          className="flex flex-col w-full overflow-hidden bg-white bg-opacity-10"
+                          className="flex flex-col w-full max-w-md overflow-hidden bg-white bg-opacity-10"
                           data-aos="zoom-in-up"
                         >
                           <Image
