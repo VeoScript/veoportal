@@ -17,6 +17,9 @@ export const Text = w.h1(
         yellow: `
           text-accent-4
         `,
+        gray: `
+          text-neutral-500
+        `,
       },
       align: {
         'left': 'text-left',
