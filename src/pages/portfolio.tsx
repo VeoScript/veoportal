@@ -34,7 +34,7 @@ const Portfolio = () => {
                       {projects.map((item: IProjects) => (
                         <div
                           key={item.id}
-                          className="flex flex-col w-full max-w-md overflow-hidden bg-white bg-opacity-10"
+                          className="flex flex-col w-full max-w-md overflow-hidden bg-[#1B263F]"
                           data-aos="zoom-in-up"
                         >
                           <Image
@@ -48,7 +48,7 @@ const Portfolio = () => {
                             placeholder="blur"
                           />
                           <div className="flex flex-col items-start w-full p-5 space-y-5">
-                            <Text font='prompt' weight="bold" color="yellow" size="xl">{item.title}</Text>
+                            <Text font='prompt' weight="bold" color="pink" size="xl">{item.title}</Text>
                             <div
                               className="font-prompt font-light text-base text-white"
                               dangerouslySetInnerHTML={{ __html: item.description }}
