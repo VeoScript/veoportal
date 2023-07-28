@@ -59,4 +59,9 @@ export const techstacks = [
     name: 'Supabase',
     link: 'https://supabase.com/',
   },
+  {
+    icon: '/images/techstacks/convex.png',
+    name: 'Convex',
+    link: 'https://www.convex.dev/',
+  },
 ]
