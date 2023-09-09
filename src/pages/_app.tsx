@@ -1,4 +1,5 @@
-import React from 'react';
+import React from 'react'
+import NProgress from '~/components/organisms/NProgress'
 import type { AppProps } from 'next/app'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 
@@ -13,14 +14,14 @@ const prompt = Prompt({
   subsets: ['latin'],
   style: ['normal', 'italic'],
   weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
-  preload: false,
+  preload: true,
 })
 
 const rock_salt = Rock_Salt({
   subsets: ['latin'],
   style: ['normal'],
   weight: ['400'],
-  preload: false,
+  preload: true,
 })
 
 const queryClient = new QueryClient({
@@ -48,6 +49,7 @@ export default function App({ Component, pageProps }: AppProps) {
         `}
       </style>
       <QueryClientProvider client={queryClient}>
+        <NProgress />
         <Component {...pageProps} />
       </QueryClientProvider>
     </>
