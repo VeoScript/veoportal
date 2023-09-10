@@ -9,7 +9,7 @@ export const experiences = [
   },
   {
     image: 'https://firebasestorage.googleapis.com/v0/b/veoportfolio.appspot.com/o/spmi_icon.svg?alt=media&token=9a8bc5d0-2b5d-4dee-93ff-278e46248f6c',
-    company: 'Specialy Pulp Manufacturing, Inc.',
+    company: 'Specialty Pulp Manufacturing, Inc.',
     position: 'IT Specialist',
     link: 'https://www.spmi-pulp.com/',
     experienceDate: 'February 2020 - June 2022',
