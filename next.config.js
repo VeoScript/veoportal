@@ -1,6 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  experimental: {
+    scrollRestoration: true,
+  },
   env: {
     DATABASE_URL: process.env.DATABASE_URL,
     SQUIDEX_API_URL: process.env.SQUIDEX_API_URL,
