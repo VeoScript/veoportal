@@ -64,4 +64,9 @@ export const techstacks = [
     name: 'Convex',
     link: 'https://www.convex.dev/',
   },
+  {
+    icon: '/images/techstacks/trpc.png',
+    name: 'tRPC',
+    link: 'https://trpc.io/',
+  },
 ]
