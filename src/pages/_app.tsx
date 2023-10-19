@@ -35,7 +35,9 @@ const queryClient = new QueryClient({
 export default function App({ Component, pageProps }: AppProps) {  
 
   React.useEffect(() => {
-    AOS.init()
+    AOS.init({
+      once: true,
+    })
   }, [])
 
   return (
