@@ -3,7 +3,7 @@ import Head from 'next/head'
 import Link from 'next/link'
 import Image from 'next/image'
 import MainTemplate from '~/components/templates/MainTemplate'
-import { Facebook, Twitter, Github, LinkedIn } from '~/utils/Icons'
+import { Facebook, Twitter, Github, LinkedIn, Magaaazine } from '~/utils/Icons'
 import { Text } from '~/components/atoms/Text'
 import { Button } from '~/components/atoms/Button'
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component'
@@ -117,6 +117,9 @@ const Home = () => {
                 </Link>
                 <Link title="Linked In" href="https://www.linkedin.com/in/veoscript/" target="_blank">
                   <LinkedIn />
+                </Link>
+                <Link title="Magaaazine" href="https://www.magaaazine.online/veoscript" target="_blank">
+                  <Magaaazine />
                 </Link>
               </div>
             </div>
