@@ -1,17 +1,30 @@
 import React from "react";
 import { GetServerSideProps } from "next";
+import dynamic from "next/dynamic";
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import moment from "moment";
-import MainTemplate from "~/components/templates/MainTemplate";
 
 import prisma from "~/config/Prisma";
 import { IBlogs } from "~/shared/interfaces";
 import { Text } from "~/components/atoms/Text";
 import { Button } from "~/components/atoms/Button";
+
+const MainTemplate = dynamic(
+  () => import("~/components/templates/MainTemplate"),
+  {
+    loading: () => (
+      <div className="flex flex-row items-start justify-center w-full h-screen mt-20">
+        <Text font="prompt" align="center" size="xl">
+          Loading...
+        </Text>
+      </div>
+    ),
+  }
+);
 
 interface IProps {
   id: string;
@@ -22,25 +35,50 @@ const BlogDetails: React.FC<IProps> = ({ id, blog }) => {
   return (
     <>
       <Head>
-        <title>Blog | {blog.title}</title>        
-        <meta name="description" content="Official website of Jerome Villaruel (VEOSCRIPT)" />
+        <title>Blog | {blog.title}</title>
+        <meta
+          name="description"
+          content="Official website of Jerome Villaruel (VEOSCRIPT)"
+        />
         <meta name="author" content="Jerome Villaruel" />
         <meta name="keywords" content="Jerome Villaruel" />
         <meta name="viewport" content="width=device-width, initial-scale-1" />
-        
-        <meta name="url" property="og:url" content={`https://www.jeromevillaruel.cf/blog/${id}`} />
-        <meta name="site_name" property="og:site_name" content={`${blog.title}`} />
-        <meta name="description" property="og:description" content="Official website of Jerome Villaruel (VEOSCRIPT)" />
-        <meta name="secure_url" property="og:secure_url" content={`https://www.jeromevillaruel.cf/blog/${id}`} />
+
+        <meta
+          name="url"
+          property="og:url"
+          content={`https://www.jeromevillaruel.cf/blog/${id}`}
+        />
+        <meta
+          name="site_name"
+          property="og:site_name"
+          content={`${blog.title}`}
+        />
+        <meta
+          name="description"
+          property="og:description"
+          content="Official website of Jerome Villaruel (VEOSCRIPT)"
+        />
+        <meta
+          name="secure_url"
+          property="og:secure_url"
+          content={`https://www.jeromevillaruel.cf/blog/${id}`}
+        />
         <meta name="image" property="og:image" content={`${blog.image}`} />
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="Jerome Villaruel (Veoscript)" />
         <meta name="twitter:creator" content="Jerome Villaruel" />
         <meta name="twitter:title" content={`${blog.title}`} />
-        <meta name="twitter:description" content="Official website of Jerome Villaruel (VEOSCRIPT)" />
+        <meta
+          name="twitter:description"
+          content="Official website of Jerome Villaruel (VEOSCRIPT)"
+        />
         <meta name="twitter:image" content={`${blog.image}`} />
-        <meta name="twitter:domain" content={`https://www.jeromevillaruel.cf/blog/${id}`} />
+        <meta
+          name="twitter:domain"
+          content={`https://www.jeromevillaruel.cf/blog/${id}`}
+        />
       </Head>
       <MainTemplate>
         <div className="flex flex-col items-center justify-start w-full h-full">
@@ -121,7 +159,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   const blog = await prisma.blog.findFirst({
     where: {
       id: String(id),
-    }
+    },
   });
 
   return {
