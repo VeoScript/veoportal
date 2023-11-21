@@ -5,6 +5,7 @@ import Image from 'next/legacy/image'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import MainTemplate from '~/components/templates/MainTemplate'
+import LoadingGrid from '~/components/molecules/Loading/LoadingGrid'
 import { Text } from '~/components/atoms/Text'
 import { Button } from '~/components/atoms/Button'
 
@@ -29,9 +30,7 @@ const Blog = () => {
             <div className="flex flex-col items-center w-full max-w-full px-5 space-y-10">
               <div className="flex flex-wrap justify-center gap-2 w-full">
                 {isLoading
-                  ? <div className="flex flex-row items-start justify-center w-full h-screen mt-20">
-                      <Text font='prompt' align='center' size='xl'>Loading...</Text>
-                    </div>
+                  ? <LoadingGrid />
                   : <>
                       {blogs.map((item: IBlogs) => (
                         <div
