@@ -1,15 +1,16 @@
-import { useState, useEffect } from 'react'
+import { useEffect } from 'react';
+import { lazyLoadStore } from '../stores';
 
-export const useLazyLoadOnScroll = (): boolean => {  
-  const [isLazyLoad, setIsLazyLoad] = useState<boolean>(false);
+export const useLazyLoadOnScroll = (): boolean => {
+  const { isLazyLoad, setIsLazyLoad } = lazyLoadStore();
 
   const handleScroll = () => {
-    setIsLazyLoad(true)
-  }
+    setIsLazyLoad(true);
+  };
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll, { passive: true });
-  }, [])
+  }, []);
 
   return isLazyLoad;
-}
+};
