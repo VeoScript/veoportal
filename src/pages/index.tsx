@@ -1,4 +1,3 @@
-import React from 'react'
 import dynamic from 'next/dynamic'
 import Head from 'next/head'
 import Link from 'next/link'
@@ -6,11 +5,7 @@ import MainTemplate from '~/components/templates/MainTemplate'
 import { Text } from '~/components/atoms/Text'
 import { Button } from '~/components/atoms/Button'
 
-// import AboutSection from '~/components/molecules/AboutSection';
-// import SkillsServicesSection from '~/components/molecules/SkillsServicesSection';
-// import ExperiencesSection from '~/components/molecules/ExperiencesSection';
-// import TechStacksSection from '~/components/molecules/TechStacksSection';
-// import Footer from '~/components/organisms/Footer';
+import { useLazyLoadOnScroll } from '~/helpers/hooks/useLazyLoadOnScroll';
 
 const AboutSection = dynamic(() => import('~/components/molecules/AboutSection'), { ssr: false })
 const SkillsServicesSection = dynamic(() => import('~/components/molecules/SkillsServicesSection'), { ssr: false })
@@ -19,6 +14,8 @@ const TechStacksSection = dynamic(() => import('~/components/molecules/TechStack
 const Footer = dynamic(() => import('~/components/organisms/Footer'), { ssr: false })
 
 const Home = () => {
+  const isLazyLoad = useLazyLoadOnScroll()
+  
   return (
     <>
       <Head>
@@ -79,10 +76,14 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <AboutSection />
-        <SkillsServicesSection />
-        <ExperiencesSection />
-        <TechStacksSection />
+        {isLazyLoad && (
+          <>
+            <AboutSection />
+            <SkillsServicesSection />
+            <ExperiencesSection />
+            <TechStacksSection />
+          </>
+        )}
         <Footer />
       </MainTemplate>
     </>
