@@ -32,10 +32,10 @@ const ExperiencesSection = () => {
               <VerticalTimelineElement
                 key={index}
                 className="vertical-timeline-element--work"
-                contentStyle={{ background: theme === 'dark' ? '#111827' : '#E1E8F4', color: theme === 'dark' ? '#fff' : '#000' }}
-                contentArrowStyle={{ borderRight: `7px solid ${theme === 'dark' ? '#111827' : '#E1E8F4'}` }}
+                contentStyle={{ background: theme === 'light' ? '#E1E8F4' : '#111827', color: theme === 'light' ? '#000' : '#fff' }}
+                contentArrowStyle={{ borderRight: `7px solid ${theme === 'light' ? '#E1E8F4' : '#111827'}` }}
                 date={experience.experienceDate}
-                iconStyle={{ background: theme === 'dark' ? '#111827' : '#E1E8F4', color: theme === 'dark' ? '#111827' : '#E1E8F4' }}
+                iconStyle={{ background: theme === 'light' ? '#E1E8F4' : '#111827', color: theme === 'light' ? '#E1E8F4' : '#111827' }}
                 icon={
                   <Image
                     src={experience.image}

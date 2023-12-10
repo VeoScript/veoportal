@@ -16,7 +16,7 @@ const NavBar = () => {
         <Link href="/" className="flex">
           <Image
             priority
-            src={theme === 'dark' ? "/images/veo.webp" : "/images/veo-dark.webp"}
+            src={theme === 'light' ? "/images/veo-dark.webp" : "/images/veo.webp"}
             className="w-[3rem] h-[2rem] object-cover bg-transparent"
             alt="veoscript"
             width={50}
@@ -31,10 +31,10 @@ const NavBar = () => {
           onClick={() => isCollapse ? setIsCollapse(false) : setIsCollapse(true)}
         >
           {isCollapse
-            ? <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-[48px] h-[48px] text-white">
+            ? <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-[48px] h-[48px] text-black dark:text-white">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
               </svg>          
-            : <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-[48px] h-[48px] text-white">
+            : <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-[48px] h-[48px] text-black dark:text-white">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 9h16.5m-16.5 6.75h16.5" />
               </svg>
           }
