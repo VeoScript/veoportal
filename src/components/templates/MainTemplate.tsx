@@ -1,10 +1,10 @@
-import React from 'react'
+import { ReactNode } from 'react'
 import NavBar from '../organisms/NavBar'
 import SideBanner from '../organisms/SideBanner'
 import Menu from '../organisms/Menu'
 
 interface IProps {
-  children: React.ReactNode
+  children: ReactNode
 }
 
 type MainTemplateProps = (props: IProps) => JSX.Element
