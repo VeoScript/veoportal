@@ -40,6 +40,7 @@ const BlogDetails: React.FC<IProps> = ({ id, blog }) => {
           name="description"
           content="Official website of Jerome Villaruel (VEOSCRIPT)"
         />
+        <meta name="image" content={`${blog.image}`} />
         <meta name="author" content="Jerome Villaruel" />
         <meta name="keywords" content="Jerome Villaruel" />
         <meta name="viewport" content="width=device-width, initial-scale-1" />
@@ -83,28 +84,14 @@ const BlogDetails: React.FC<IProps> = ({ id, blog }) => {
       <MainTemplate>
         <div className="flex flex-col items-center justify-start w-full h-full">
           <div className="flex flex-col items-center w-full max-w-full h-full mt-20 md:px-0 py-10">
-            <div className="flex flex-col items-center w-full max-w-full md:max-w-5xl h-full space-y-10 md:space-y-20">
-              <div className="flex flex-col items-center w-full space-y-10 md:space-y-20">
+            <div className="flex flex-col items-center w-full max-w-full md:max-w-5xl h-full space-y-10">
+              <div className="flex flex-col items-center w-full space-y-10">
                 <div className="flex flex-col items-center w-full px-5 md:px-0 space-y-5">
-                  <Text
-                    font="prompt"
-                    color="pink"
-                    align="center"
-                    weight="bold"
-                    size="5xl"
-                  >
+                  <h1 className="font-bold text-5xl text-center text-black dark:text-accent-3">
                     {blog?.title}
-                  </Text>
-                  <span className="w-auto px-5 py-2 rounded-md bg-accent-2">
-                    <Text
-                      font="prompt"
-                      color="yellow"
-                      align="center"
-                      weight="light"
-                      size="sm"
-                    >
-                      {blog?.topic}
-                    </Text>
+                  </h1>
+                  <span className="w-auto px-5 py-2 rounded-md font-light text-sm text-white dark:text-accent-4 bg-accent-2">
+                    {blog?.topic}
                   </span>
                   <Text
                     font="prompt"
@@ -126,7 +113,7 @@ const BlogDetails: React.FC<IProps> = ({ id, blog }) => {
                 />
               </div>
               <ReactMarkdown
-                className="w-full px-5 md:px-0 prose-sm select-text font-prompt text-base text-white break-words"
+                className="w-full px-5 md:px-0 prose-sm select-text font-prompt text-base text-black dark:text-white break-words"
                 remarkPlugins={[remarkGfm]}
               >
                 {blog?.article ?? ""}

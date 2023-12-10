@@ -6,7 +6,7 @@ import { Facebook, Twitter, Github, LinkedIn, Magaaazine } from "~/utils/Icons";
 
 const AboutSection = () => {
   return (
-    <div className="flex flex-col items-center justify-start md:justify-center w-full h-full md:h-screen border-t border-neutral-800 bg-black">
+    <div className="flex flex-col items-center justify-start md:justify-center w-full h-full md:h-screen border-t border-neutral-300 dark:border-neutral-800 bg-accent-7 dark:bg-black">
       <div className="flex flex-col md:flex-row items-center justify-start md:justify-center w-full large-break-point:max-w-5xl extra-large-break-point:max-w-7xl h-full space-x-0 md:space-x-10">
         <div
           className="flex w-full max-w-full md:max-w-[20rem]"
@@ -37,7 +37,7 @@ const AboutSection = () => {
           </div>
           <div className="flex flex-col w-full">
             <Text weight="light" align="justify">
-              {`👋 Hello, I'm Jerome Villaruel officially known as Veoscript, a software developer based in Philippines specializing in React, NextJS, NestJS, RestAPI, GraphQL, Prisma, Supabase, and PlanetScale. I enjoy building dynamic web applications and leveraging these technologies to create robust and scalable solutions. Excited to collaborate on innovative projects and contribute to the world of software development.`}
+              {`👋 Hello, I'm Jerome Villaruel officially known as Veoscript, a software developer based in Philippines specializing in React, React Native, NextJS, NestJS, RestAPI, GraphQL, tRPC, Prisma, Supabase, and PlanetScale. I enjoy building dynamic web applications and leveraging these technologies to create robust and scalable solutions. Excited to collaborate on innovative projects and contribute to the world of software development.`}
             </Text>
           </div>
           <div className="flex flex-row items-center w-full space-x-5">

@@ -11,7 +11,6 @@ const AboutSection = dynamic(() => import('~/components/molecules/AboutSection')
 const SkillsServicesSection = dynamic(() => import('~/components/molecules/SkillsServicesSection'), { ssr: false })
 const ExperiencesSection = dynamic(() => import('~/components/molecules/ExperiencesSection'), { ssr: false })
 const TechStacksSection = dynamic(() => import('~/components/molecules/TechStacksSection'), { ssr: false })
-const Footer = dynamic(() => import('~/components/organisms/Footer'), { ssr: false })
 
 const Home = () => {
   const isLazyLoad = useLazyLoadOnScroll()
@@ -21,6 +20,7 @@ const Home = () => {
       <Head>
         <title>Jerome Villaruel</title>
         <meta name="description" content="Official website of Jerome Villaruel (VEOSCRIPT)" />
+        <meta name="image" content="https://i.ibb.co/8MfwSGd/page-image.png" />
         <meta name="author" content="Jerome Villaruel" />
         <meta name="keywords" content="Jerome Villaruel" />
         <meta name="viewport" content="width=device-width, initial-scale-1" />
@@ -28,8 +28,8 @@ const Home = () => {
         <meta name="url" property="og:url" content="https://jeromevillaruel.cf" />
         <meta name="site_name" property="og:site_name" content="Jerome Villaruel (Veoscript)" />
         <meta name="description" property="og:description" content="Official website of Jerome Villaruel (VEOSCRIPT)" />
-        <meta name="secure_url" property="og:secure_url" content="https://i.ibb.co/5shcK8r/page-image.png" />
-        <meta name="image" property="og:image" content="https://i.ibb.co/5shcK8r/page-image.png" />
+        <meta name="secure_url" property="og:secure_url" content="https://i.ibb.co/8MfwSGd/page-image.png" />
+        <meta name="image" property="og:image" content="https://i.ibb.co/8MfwSGd/page-image.png" />
         <meta name="type" property="og:image:type" content="png" />
 
         <meta name="twitter:card" content="summary_large_image" />
@@ -37,7 +37,7 @@ const Home = () => {
         <meta name="twitter:creator" content="Jerome Villaruel" />
         <meta name="twitter:title" content="Jerome Villaruel (Veoscript)" />
         <meta name="twitter:description" content="Official website of Jerome Villaruel (VEOSCRIPT)" />
-        <meta name="twitter:image" content="https://i.ibb.co/5shcK8r/page-image.png" />
+        <meta name="twitter:image" content="https://i.ibb.co/8MfwSGd/page-image.png" />
         <meta name="twitter:domain" content="https://jeromevillaruel.cf" />
       </Head>
       <MainTemplate>
@@ -84,7 +84,6 @@ const Home = () => {
             <TechStacksSection />
           </>
         )}
-        <Footer />
       </MainTemplate>
     </>
   )

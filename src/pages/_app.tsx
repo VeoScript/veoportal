@@ -1,4 +1,5 @@
 import React from 'react'
+import { ThemeProvider } from 'next-themes'
 import NProgress from '~/components/organisms/NProgress'
 import type { AppProps } from 'next/app'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
@@ -52,7 +53,9 @@ export default function App({ Component, pageProps }: AppProps) {
       </style>
       <QueryClientProvider client={queryClient}>
         <NProgress />
-        <Component {...pageProps} />
+        <ThemeProvider attribute="class">
+          <Component {...pageProps} />
+        </ThemeProvider>
       </QueryClientProvider>
     </>
   )

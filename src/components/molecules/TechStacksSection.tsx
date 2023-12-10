@@ -8,7 +8,7 @@ import { techstacks } from '../../shared/mocks/techstacks'
 
 const TechStacksSection = () => {
   return (
-    <div className="flex flex-col items-center justify-center w-full h-full md:h-screen px-5 border-t border-neutral-800 bg-accent-1">
+    <div className="flex flex-col items-center justify-center w-full h-full md:h-screen px-5 border-t border-neutral-300 dark:border-neutral-800">
       <div className="flex flex-col items-center w-full large-break-point:max-w-5xl extra-large-break-point:max-w-7xl py-10 md:py-0 space-y-10 md:space-y-24">
         <div className="flex flex-col items-center w-full">
           <Text

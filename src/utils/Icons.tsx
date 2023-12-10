@@ -1,7 +1,7 @@
 export const Facebook = () => {
   return (
     <svg
-      className="w-5 h-5 fill-current text-white transition ease-in-out duration-200 transform hover:scale-90 hover:text-accent-3"
+      className="w-5 h-5 fill-current text-black dark:text-white transition ease-in-out duration-200 transform hover:scale-125 hover:text-white dark:hover:text-accent-3"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
     >
@@ -13,11 +13,11 @@ export const Facebook = () => {
 export const Twitter = () => {
   return (
     <svg
-      className="w-5 h-5 fill-current text-white transition ease-in-out duration-200 transform hover:scale-90 hover:text-accent-3"
+      className="w-5 h-5 fill-current text-black dark:text-white transition ease-in-out duration-200 transform hover:scale-125 hover:text-white dark:hover:text-accent-3"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
     >
-      <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" />
+      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
     </svg>
   );
 };
@@ -25,7 +25,7 @@ export const Twitter = () => {
 export const Github = () => {
   return (
     <svg
-      className="w-5 h-5 fill-current text-white transition ease-in-out duration-200 transform hover:scale-90 hover:text-accent-3"
+      className="w-5 h-5 fill-current text-black dark:text-white transition ease-in-out duration-200 transform hover:scale-125 hover:text-white dark:hover:text-accent-3"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
     >
@@ -37,7 +37,7 @@ export const Github = () => {
 export const LinkedIn = () => {
   return (
     <svg
-      className="w-5 h-5 fill-current text-white transition ease-in-out duration-200 transform hover:scale-90 hover:text-accent-3"
+      className="w-5 h-5 fill-current text-black dark:text-white transition ease-in-out duration-200 transform hover:scale-125 hover:text-white dark:hover:text-accent-3"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
     >
@@ -54,7 +54,7 @@ export const Magaaazine = () => {
       height="256.000000pt"
       viewBox="0 0 256.000000 256.000000"
       preserveAspectRatio="xMidYMid meet"
-      className="w-5 h-5 fill-current text-white transition ease-in-out duration-200 transform hover:scale-90 hover:text-accent-3"
+      className="w-6 h-6 fill-current text-black dark:text-white transition ease-in-out duration-200 transform hover:scale-125 hover:text-white dark:hover:text-accent-3"
     >
       <g
         transform="translate(0.000000,256.000000) scale(0.100000,-0.100000)"
@@ -66,7 +66,7 @@ export const Magaaazine = () => {
 -437 220 -804 225 -816 9 -22 13 -23 164 -23 l154 0 30 128 c16 70 101 433
 188 807 86 374 161 684 166 689 4 6 8 -346 8 -782 l0 -792 -70 0 c-68 0 -70
 -1 -70 -25 l0 -25 385 0 385 0 0 25 c0 24 -2 25 -70 25 l-70 0 0 840 0 840 70
-0 c68 0 70 1 70 25 l0 25 -337 -2 -337 -3 -150 -648 c-96 -409 -154 -641 -158
+0 c68 0 70 1 70 25 l0 25 -337 -2 -337 -3 -125 -648 c-96 -409 -154 -641 -158
 -630 -5 10 -80 299 -169 643 -89 344 -163 628 -166 633 -5 9 -667 10 -676 0z"
         />
       </g>
