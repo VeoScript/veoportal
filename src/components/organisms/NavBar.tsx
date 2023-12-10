@@ -1,10 +1,14 @@
-import React from 'react'
+import { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+import { useTheme } from 'next-themes'
 
 const NavBar = () => {
+  const { theme } = useTheme()
 
-  const [isCollapse, setIsCollapse] = React.useState<boolean>(false)
+  const [isCollapse, setIsCollapse] = useState<boolean>(false)
+
+  console.log("theme", theme)
 
   return (
     <div className="absolute md:fixed top-0 left-0 md:left-20 z-20 flex flex-col md:flex-row items-center justify-between w-full p-5 space-y-5 md:space-y-0 backdrop-blur-sm md:backdrop-blur-xl bg-transparent bg-opacity-50">
@@ -12,7 +16,7 @@ const NavBar = () => {
         <Link href="/" className="flex">
           <Image
             priority
-            src="/images/veo.png"
+            src={theme === 'dark' ? "/images/veo.webp" : "/images/veo-dark.webp"}
             className="w-[3rem] h-[2rem] object-cover bg-transparent"
             alt="veoscript"
             width={50}
@@ -36,7 +40,7 @@ const NavBar = () => {
           }
         </button>
       </div>
-      <div className={`${isCollapse ? 'flex' : 'hidden md:flex'} flex-col md:flex-row items-start md:items-center justify-start md:justify-end w-full space-x-0 md:space-x-5 space-y-3 md:space-y-0 mr-0 md:mr-[10rem] text-white`}>
+      <div className={`${isCollapse ? 'flex' : 'hidden md:flex'} flex-col md:flex-row items-start md:items-center justify-start md:justify-end w-full space-x-0 md:space-x-5 space-y-3 md:space-y-0 mr-0 md:mr-[10rem] text-black dark:text-white`}>
         <p className="w-[10rem] font-prompt font-light text-sm">928 Bonifactio St. Brgy. Guerrero, Bato, Leyte</p>
         <div className="flex flex-col w-[10rem] font-prompt font-light text-sm">
           <Link href="mailto:jeromevillaruel1998@gmail.com">jeromevillaruel1998@gmail.com</Link>

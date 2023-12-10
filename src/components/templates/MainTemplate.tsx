@@ -1,7 +1,10 @@
 import { ReactNode } from 'react'
-import NavBar from '../organisms/NavBar'
-import SideBanner from '../organisms/SideBanner'
+import dynamic from 'next/dynamic'
 import Menu from '../organisms/Menu'
+import SideBanner from '../organisms/SideBanner'
+
+const NavBar = dynamic(() => import('../organisms/NavBar'), { ssr: false })
+const Footer = dynamic(() => import('~/components/organisms/Footer'), { ssr: false })
 
 interface IProps {
   children: ReactNode
@@ -16,9 +19,10 @@ const MainTemplate: MainTemplateProps = ({ children }) => {
         <SideBanner />
       </div>
       <NavBar />
-      <div className="relative ml-0 md:ml-20 flex-1 flex-col items-center justify-center w-full max-w-[1920px] h-full font-prompt text-white bg-accent-1">
+      <div className="relative ml-0 md:ml-20 flex-1 flex-col items-center justify-center w-full max-w-[1920px] h-full font-prompt text-black dark:text-white bg-accent-6 dark:bg-accent-1">
         <Menu />
         {children}
+        <Footer />
       </div>
     </div>
   )

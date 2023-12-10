@@ -6,16 +6,16 @@ export const Text = w.h1(
     variants: {
       color: {
         white: `
-          text-white
+          text-black dark:text-white
         `,
         pink: `
-          text-accent-3
+          text-accent-9 dark:text-accent-3
         `,
         black: `
           text-accent-2
         `,
         yellow: `
-          text-accent-4
+          text-accent-8 dark:text-accent-4
         `,
         gray: `
           text-neutral-500

@@ -2,6 +2,7 @@
 const { fontFamily } = require('tailwindcss/defaultTheme')
 
 module.exports = {
+  darkMode: 'class',
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/layouts/**/*.{js,ts,jsx,tsx,mdx}',
@@ -17,6 +18,10 @@ module.exports = {
         "accent-3": "#84D2F6",
         "accent-4": "#F4BD83",
         "accent-5": "#386FA5",
+        "accent-6": "#E1E8F4",
+        "accent-7": "#BBC9E1",
+        "accent-8": "#EB8B21",
+        "accent-9": "#1EAAEE",
       },
       fontFamily: {
         prompt: ['var(--prompt-font)', ...fontFamily.sans],

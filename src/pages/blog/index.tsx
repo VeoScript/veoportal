@@ -35,7 +35,7 @@ const Blog = () => {
                       {blogs.map((item: IBlogs) => (
                         <div
                           key={item.id}
-                          className="flex flex-col w-full max-w-md h-auto overflow-hidden bg-[#1B263F]"
+                          className="flex flex-col w-full max-w-md overflow-hidden bg-slate-300 dark:bg-[#1B263F]"
                           data-aos="zoom-in-up"
                         >
                           <Image
@@ -49,9 +49,9 @@ const Blog = () => {
                             placeholder="blur"
                           />
                           <div className="flex flex-col items-start w-full p-5 space-y-5">
-                            <Text font='prompt' weight="bold" color="pink" size="xl">{item.title}</Text>
+                            <h1 className="font-bold text-xl text-black dark:text-accent-3">{item.title}</h1>
                             <ReactMarkdown
-                              className="w-full font-prompt font-light text-base text-white line-clamp-3 break-words"
+                              className="w-full font-prompt font-light text-base text-black dark:text-white line-clamp-3 break-words"
                               remarkPlugins={[remarkGfm]}
                             >
                               {item.article}

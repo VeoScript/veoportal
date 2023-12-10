@@ -1,6 +1,7 @@
 import React from "react";
 import Link from 'next/link'
 import Image from 'next/image'
+import { useTheme } from 'next-themes'
 import { Text } from '~/components/atoms/Text'
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component'
 import 'react-vertical-timeline-component/style.min.css'
@@ -8,9 +9,11 @@ import 'react-vertical-timeline-component/style.min.css'
 import { IExperience } from '~/shared/interfaces'
 import { experiences } from '../../shared/mocks/experiences'
 
-const ExperiencesSection = () => {
+const ExperiencesSection = () => {  
+  const { theme } = useTheme()
+
   return (
-    <div className="flex flex-col items-center justify-center w-full h-full px-5 py-[5rem] border-t border-neutral-800 bg-accent-2">
+    <div className="flex flex-col items-center justify-center w-full h-full px-5 py-[5rem] border-t border-neutral-300 dark:border-neutral-800 bg-accent-7 dark:bg-accent-2">
       <div className="flex flex-col items-center w-full large-break-point:max-w-5xl extra-large-break-point:max-w-7xl space-y-24">
         <div className="flex flex-col items-center w-full">
           <Text
@@ -29,14 +32,14 @@ const ExperiencesSection = () => {
               <VerticalTimelineElement
                 key={index}
                 className="vertical-timeline-element--work"
-                contentStyle={{ background: "#111827", color: "#fff" }}
-                contentArrowStyle={{ borderRight: "7px solid  #111827" }}
+                contentStyle={{ background: theme === 'dark' ? '#111827' : '#E1E8F4', color: theme === 'dark' ? '#fff' : '#000' }}
+                contentArrowStyle={{ borderRight: `7px solid ${theme === 'dark' ? '#111827' : '#E1E8F4'}` }}
                 date={experience.experienceDate}
-                iconStyle={{ background: "#111827", color: "#111827" }}
+                iconStyle={{ background: theme === 'dark' ? '#111827' : '#E1E8F4', color: theme === 'dark' ? '#111827' : '#E1E8F4' }}
                 icon={
                   <Image
                     src={experience.image}
-                    className="w-full h-full p-2 object-fill rounded-full border-2 border-neutral-300 bg-white"
+                    className="w-full h-full p-2 object-fill rounded-full"
                     alt={experience.image}
                     width={100}
                     height={100}
@@ -45,7 +48,7 @@ const ExperiencesSection = () => {
                 }
               >
                 <div className="flex flex-row items-center justify-between w-full">
-                  <h3 className="vertical-timeline-element-title font-bold text-[#F4BD83]">
+                  <h3 className="vertical-timeline-element-title font-bold text-accent-8 dark:text-accent-4">
                     {experience.company}
                   </h3>
                   <Link href={experience.link} target="_blank">

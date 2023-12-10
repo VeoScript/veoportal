@@ -1,10 +1,13 @@
 import React from "react";
 import Image from "next/image";
 import { Text } from "~/components/atoms/Text";
+import { useTheme } from 'next-themes'
 
 const SkillsServicesSection = () => {
+  const { theme } = useTheme()
+
   return (
-    <div className="flex flex-col items-center justify-center w-full h-full md:h-screen px-5 border-t border-neutral-800 bg-accent-1">
+    <div className="flex flex-col items-center justify-center w-full h-full md:h-screen px-5 border-t border-neutral-300 dark:border-neutral-800">
       <div className="flex flex-col items-center w-full large-break-point:max-w-5xl extra-large-break-point:max-w-7xl py-10 md:py-0 space-y-10 md:space-y-24">
         <div className="flex flex-col items-center w-full">
           <Text
@@ -24,7 +27,7 @@ const SkillsServicesSection = () => {
             data-aos-delay="200"
           >
             <Image
-              src="/images/icons/image2.webp"
+              src={theme === 'light' ? "/images/icons/image2-dark.webp" : "/images/icons/image2.webp"}
               className="w-16 md:w-28 h-16 md:h-28 object-cover bg-transparent"
               alt="Web Development"
               width={100}
@@ -46,7 +49,7 @@ const SkillsServicesSection = () => {
             data-aos-delay="400"
           >
             <Image
-              src="/images/icons/image1.webp"
+              src={theme === 'light' ? "/images/icons/image1-dark.webp" : "/images/icons/image1.webp"}
               className="w-16 md:w-28 h-16 md:h-28 object-cover bg-transparent"
               alt="Web Development"
               width={100}
@@ -68,7 +71,7 @@ const SkillsServicesSection = () => {
             data-aos-delay="600"
           >
             <Image
-              src="/images/icons/image4.webp"
+              src={theme === 'light' ? "/images/icons/image4-dark.webp" : "/images/icons/image4.webp"}
               className="w-16 md:w-28 h-16 md:h-28 object-cover bg-transparent"
               alt="Web Development"
               width={100}
