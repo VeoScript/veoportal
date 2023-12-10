@@ -16,7 +16,7 @@ const NavBar = () => {
         <Link href="/" className="flex">
           <Image
             priority
-            src={theme === 'dark' ? "/images/veo.webp" : "/images/veo-dark.webp"}
+            src={theme === 'light' ? "/images/veo-dark.webp" : "/images/veo.webp"}
             className="w-[3rem] h-[2rem] object-cover bg-transparent"
             alt="veoscript"
             width={50}

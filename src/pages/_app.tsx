@@ -53,7 +53,7 @@ export default function App({ Component, pageProps }: AppProps) {
       </style>
       <QueryClientProvider client={queryClient}>
         <NProgress />
-        <ThemeProvider attribute="class">
+        <ThemeProvider enableSystem={false} attribute="class">
           <Component {...pageProps} />
         </ThemeProvider>
       </QueryClientProvider>
