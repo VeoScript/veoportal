@@ -6,19 +6,21 @@ const nextConfig = {
   },
   env: {
     DATABASE_URL: process.env.DATABASE_URL,
-    SQUIDEX_API_URL: process.env.SQUIDEX_API_URL,
-    SQUIDEX_IMAGE_API_URL: process.env.SQUIDEX_IMAGE_API_URL,
-    SQUIDEX_API_TOKEN: process.env.SQUIDEX_API_TOKEN,
-    SQUIDEX_CLIENT_ID: process.env.SQUIDEX_CLIENT_ID,
-    SQUIDEX_CLIENT_SECRET: process.env.SQUIDEX_CLIENT_SECRET,
   },
   images: {
     dangerouslyAllowSVG: true,
-    domains: [
-      'i.ibb.co',
-      'firebasestorage.googleapis.com',
-      'cloud.squidex.io',
-    ]
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'i.ibb.co',
+        pathname: '**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'firebasestorage.googleapis.com',
+        pathname: '**',
+      },
+    ],
   }
 }
 
