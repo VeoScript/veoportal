@@ -1,4 +1,4 @@
-import NextNprogress from 'nextjs-progressbar'
+import NextNprogress from 'nextjs-progressbar';
 
 const NProgress: React.FC = () => {
   return (
@@ -8,9 +8,9 @@ const NProgress: React.FC = () => {
       stopDelayMs={200}
       height={4}
       showOnShallow={true}
-      options={{ easing: 'ease', speed: 500 }}
+      options={{ easing: 'ease', speed: 500, showSpinner: false }}
     />
-  )
-}
+  );
+};
 
-export default NProgress
+export default NProgress;

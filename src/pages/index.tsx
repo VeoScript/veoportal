@@ -51,7 +51,7 @@ const Home = () => {
               <Text font='rock_salt' color='pink' align='center' weight='bold' size='5xl'>Veo</Text>
               <Text font='rock_salt' color='yellow' align='center' weight='bold' size='5xl'>Script</Text>
             </div>
-            <div className="flex flex-col items-center w-full space-y-5">
+            <div className="flex flex-col items-center w-full space-y-10">
               <Text 
                 align='center' 
                 weight='bold' 
@@ -62,7 +62,7 @@ const Home = () => {
                 The Odyssey of a Full-Stack Developer
               </Text>
               <div
-                className="flex flex-col items-center w-full max-w-xl space-y-5"
+                className="flex flex-col items-center w-full max-w-xl space-y-10"
                 data-aos="fade-up"
                 data-aos-delay="600"
               >
