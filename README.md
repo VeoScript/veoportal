@@ -5,14 +5,11 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/veoscript/magaaazine/blob/master/LICENSE">
-    <img alt="GitHub" src="https://img.shields.io/github/license/veoscript/veoportal.svg?color=blue">
+  <a href="https://github.com/VeoScript/veoportal/blob/master/LICENSE">
+    <img alt="GitHub" src="https://img.shields.io/github/license/veoscript/veoportal.svg?color=green">
   </a>
-  <a href="https://github.com/veoscript/magaaazine/releases">
+  <a href="https://github.com/veoscript/veoportal/releases">
     <img alt="GitHub release" src="https://img.shields.io/github/release/veoscript/veoportal.svg">
-  </a>
-  <a href="CODE_OF_CONDUCT.md">
-    <img alt="Contributor Covenant" src="https://img.shields.io/badge/Contributor%20Covenant-2.0-4baaaa.svg">
   </a>
 </p>
 
