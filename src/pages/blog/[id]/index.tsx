@@ -38,11 +38,11 @@ const BlogDetails: React.FC<IProps> = ({ id, blog }) => {
         <title>Blog | {blog.title}</title>
         <meta
           name="description"
-          content="Official website of Jerome Villaruel (VEOSCRIPT)"
+          content={blog?.title}
         />
         <meta name="image" content={`${blog.image}`} />
         <meta name="author" content="Jerome Villaruel" />
-        <meta name="keywords" content="Jerome Villaruel" />
+        <meta name="keywords" content={blog?.title} />
         <meta name="viewport" content="width=device-width, initial-scale-1" />
 
         <meta
@@ -58,7 +58,7 @@ const BlogDetails: React.FC<IProps> = ({ id, blog }) => {
         <meta
           name="description"
           property="og:description"
-          content="Official website of Jerome Villaruel (VEOSCRIPT)"
+          content={blog?.title}
         />
         <meta
           name="secure_url"
@@ -67,13 +67,19 @@ const BlogDetails: React.FC<IProps> = ({ id, blog }) => {
         />
         <meta name="image" property="og:image" content={`${blog.image}`} />
 
+        <meta property="og:url" content={`https://www.jeromevillaruel.cf/blog/${id}`} />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={blog?.title} />
+        <meta property="og:description" content={blog?.title} />
+        <meta property="og:image" content={`${blog.image}`} />
+
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="Jerome Villaruel (Veoscript)" />
         <meta name="twitter:creator" content="Jerome Villaruel" />
         <meta name="twitter:title" content={`${blog.title}`} />
         <meta
           name="twitter:description"
-          content="Official website of Jerome Villaruel (VEOSCRIPT)"
+          content={blog?.title}
         />
         <meta name="twitter:image" content={`${blog.image}`} />
         <meta

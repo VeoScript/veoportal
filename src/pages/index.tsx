@@ -19,25 +19,31 @@ const Home = () => {
     <>
       <Head>
         <title>Jerome Villaruel</title>
-        <meta name="description" content="Official website of Jerome Villaruel (VEOSCRIPT)" />
-        <meta name="image" content="https://i.ibb.co/8MfwSGd/page-image.png" />
+        <meta name="description" content="I'm Jerome Villaruel officially known as Veoscript, a software developer based in Philippines specializing in React, React Native, NextJS, NestJS, RestAPI, GraphQL, tRPC, Prisma, Supabase, and PlanetScale. I enjoy building dynamic web applications and leveraging these technologies to create robust and scalable solutions. Excited to collaborate on innovative projects and contribute to the world of software development." />
+        <meta name="image" content="https://i.ibb.co/xjzLnsv/page-image.png" />
         <meta name="author" content="Jerome Villaruel" />
         <meta name="keywords" content="Jerome Villaruel" />
         <meta name="viewport" content="width=device-width, initial-scale-1" />
         
         <meta name="url" property="og:url" content="https://jeromevillaruel.cf" />
         <meta name="site_name" property="og:site_name" content="Jerome Villaruel (Veoscript)" />
-        <meta name="description" property="og:description" content="Official website of Jerome Villaruel (VEOSCRIPT)" />
-        <meta name="secure_url" property="og:secure_url" content="https://i.ibb.co/8MfwSGd/page-image.png" />
-        <meta name="image" property="og:image" content="https://i.ibb.co/8MfwSGd/page-image.png" />
+        <meta name="description" property="og:description" content="I'm Jerome Villaruel officially known as Veoscript, a software developer based in Philippines specializing in React, React Native, NextJS, NestJS, RestAPI, GraphQL, tRPC, Prisma, Supabase, and PlanetScale. I enjoy building dynamic web applications and leveraging these technologies to create robust and scalable solutions. Excited to collaborate on innovative projects and contribute to the world of software development." />
+        <meta name="secure_url" property="og:secure_url" content="https://i.ibb.co/xjzLnsv/page-image.png" />
+        <meta name="image" property="og:image" content="https://i.ibb.co/xjzLnsv/page-image.png" />
         <meta name="type" property="og:image:type" content="png" />
+
+        <meta property="og:url" content="https://www.jeromevillaruel.cf/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Jerome Villaruel" />
+        <meta property="og:description" content="I'm Jerome Villaruel officially known as Veoscript, a software developer based in Philippines specializing in React, React Native, NextJS, NestJS, RestAPI, GraphQL, tRPC, Prisma, Supabase, and PlanetScale. I enjoy building dynamic web applications and leveraging these technologies to create robust and scalable solutions. Excited to collaborate on innovative projects and contribute to the world of software development." />
+        <meta property="og:image" content="https://i.ibb.co/xjzLnsv/page-image.png" />
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="Jerome Villaruel (Veoscript)" />
         <meta name="twitter:creator" content="Jerome Villaruel" />
         <meta name="twitter:title" content="Jerome Villaruel (Veoscript)" />
-        <meta name="twitter:description" content="Official website of Jerome Villaruel (VEOSCRIPT)" />
-        <meta name="twitter:image" content="https://i.ibb.co/8MfwSGd/page-image.png" />
+        <meta name="twitter:description" content="I'm Jerome Villaruel officially known as Veoscript, a software developer based in Philippines specializing in React, React Native, NextJS, NestJS, RestAPI, GraphQL, tRPC, Prisma, Supabase, and PlanetScale. I enjoy building dynamic web applications and leveraging these technologies to create robust and scalable solutions. Excited to collaborate on innovative projects and contribute to the world of software development." />
+        <meta name="twitter:image" content="https://i.ibb.co/xjzLnsv/page-image.png" />
         <meta name="twitter:domain" content="https://jeromevillaruel.cf" />
       </Head>
       <MainTemplate>
