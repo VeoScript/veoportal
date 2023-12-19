@@ -38,11 +38,11 @@ const BlogDetails: React.FC<IProps> = ({ id, blog }) => {
         <title>Blog | {blog.title}</title>
         <meta
           name="description"
-          content="Official website of Jerome Villaruel (VEOSCRIPT)"
+          content={blog?.title}
         />
         <meta name="image" content={`${blog.image}`} />
         <meta name="author" content="Jerome Villaruel" />
-        <meta name="keywords" content="Jerome Villaruel" />
+        <meta name="keywords" content={blog?.title} />
         <meta name="viewport" content="width=device-width, initial-scale-1" />
 
         <meta
@@ -58,7 +58,7 @@ const BlogDetails: React.FC<IProps> = ({ id, blog }) => {
         <meta
           name="description"
           property="og:description"
-          content="Official website of Jerome Villaruel (VEOSCRIPT)"
+          content={blog?.title}
         />
         <meta
           name="secure_url"
@@ -73,7 +73,7 @@ const BlogDetails: React.FC<IProps> = ({ id, blog }) => {
         <meta name="twitter:title" content={`${blog.title}`} />
         <meta
           name="twitter:description"
-          content="Official website of Jerome Villaruel (VEOSCRIPT)"
+          content={blog?.title}
         />
         <meta name="twitter:image" content={`${blog.image}`} />
         <meta
