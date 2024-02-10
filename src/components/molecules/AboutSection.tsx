@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
-import Image from 'next/image'
-import { Text } from '~/components/atoms/Text'
+import Image from "next/legacy/image";
+import { Text } from "~/components/atoms/Text";
 import { Facebook, Twitter, Github, LinkedIn, Magaaazine } from "~/utils/Icons";
 
 const AboutSection = () => {
@@ -13,14 +13,18 @@ const AboutSection = () => {
           data-aos="fade-right"
           data-aos-delay="200"
         >
-          <Image
-            src="/images/jeromevillaruel.png"
-            className="w-full md:w-[20rem] h-[20rem] object-cover rounded-none md:rounded-ss-[5rem] md:rounded-ee-[5rem] bg-white"
-            alt="veoscript"
-            width={500}
-            height={500}
-            quality={100}
-          />
+          <div className="relative overflow-hidden rounded-none md:rounded-ss-[5rem] md:rounded-ee-[5rem]">
+            <Image
+              src="/images/jeromevillaruel.png"
+              className="w-full md:w-[20rem] h-[20rem] object-cover bg-white dark:bg-accent-1"
+              alt="veoscript"
+              width={500}
+              height={500}
+              quality={100}
+              placeholder="blur"
+              blurDataURL="/images/jeromevillaruel.png"
+            />
+          </div>
         </div>
         <div
           className="flex flex-col items-start w-full px-5 md:px-0 py-5 md:py-3 space-y-10"
