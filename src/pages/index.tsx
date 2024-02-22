@@ -128,7 +128,7 @@ const Home = () => {
                 data-aos="zoom-in"
                 data-aos-delay="400"
               >
-                The Odyssey of a Full-Stack Developer
+                The Odyssey of a Software Developer
               </Text>
               <div
                 className="flex flex-col items-center w-full max-w-xl space-y-10"
