@@ -13,7 +13,7 @@ const AboutSection = () => {
           data-aos="fade-right"
           data-aos-delay="200"
         >
-          <div className="relative overflow-hidden rounded-none md:rounded-ss-[5rem] md:rounded-ee-[5rem]">
+          <div className="relative flex flex-row items-center justify-center object-cover overflow-hidden rounded-none md:rounded-ss-[5rem] md:rounded-ee-[5rem]">
             <Image
               src="/images/jeromevillaruel.png"
               className="w-full md:w-[20rem] h-[20rem] object-cover bg-white dark:bg-accent-1"
