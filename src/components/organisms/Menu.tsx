@@ -122,7 +122,7 @@ const Menu = () => {
           <Link
             title="Admin Panel"
             className={`${isCollapse ? "block" : "hide"}`}
-            href="https://veoportal-admin.vercel.app/"
+            href="https://jeromevillaruel.online/"
             target="_blank"
             onClick={() => setIsCollapse(false)}
           >
