@@ -9,7 +9,7 @@ const NavBar = () => {
   const [isCollapse, setIsCollapse] = useState<boolean>(false);
 
   return (
-    <div className="absolute md:fixed top-0 left-0 md:left-20 z-20 flex flex-col md:flex-row items-center justify-between w-full p-5 space-y-5 md:space-y-0 backdrop-blur-sm md:backdrop-blur-xl bg-accent-6 dark:bg-accent-1 bg-opacity-50">
+    <div className="absolute md:fixed top-0 left-0 md:left-20 z-20 flex flex-col md:flex-row items-center justify-between w-full p-5 space-y-5 md:space-y-0 backdrop-blur-sm md:backdrop-blur-xl bg-accent-6 dark:bg-accent-1 bg-opacity-50 dark:bg-opacity-50">
       <div className="flex flex-row items-center justify-between w-full">
         <Link href="/" className="flex">
           <Image
