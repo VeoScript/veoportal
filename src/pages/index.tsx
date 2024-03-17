@@ -6,6 +6,7 @@ import { Text } from "~/components/atoms/Text";
 import { Button } from "~/components/atoms/Button";
 
 import { useLazyLoadOnScroll } from "~/helpers/hooks/useLazyLoadOnScroll";
+import { useGetUser } from "~/helpers/tanstack/queries/user";
 
 const AboutSection = dynamic(
   () => import("~/components/molecules/AboutSection"),
@@ -26,6 +27,8 @@ const TechStacksSection = dynamic(
 
 const Home = () => {
   const isLazyLoad = useLazyLoadOnScroll();
+
+  const { data: user, isLoading: isLoadingUser } = useGetUser();
 
   return (
     <>
@@ -96,6 +99,21 @@ const Home = () => {
       <MainTemplate>
         <div className="flex flex-col items-center justify-center w-full h-screen">
           <div className="flex flex-col items-center w-full max-w-full mt-10 px-5 md:px-0 space-y-10">
+            {!isLoadingUser && user.isOpenToWork && (
+              <caption
+                className="relative px-3 py-2 text-sm rounded-xl border-2 border-green-600 text-accent-2 bg-green-400"
+                data-aos="zoom-in"
+                data-aos-delay="800"
+              >
+                <span className="absolute -top-3 -left-5 text-[2rem] -rotate-45">
+                  🎊
+                </span>
+                Open to Work!
+                <span className="absolute -top-3 -right-5 text-[2rem] rotate-45">
+                  🎊
+                </span>
+              </caption>
+            )}
             <div
               className="flex items-center justify-center w-full"
               data-aos="zoom-in"
