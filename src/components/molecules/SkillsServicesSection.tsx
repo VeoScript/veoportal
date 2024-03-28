@@ -1,8 +1,12 @@
 import React from "react";
 import Image from "next/image";
+import { useTheme } from "next-themes";
+
 import { Text } from "~/components/atoms/Text";
 
 const SkillsServicesSection = () => {
+  const { theme } = useTheme();
+
   return (
     <div className="flex flex-col items-center justify-center w-full h-full md:h-screen px-5 border-t border-neutral-300 dark:border-neutral-800">
       <div className="flex flex-col items-center w-full large-break-point:max-w-5xl extra-large-break-point:max-w-7xl py-10 md:py-0 space-y-10 md:space-y-24">
@@ -24,8 +28,12 @@ const SkillsServicesSection = () => {
             data-aos-delay="200"
           >
             <Image
-              src="/images/icons/svg/website.svg"
-              className="w-28 md:w-44 h-28 md:h-44 object-contain bg-transparent"
+              src={
+                theme === "light"
+                  ? "/images/icons/image2-dark.webp"
+                  : "/images/icons/image2.webp"
+              }
+              className="w-28 md:w-38 h-28 md:h-38 mb-5 object-contain bg-transparent"
               alt="Web Development"
               width={100}
               height={100}
@@ -43,11 +51,15 @@ const SkillsServicesSection = () => {
           <div
             className="flex flex-col items-center w-full space-y-3"
             data-aos="fade-up"
-            data-aos-delay="400"
+            data-aos-delay="380"
           >
             <Image
-              src="/images/icons/svg/programming.svg"
-              className="w-28 md:w-44 h-28 md:h-44 object-contain bg-transparent"
+              src={
+                theme === "light"
+                  ? "/images/icons/image1-dark.webp"
+                  : "/images/icons/image1.webp"
+              }
+              className="w-28 md:w-38 h-28 md:h-38 mb-5 object-contain bg-transparent"
               alt="Software Development"
               width={100}
               height={100}
@@ -68,8 +80,12 @@ const SkillsServicesSection = () => {
             data-aos-delay="600"
           >
             <Image
-              src="/images/icons/svg/maintenance.svg"
-              className="w-28 md:w-44 h-28 md:h-44 object-contain bg-transparent"
+              src={
+                theme === "light"
+                  ? "/images/icons/image4-dark.webp"
+                  : "/images/icons/image4.webp"
+              }
+              className="w-28 md:w-38 h-28 md:h-38 mb-5 object-contain bg-transparent"
               alt="I.T. Networking"
               width={100}
               height={100}
