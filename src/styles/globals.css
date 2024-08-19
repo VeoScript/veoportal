@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .custom-button-white {
+    @apply rounded-full bg-default-white text-center font-semibold text-default-black transition duration-300 ease-in-out hover:opacity-70;
+  }
+  .custom-button-black {
+    @apply rounded-full bg-default-black text-center font-semibold text-default-white transition duration-300 ease-in-out hover:opacity-70;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
