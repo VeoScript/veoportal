@@ -9,6 +9,12 @@
   .custom-button-black {
     @apply rounded-full bg-default-black text-center font-semibold text-default-white transition duration-300 ease-in-out hover:opacity-70;
   }
+  .custom-button-gray {
+    @apply rounded-full bg-default-gray text-center font-semibold text-default-black transition duration-300 ease-in-out hover:opacity-70;
+  }
+  .custom-button-dim-gray {
+    @apply bg-default-dim-black rounded-full text-center font-semibold text-default-white transition duration-300 ease-in-out hover:opacity-70;
+  }
 }
 
 @layer utilities {

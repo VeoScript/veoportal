@@ -27,7 +27,7 @@ const AboutMe = (): JSX.Element => {
         <span className="font-bold text-violet-500">desktop</span>, and{" "}
         <span className="font-bold text-orange-600">mobile</span> applications.
       </h1>
-      <Link href="/" className="custom-button-black px-10 py-4 text-xs">
+      <Link href="/" className="custom-button-black dark:custom-button-dim-gray px-10 py-4 text-xs">
         View Portfolio
       </Link>
     </div>
