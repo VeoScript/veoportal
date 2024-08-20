@@ -50,7 +50,7 @@ export default function RootLayout({
       <body
         className={clsx(
           raleway.variable,
-          "overflow-x-hidden bg-default-white font-raleway text-default-black selection:bg-slate-300",
+          "dark:bg-default-dim-black overflow-x-hidden bg-default-white font-raleway text-default-black selection:bg-slate-300 dark:text-default-white",
         )}
       >
         <Toaster position="bottom-center" />

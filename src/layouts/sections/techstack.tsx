@@ -5,7 +5,7 @@ import { techstacks } from "~/constants/techstacks";
 
 const TechStack = (): JSX.Element => {
   return (
-    <div className="z-10 flex w-full flex-col items-center overflow-hidden rounded-b-[7rem] border-b border-neutral-200 bg-default-white px-1 py-[5rem]">
+    <div className="dark:bg-default-dim-black z-10 flex w-full flex-col items-center overflow-hidden rounded-b-[7rem] border-b border-neutral-200 bg-default-white px-1 py-[5rem] dark:border-neutral-700">
       <div className="flex w-full items-center justify-center overflow-hidden">
         <div className="flex animate-marquee whitespace-nowrap">
           <div className="flex items-center justify-center gap-x-[1rem] md:gap-x-[3rem]">
@@ -18,7 +18,7 @@ const TechStack = (): JSX.Element => {
               >
                 <Image
                   priority={false}
-                  className="h-full w-full bg-default-white object-cover"
+                  className="dark:bg-default-dim-black h-full w-full bg-default-white object-cover"
                   src={item.img}
                   alt={item.alt}
                   width={50}
@@ -38,7 +38,7 @@ const TechStack = (): JSX.Element => {
               >
                 <Image
                   priority={false}
-                  className="h-full w-full bg-default-white object-cover"
+                  className="dark:bg-default-dim-black h-full w-full bg-default-white object-cover"
                   src={item.img}
                   alt={item.alt}
                   width={50}
