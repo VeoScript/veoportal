@@ -19,6 +19,7 @@ const config: Config = {
     extend: {
       colors: {
         "default-black": "#242424",
+        "default-dim-black": "#383838",
         "default-white": "#FFFFFE",
         "default-ghost-white": "#F1F0EF",
         "default-gray": "#CBC8C5",
