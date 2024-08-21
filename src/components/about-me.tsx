@@ -13,12 +13,12 @@ const AboutMe = (): JSX.Element => {
       <div className="relative flex w-full justify-center">
         <ProfileHolder src="/images/jeromevillaruel.webp" />
         <span className="absolute left-[58%] top-14 z-10 -rotate-12">
-          <span className="dark:bg-default-dim-black flex animate-bounce rounded-full bg-default-white bg-opacity-80 p-3 text-center text-xs font-semibold dark:bg-opacity-80">
+          <span className="flex animate-bounce rounded-full bg-default-white bg-opacity-80 p-3 text-center text-xs font-semibold dark:bg-default-dim-black dark:bg-opacity-80">
             Jerome Villaruel 👋
           </span>
         </span>
       </div>
-      <div className="flex w-full flex-col items-center gap-y-3">
+      <div className="flex w-full flex-col items-center gap-y-1">
         <VoicePronounciation pronounceText={pronounceText} />
         <p>Also known as Veoscript</p>
       </div>

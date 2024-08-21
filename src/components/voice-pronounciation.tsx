@@ -27,7 +27,7 @@ const VoicePronounciation = ({ pronounceText }: Props): JSX.Element => {
 
   return (
     <div className="flex items-center gap-x-2">
-      <h2 className="text-sm font-bold">{`/${pronounceText}/`}</h2>
+      <h2 className="font-bold">{`/${pronounceText}/`}</h2>
       <button
         title="Click to speak"
         aria-label="Speak my pronounciation"
