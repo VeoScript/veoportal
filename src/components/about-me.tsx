@@ -4,6 +4,7 @@ import Link from "next/link";
 
 import ProfileHolder from "./profile-holder";
 import VoicePronounciation from "./voice-pronounciation";
+import PortfolioModal from "./portfolio-modal";
 
 const AboutMe = (): JSX.Element => {
   const pronounceText = "vee-oh-skript";
@@ -18,7 +19,7 @@ const AboutMe = (): JSX.Element => {
           </span>
         </span>
       </div>
-      <div className="flex w-full flex-col items-center gap-y-1">
+      <div className="flex w-full flex-col items-center gap-y-2">
         <VoicePronounciation pronounceText={pronounceText} />
         <p>Also known as Veoscript</p>
       </div>
@@ -27,9 +28,7 @@ const AboutMe = (): JSX.Element => {
         <span className="font-bold text-violet-500">desktop</span>, and{" "}
         <span className="font-bold text-orange-600">mobile</span> applications.
       </h1>
-      <Link href="/" className="custom-button-black dark:custom-button-dim-gray px-10 py-4 text-xs">
-        View Portfolio
-      </Link>
+      <PortfolioModal />
     </div>
   );
 };
