@@ -26,9 +26,10 @@ const VoicePronounciation = ({ pronounceText }: Props): JSX.Element => {
   }, []);
 
   return (
-    <div className="flex items-center gap-x-2">
+    <div className="relative flex items-center gap-x-2">
       <h2 className="font-bold">{`/${pronounceText}/`}</h2>
       <button
+        className="absolute -right-5"
         title="Click to speak"
         aria-label="Speak my pronounciation"
         onClick={handlePronounceText}
