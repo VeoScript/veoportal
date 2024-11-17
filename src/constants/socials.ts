@@ -16,8 +16,8 @@ export const socialLinks: SocialList[] = [
     name: "Instagram",
     link: "https://www.instagram.com/veoscript",
   },
-  {
-    name: "Magaaazine",
-    link: "https://www.magaaazine.online/veoscript",
-  },
+  // {
+  //   name: "Magaaazine",
+  //   link: "https://magaaazine.vercel.app/veoscript",
+  // },
 ];
