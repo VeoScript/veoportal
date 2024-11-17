@@ -53,7 +53,7 @@ export default function RootLayout({
           "overflow-x-hidden bg-default-white font-raleway text-default-black selection:bg-slate-300 dark:bg-default-dim-black dark:text-default-white dark:selection:bg-slate-700",
         )}
       >
-        <Toaster position="bottom-center" />
+        <Toaster richColors position="top-right" />
         {children}
       </body>
     </html>

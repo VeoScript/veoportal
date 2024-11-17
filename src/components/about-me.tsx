@@ -1,7 +1,5 @@
 "use client";
 
-import Link from "next/link";
-
 import ProfileHolder from "./profile-holder";
 import VoicePronounciation from "./voice-pronounciation";
 import PortfolioModal from "./portfolio-modal";
