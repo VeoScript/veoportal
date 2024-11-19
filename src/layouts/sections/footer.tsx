@@ -23,7 +23,7 @@ const Footer = (): JSX.Element | null => {
             <HandShakeIcon />
           </div>
           <h3 className="text-center text-[2rem] font-bold leading-10 md:text-[3rem] md:leading-[3rem]">
-            Tell me about your next <span className="text-blue-600">project</span>
+            Tell me about your next projects
           </h3>
           <div className="flex w-full flex-col items-center justify-center gap-x-2 gap-y-3 md:flex-row md:gap-y-0">
             <Link href={`mailto:${myEmail}`} target="_blank" passHref className="w-full md:w-auto">
