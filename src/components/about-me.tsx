@@ -18,6 +18,7 @@ const AboutMe = (): JSX.Element => {
         </span>
       </div>
       <div className="flex w-full flex-col items-center gap-y-2">
+        <h1 className="text-xl font-bold text-neutral-400">Software Developer</h1>
         <VoicePronounciation pronounceText={pronounceText} />
         <p>Also known as Veoscript</p>
       </div>
