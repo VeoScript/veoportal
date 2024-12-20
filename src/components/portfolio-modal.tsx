@@ -48,7 +48,7 @@ const PortfolioModal = (): JSX.Element => {
       >
         <div className="fixed inset-0 z-50 w-screen overflow-hidden bg-default-white bg-opacity-80 backdrop-blur-md md:overflow-y-auto md:backdrop-blur-sm dark:bg-default-black dark:bg-opacity-80 dark:backdrop-blur-md">
           <div className="flex min-h-full items-center justify-center p-0 md:p-4">
-            <DialogPanel className="relative h-screen w-full max-w-[50rem] overflow-y-auto rounded-none bg-none p-0 md:h-full md:rounded-xl md:bg-default-ghost-white md:p-4 dark:bg-none md:dark:bg-default-dim-black">
+            <DialogPanel className="relative h-screen w-full max-w-[70rem] overflow-y-auto rounded-none bg-none p-0 md:h-full md:rounded-xl md:bg-default-ghost-white md:p-4 dark:bg-none md:dark:bg-default-dim-black">
               <Button
                 title="Previous"
                 aria-label="Previous"
@@ -75,7 +75,7 @@ const PortfolioModal = (): JSX.Element => {
                       className="w-full"
                     >
                       <Image
-                        className="mb-5 h-[20rem] w-full rounded-none bg-neutral-300 object-contain md:h-[30rem] md:rounded-xl dark:bg-neutral-700"
+                        className="mb-5 h-[20rem] w-full rounded-none bg-neutral-300 object-contain md:h-[60vh] md:rounded-xl dark:bg-neutral-700"
                         src={src}
                         alt={title}
                         priority
