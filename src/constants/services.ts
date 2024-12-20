@@ -29,6 +29,6 @@ export const services: ServicesList[] = [
     alt: "I.T. Networking",
     title: "I.T. Networking",
     description:
-      "Handle network topology, network security, microservices, database adminisitrator, computer maintenance, and Local Area Network.",
+      "Manage network topology, network security, microservices, database administration, computer maintenance, and Local Area Network (LAN) operations.",
   },
 ];
