@@ -50,7 +50,7 @@ const Footer = (): JSX.Element | null => {
           </div>
         </div>
         <div className="flex w-full flex-col items-center justify-between gap-y-3 border-t border-neutral-200 pb-16 pt-10 md:flex-row md:gap-y-0 dark:border-neutral-700">
-          <p className="text-sm font-semibold">&copy; 2024 All rights reserved.</p>
+          <p className="text-sm font-semibold">&copy; 2025 All rights reserved.</p>
           <SocialNavs />
         </div>
       </div>
