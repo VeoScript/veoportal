@@ -10,7 +10,7 @@ const AboutMe = (): JSX.Element => {
   return (
     <div className="mt-[3rem] flex h-full w-full max-w-xl flex-col items-center justify-center gap-y-10 md:mt-0">
       <div className="relative flex w-full justify-center">
-        <ProfileHolder src="/images/jeromevillaruel_v1.webp" />
+        <ProfileHolder src="/images/jeromevillaruel_v2.webp" />
         <span className="absolute left-[58%] top-14 z-10 -rotate-12">
           <span className="flex animate-bounce rounded-full bg-default-white bg-opacity-80 p-3 text-center text-xs font-semibold dark:bg-default-dim-black dark:bg-opacity-80">
             Jerome Villaruel 👋
