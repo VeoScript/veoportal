@@ -16,6 +16,11 @@ export const techstacks: TechStackList[] = [
     link: "https://nextjs.org/",
   },
   {
+    img: "/images/techstacks/expo.png",
+    alt: "Expo",
+    link: "https://expo.dev/",
+  },
+  {
     img: "/images/techstacks/vuejs.png",
     alt: "Vue JS",
     link: "https://vuejs.org/",
@@ -51,6 +56,11 @@ export const techstacks: TechStackList[] = [
     link: "https://nestjs.com/",
   },
   {
+    img: "/images/techstacks/golang.png",
+    alt: "Go Lang",
+    link: "https://go.dev/",
+  },
+  {
     img: "/images/techstacks/graphql.png",
     alt: "GraphQL",
     link: "https://graphql.org/",
@@ -59,6 +69,11 @@ export const techstacks: TechStackList[] = [
     img: "/images/techstacks/prismaorm.png",
     alt: "Prisma",
     link: "https://www.prisma.io/",
+  },
+  {
+    img: "/images/techstacks/drizzle.png",
+    alt: "Drizzle",
+    link: "https://orm.drizzle.team/",
   },
   {
     img: "/images/techstacks/supabase.png",
