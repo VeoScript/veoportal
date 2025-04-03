@@ -88,17 +88,7 @@ const Services = (): JSX.Element | null => {
                 </p>
               </div>
             </div>
-            <div className="-mt-10 flex w-full flex-col-reverse items-center justify-between gap-10 px-3 md:flex-row md:items-center md:px-0">
-              <div className="flex h-auto w-full flex-col md:h-[35rem]">
-                <Image
-                  className="h-auto w-auto object-cover"
-                  src="/images/promotions/pandan.webp"
-                  alt="Pandan POS"
-                  width={250}
-                  height={250}
-                  quality={50}
-                />
-              </div>
+            <div className="-mt-10 flex w-full flex-col items-center justify-between gap-10 px-3 md:flex-row md:items-center md:px-0">
               <div className="flex flex-col items-center gap-y-5 text-center md:items-start md:text-left">
                 <div className="flex flex-col items-center gap-3 md:flex-row">
                   <Image
@@ -137,6 +127,16 @@ const Services = (): JSX.Element | null => {
                     quality={50}
                   />
                 </Link>
+              </div>
+              <div className="flex h-auto w-full flex-col md:h-[35rem]">
+                <Image
+                  className="h-auto w-auto object-cover"
+                  src="/images/promotions/pandan.webp"
+                  alt="Pandan POS"
+                  width={250}
+                  height={250}
+                  quality={50}
+                />
               </div>
             </div>
           </>
