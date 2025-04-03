@@ -1,11 +1,14 @@
 "use client";
 
+import Link from "next/link";
 import Image from "next/image";
 
 import { services } from "~/constants/services";
 import { experiences } from "~/constants/experiences";
 import { useTheme } from "~/hooks/use-theme";
 import { useLazyLoadOnScroll } from "~/hooks/use-lazyload-on-scroll";
+
+const HAS_PROMOTION = process.env.PROMOTION_FLAG === "true" ? true : false;
 
 const Services = (): JSX.Element | null => {
   const theme = useTheme();
@@ -33,8 +36,8 @@ const Services = (): JSX.Element | null => {
           {services.map((item, index) => (
             <div key={index} className="flex w-full flex-col items-center gap-y-5 md:items-start">
               <Image
-                className="h-[2.5rem] w-[2.5rem] object-cover"
-                src={theme === "dark" ? item.src : item.scrDark}
+                className="h-[5rem] w-auto object-cover"
+                src={theme === "dark" ? item.src : item.srcDark || item.src}
                 alt={item.alt}
                 width={10}
                 height={10}
@@ -61,12 +64,12 @@ const Services = (): JSX.Element | null => {
             return (
               <div key={index} className="flex flex-col items-center gap-y-1">
                 <Image
-                  className="object-cover"
+                  className="h-[2rem] w-auto object-cover"
                   src={item.src}
                   alt={item.company}
                   width={100}
                   height={100}
-                  quality={50}
+                  quality={100}
                 />
                 <p className="text-[10px] text-neutral-400">{item.experienceDate}</p>
                 <h3 className="text-sm">{item.position}</h3>
@@ -74,6 +77,70 @@ const Services = (): JSX.Element | null => {
             );
           })}
         </div>
+
+        {HAS_PROMOTION && (
+          <>
+            <div className="relative w-full">
+              <span className="absolute w-full border border-neutral-200 dark:border-neutral-700" />
+              <div className="absolute -top-5 z-10 flex w-full flex-row items-center justify-center">
+                <p className="flex w-[10rem] -rotate-12 justify-center rounded-full border border-neutral-200 bg-default-white px-10 py-4 text-sm font-semibold dark:border-neutral-500 dark:bg-default-dim-black">
+                  Promotion
+                </p>
+              </div>
+            </div>
+            <div className="-mt-10 flex w-full flex-col-reverse items-center justify-between gap-10 px-3 md:flex-row md:items-center md:px-0">
+              <div className="flex h-auto w-full flex-col md:h-[35rem]">
+                <Image
+                  className="h-auto w-auto object-cover"
+                  src="/images/promotions/pandan.webp"
+                  alt="Pandan POS"
+                  width={250}
+                  height={250}
+                  quality={50}
+                />
+              </div>
+              <div className="flex flex-col items-center gap-y-5 text-center md:items-start md:text-left">
+                <div className="flex flex-col items-center gap-3 md:flex-row">
+                  <Image
+                    className="h-[5rem] w-[5rem] rounded-xl object-cover"
+                    src="/images/promotions/pandan-logo.webp"
+                    alt="Pandan POS"
+                    width={100}
+                    height={100}
+                    quality={50}
+                  />
+                  <span className="flex flex-col">
+                    <h2 className="text-[2rem] font-bold">Introducing Pandan POS</h2>
+                    <h3 className="text-[1rem] font-semibold text-neutral-500 dark:text-neutral-400">
+                      Your pocket POS
+                    </h3>
+                  </span>
+                </div>
+                <p>
+                  Take your business anywhere with Pandan POS, the ultimate offline point-of-sale
+                  system designed for small businesses, entrepreneurs, and mobile vendors. Whether
+                  you run a retail shop, food stall, or service-based business, Pandan POS helps you
+                  manage sales, orders and track inventory—all without needing an internet
+                  connection!
+                </p>
+                <Link
+                  className="transition duration-200 ease-in-out hover:opacity-50"
+                  href="https://play.google.com/store/apps/details?id=com.veoscript.PandanPOS"
+                  target="_blank"
+                >
+                  <Image
+                    className="h-auto w-auto object-cover"
+                    src="/images/promotions/google-play-button.webp"
+                    alt="Google Play Button"
+                    width={100}
+                    height={100}
+                    quality={50}
+                  />
+                </Link>
+              </div>
+            </div>
+          </>
+        )}
       </div>
     </div>
   );

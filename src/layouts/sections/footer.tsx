@@ -17,7 +17,7 @@ const Footer = (): JSX.Element | null => {
 
   return (
     <footer className="flex w-full bg-default-ghost-white dark:bg-default-black">
-      <div className="flex w-full flex-col items-center rounded-t-[7rem] bg-default-white px-[5rem] dark:bg-default-dim-black">
+      <div className="flex w-full flex-col items-center rounded-t-[3rem] bg-default-white px-[5rem] md:rounded-t-[7rem] dark:bg-default-dim-black">
         <div className="flex w-full max-w-md flex-col items-center gap-y-[2rem] py-[5rem] md:gap-y-[3rem]">
           <div className="rounded-full bg-default-ghost-white p-5 dark:bg-default-black">
             <HandShakeIcon />
