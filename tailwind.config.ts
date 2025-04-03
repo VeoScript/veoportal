@@ -30,7 +30,7 @@ const config: Config = {
       keyframes: {
         marquee: {
           "0%": { transform: "translateX(0%)" },
-          "100%": { transform: "translateX(-20%)" },
+          "100%": { transform: "translateX(-30%)" },
         },
       },
       animation: {
