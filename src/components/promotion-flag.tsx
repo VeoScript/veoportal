@@ -5,10 +5,9 @@ import Image from "next/image";
 
 function PromotionFlag() {
   return (
-    <div className="absolute top-0 z-30 w-full bg-blue-300 p-1">
+    <div className="absolute top-0 z-30 w-full bg-neutral-300 p-1 dark:bg-default-dim-black">
       <div className="flex flex-row items-center justify-center gap-x-1">
-        <p className="text-[0.7rem] text-black md:text-xs">Promotion:</p>
-        <p className="text-[0.8rem] font-semibold text-blue-600 md:text-sm">
+        <p className="text-[0.8rem] font-semibold text-neutral-700 md:text-sm dark:text-neutral-100">
           Introducing Pandan POS
         </p>
         <Link
