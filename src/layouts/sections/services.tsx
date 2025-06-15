@@ -89,7 +89,7 @@ const Services = (): JSX.Element | null => {
               </div>
             </div>
             <div className="-mt-10 flex w-full flex-col items-center justify-between gap-10 px-3 md:flex-row md:items-center md:px-0">
-              <div className="flex flex-col items-center gap-y-5 text-center md:items-start md:text-left">
+              <div className="flex w-full flex-col items-center gap-y-5 text-center md:items-start md:text-left">
                 <div className="flex flex-col items-center gap-3 md:flex-row">
                   <Image
                     className="h-[5rem] w-[5rem] rounded-xl object-cover"
@@ -128,14 +128,14 @@ const Services = (): JSX.Element | null => {
                   />
                 </Link>
               </div>
-              <div className="flex h-auto w-full flex-col md:h-[35rem]">
+              <div className="flex h-auto w-full flex-col">
                 <Image
-                  className="h-auto w-auto object-cover"
-                  src="/images/promotions/pandan.webp"
+                  className="h-full w-auto object-cover"
+                  src="/images/promotions/pandan-phones.webp"
                   alt="Pandan POS"
-                  width={250}
-                  height={250}
-                  quality={50}
+                  width={828}
+                  height={1170}
+                  quality={100}
                 />
               </div>
             </div>
