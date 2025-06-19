@@ -8,6 +8,14 @@ export type ProjectList = {
 
 export const projects: ProjectList[] = [
   {
+    src: "/images/projects/pandan-pos.webp",
+    title: "Pandan POS",
+    description:
+      "Take your business anywhere with Pandan POS, the ultimate offline point-of-sale system designed for small businesses, entrepreneurs, and mobile vendors. Whether you run a retail shop, food stall, or service-based business, Pandan POS helps you manage sales, orders and track inventory—all without needing an internet connection!",
+    sourceCode: "https://github.com/VeoScript/pandan-pos",
+    demo: "https://play.google.com/store/apps/details?id=com.veoscript.PandanPOS",
+  },
+  {
     src: "/images/projects/magaaazine.webp",
     title: "Magaaazine",
     description:
