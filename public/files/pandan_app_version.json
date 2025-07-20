@@ -1,10 +1,10 @@
 {
   "android": {
-    "version": "1.7.0",
+    "version": "1.7.1",
     "mustUpdate": true
   },
   "ios": {
-    "version": "1.7.0",
+    "version": "1.7.1",
     "mustUpdate": true
   }
 }
