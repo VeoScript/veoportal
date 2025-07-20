@@ -1,11 +1,11 @@
 import { NextResponse } from "next/server";
+import { promises as fs } from "fs";
+import path from "path";
 
 export async function GET() {
-  const baseUrl =
-    process.env.NODE_ENV === "production" ? process.env.PROD_URL : process.env.DEV_URL;
+  const filePath = path.join(process.cwd(), "public", "files", "pandan_app_version.json");
+  const fileContents = await fs.readFile(filePath, "utf-8");
+  const jsonData = JSON.parse(fileContents);
 
-  const res = await fetch(`${baseUrl}/files/pandan_app_version.json`);
-  const json = await res.json();
-
-  return NextResponse.json(json);
+  return NextResponse.json(jsonData);
 }
