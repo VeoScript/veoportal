@@ -113,20 +113,36 @@ const Services = (): JSX.Element | null => {
                   manage sales, orders and track inventory—all without needing an internet
                   connection!
                 </p>
-                <Link
-                  className="transition duration-200 ease-in-out hover:opacity-50"
-                  href="https://play.google.com/store/apps/details?id=com.veoscript.PandanPOS"
-                  target="_blank"
-                >
-                  <Image
-                    className="h-auto w-auto object-cover"
-                    src="/images/promotions/google-play-button.webp"
-                    alt="Google Play Button"
-                    width={100}
-                    height={100}
-                    quality={50}
-                  />
-                </Link>
+                <div className="flex flex-row items-center gap-x-2">
+                  <Link
+                    className="flex h-[2rem] w-auto items-center gap-x-2 transition duration-200 ease-in-out hover:opacity-50"
+                    href="https://www.facebook.com/profile.php?id=61577619353457"
+                    target="_blank"
+                  >
+                    <Image
+                      className="h-[2rem] w-[2rem] object-cover"
+                      src="/images/svgs/facebook.svg"
+                      alt="Follow us on facebook button"
+                      width={100}
+                      height={100}
+                      quality={100}
+                    />
+                  </Link>
+                  <Link
+                    className="transition duration-200 ease-in-out hover:opacity-50"
+                    href="https://play.google.com/store/apps/details?id=com.veoscript.PandanPOS"
+                    target="_blank"
+                  >
+                    <Image
+                      className="h-auto w-auto object-cover"
+                      src="/images/promotions/google-play-button.webp"
+                      alt="Google Play Button"
+                      width={100}
+                      height={100}
+                      quality={50}
+                    />
+                  </Link>
+                </div>
               </div>
               <div className="flex h-auto w-full flex-col">
                 <Image
