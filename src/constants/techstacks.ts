@@ -46,6 +46,11 @@ export const techstacks: TechStackList[] = [
     link: "https://tauri.app/",
   },
   {
+    img: "/images/techstacks/electronjs.png",
+    alt: "Electron",
+    link: "https://www.electronjs.org/",
+  },
+  {
     img: "/images/techstacks/ionic.png",
     alt: "Ionic",
     link: "https://ionicframework.com/",
@@ -54,6 +59,11 @@ export const techstacks: TechStackList[] = [
     img: "/images/techstacks/nestjs.png",
     alt: "Nest JS",
     link: "https://nestjs.com/",
+  },
+  {
+    img: "/images/techstacks/honojs.png",
+    alt: "HonoJS",
+    link: "https://hono.dev/",
   },
   {
     img: "/images/techstacks/golang.png",
