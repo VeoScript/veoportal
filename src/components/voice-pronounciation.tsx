@@ -2,9 +2,10 @@ import { useEffect } from "react";
 
 type Props = {
   pronounceText: string;
+  textClassName?: string;
 };
 
-const VoicePronounciation = ({ pronounceText }: Props): JSX.Element => {
+const VoicePronounciation = ({ pronounceText, textClassName }: Props): JSX.Element => {
   const handlePronounceText = () => {
     const utterance = new SpeechSynthesisUtterance(pronounceText);
 
@@ -27,7 +28,7 @@ const VoicePronounciation = ({ pronounceText }: Props): JSX.Element => {
 
   return (
     <div className="relative flex items-center gap-x-2">
-      <h2 className="font-bold">{`/${pronounceText}/`}</h2>
+      <h2 className={textClassName}>{`/${pronounceText}/`}</h2>
       <button
         className="absolute -right-5"
         title="Click to speak"
