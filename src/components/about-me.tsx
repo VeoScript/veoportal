@@ -3,6 +3,7 @@
 import ProfileHolder from "./profile-holder";
 import VoicePronounciation from "./voice-pronounciation";
 import PortfolioModal from "./portfolio-modal";
+import Link from "next/link";
 
 const AboutMe = (): JSX.Element => {
   const pronounceText = "vee-oh-skript";
@@ -25,15 +26,20 @@ const AboutMe = (): JSX.Element => {
             <span className="font-bold text-black dark:text-white">Jerome Villaruel</span> also
             known as Veoscript
           </h1>
-          <h2 className="text-xl font-bold text-neutral-600 dark:text-neutral-400">
-            Software Developer
+          <h2 className="text-xl font-bold text-neutral-600 dark:text-zinc-200">
+            Software Engineer
           </h2>
-          <VoicePronounciation pronounceText={pronounceText} />
+          <VoicePronounciation
+            pronounceText={pronounceText}
+            textClassName="text-zinc-500 dark:text-zinc-400"
+          />
         </div>
         <h1 className="text-center text-[2rem] font-medium leading-10 tracking-tight md:text-left md:text-[3rem] md:leading-[3.5rem]">
-          Building <span className="font-bold text-blue-600">web</span>,{" "}
-          <span className="font-bold text-violet-500">desktop</span>, and{" "}
-          <span className="font-bold text-orange-600">mobile</span> applications.
+          Full-stack developer building scalable{" "}
+          <span className="font-bold text-blue-600">web</span>,{" "}
+          <span className="font-bold text-violet-500">desktop</span>,{" "}
+          <span className="font-bold text-orange-600">mobile</span>, and{" "}
+          <span className="font-bold text-green-500">backend</span> systems.
         </h1>
         <PortfolioModal />
       </div>

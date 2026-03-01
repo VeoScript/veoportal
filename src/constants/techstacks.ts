@@ -6,9 +6,9 @@ export type TechStackList = {
 
 export const techstacks: TechStackList[] = [
   {
-    img: "/images/techstacks/reactjs.png",
-    alt: "React JS",
-    link: "https://react.dev/",
+    img: "/images/techstacks/aws.png",
+    alt: "AWS Web Services",
+    link: "https://aws.amazon.com/",
   },
   {
     img: "/images/techstacks/nextjs.png",
@@ -19,6 +19,11 @@ export const techstacks: TechStackList[] = [
     img: "/images/techstacks/expo.png",
     alt: "Expo",
     link: "https://expo.dev/",
+  },
+  {
+    img: "/images/techstacks/reactjs.png",
+    alt: "React JS",
+    link: "https://react.dev/",
   },
   {
     img: "/images/techstacks/vuejs.png",
