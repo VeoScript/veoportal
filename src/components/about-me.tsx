@@ -10,9 +10,9 @@ const AboutMe = (): JSX.Element => {
 
   return (
     <div className="mt-0 flex w-full flex-col items-center justify-between gap-x-0 gap-y-[2rem] md:-mt-[5rem] md:flex-row md:gap-x-[3rem] md:gap-y-0">
-      <figure className="h-auto w-0 bg-none md:h-screen md:w-full md:bg-[url('/images/veoscirpt-warp.png')] md:bg-contain md:bg-center md:bg-no-repeat" />
+      <figure className="h-auto w-0 bg-none md:h-screen md:w-full md:bg-[url('/images/veo_abroad.webp')] md:bg-contain md:bg-center md:bg-no-repeat" />
       <div className="relative flex w-full justify-center md:hidden">
-        <ProfileHolder src="/images/jeromevillaruel_v2.webp" />
+        <ProfileHolder src="/images/veo_abroad.webp" />
         <span className="absolute left-[58%] top-14 z-10 -rotate-12 md:hidden">
           <span className="flex animate-bounce rounded-full bg-default-white bg-opacity-80 p-3 text-center text-xs font-semibold md:hidden dark:bg-default-dim-black dark:bg-opacity-80">
             Happy Coding! 👋
