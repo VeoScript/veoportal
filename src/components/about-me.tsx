@@ -3,7 +3,6 @@
 import ProfileHolder from "./profile-holder";
 import VoicePronounciation from "./voice-pronounciation";
 import PortfolioModal from "./portfolio-modal";
-import Link from "next/link";
 
 const AboutMe = (): JSX.Element => {
   const pronounceText = "vee-oh-skript";
