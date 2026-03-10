@@ -10,6 +10,16 @@ export type ServicesList = {
 
 export const experiences: ServicesList[] = [
   {
+    src: "/images/experiences/reakt.webp",
+    company: "Reakt Solutions",
+    position: "Software Developer",
+    description:
+      "Developed and maintained cross-platform and native mobile applications for Android and iOS, focusing on performance, usability, and scalable architecture. Collaborated with designers, backend engineers, and product managers to deliver high-quality mobile solutions aligned with client and business requirements. Implemented new features, optimized existing functionality, and ensured application stability through testing, debugging, and continuous improvement. Integrated RESTful APIs, managed app deployments, and contributed to code reviews and agile development processes.",
+    link: "https://www.reakt.net.au/",
+    experienceDate: "March 2026 - Present",
+    isCurrent: true,
+  },
+  {
     src: "/images/experiences/booky.webp",
     company: "Booky",
     position: "Software Engineer",
