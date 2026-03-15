@@ -36,12 +36,12 @@ const Services = (): JSX.Element | null => {
           {services.map((item, index) => (
             <div key={index} className="flex w-full flex-col items-center gap-y-5 md:items-start">
               <Image
-                className="h-[5rem] w-auto object-cover"
+                className="h-[10rem] w-auto object-cover"
                 src={theme === "dark" ? item.src : item.srcDark || item.src}
                 alt={item.alt}
-                width={10}
-                height={10}
-                quality={50}
+                width={100}
+                height={100}
+                quality={100}
               />
               <h3 className="mt-3 text-xl font-bold">{item.title}</h3>
               <p className="text-center text-base text-default-dim-black md:text-left dark:text-neutral-300">
