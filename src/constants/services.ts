@@ -8,24 +8,24 @@ export type ServicesList = {
 
 export const services: ServicesList[] = [
   {
-    src: "/images/svgs/website-dark.svg",
-    srcDark: "/images/svgs/website.svg",
+    src: "/images/services/web-development.png",
+    srcDark: "/images/services/web-development.png",
     alt: "Web Development",
     title: "Web Development",
     description:
       "Consider as a full-stack developer using Git, NextJS, NuxtJS, NestJS, Prisma, PostgreSQL, MySQL, MSSQL, PlanetScale, GraphQL, and Rest-API.",
   },
   {
-    src: "/images/svgs/software-developer-dark.svg",
-    srcDark: "/images/svgs/software-developer.svg",
+    src: "/images/services/software-development.png",
+    srcDark: "/images/services/software-development.png",
     alt: "Software Development",
     title: "Software Development",
     description:
       "Provide business app for desktop applications using Tauri, and Mobile applications both iOS & Android using React Native and Ionic.",
   },
   {
-    src: "/images/svgs/broadcast-dark.svg",
-    srcDark: "/images/svgs/broadcast.svg",
+    src: "/images/services/it-networking.png",
+    srcDark: "/images/services/it-networking.png",
     alt: "I.T. Networking",
     title: "I.T. Networking",
     description:
