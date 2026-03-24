@@ -26,8 +26,8 @@ export const experiences: ServicesList[] = [
     description:
       "This role involves planning and implementing features for mobile and web applications and server infrastructure, ensuring optimal user experience and adherence to development standards, while also tracking metrics, proposing improvements, and supporting internal tools as needed. The responsibilities span feature ideation, coding, testing, adherence to standards, metric tracking, improvement proposals, and internal tool support.",
     link: "https://booky.ph/",
-    experienceDate: "February 2024 - Present",
-    isCurrent: true,
+    experienceDate: "February 2024 - April 2026",
+    isCurrent: false,
   },
   {
     src: "/images/experiences/halcyon.webp",
@@ -37,7 +37,7 @@ export const experiences: ServicesList[] = [
       "Responsible for writing clean, efficient, and maintainable code for mobile applications, testing, and debugging mobile applications to ensure they meet quality standards and collaborating with other developers to share knowledge and best practices.",
     link: "https://halcyonagile.com.ph/",
     experienceDate: "June 2022 - February 2024",
-    isCurrent: true,
+    isCurrent: false,
   },
   {
     src: "/images/experiences/spmi.webp",

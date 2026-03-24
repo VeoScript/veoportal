@@ -67,8 +67,8 @@ const Services = (): JSX.Element | null => {
                   className="h-[2rem] w-auto object-cover"
                   src={item.src}
                   alt={item.company}
-                  width={100}
-                  height={100}
+                  width={200}
+                  height={200}
                   quality={100}
                 />
                 <p className="text-[10px] text-neutral-400">{item.experienceDate}</p>
