@@ -26,7 +26,7 @@ const AboutMe = (): JSX.Element => {
             known as Veoscript
           </h1>
           <h2 className="text-xl font-bold text-neutral-600 dark:text-zinc-200">
-            Software Developer
+            Software Engineer
           </h2>
           <VoicePronounciation
             pronounceText={pronounceText}
