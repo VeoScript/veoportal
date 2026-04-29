@@ -16,7 +16,7 @@ const raleway = Raleway({
 export const metadata: Metadata = {
   title: "Jerome Villaruel",
   description:
-    "I'm Jerome Villaruel officially known as Veoscript, a software developer based in Philippines specializing in React, React Native, NextJS, NestJS, RestAPI, GraphQL, tRPC, Prisma, Supabase, and PlanetScale. I enjoy building dynamic web applications and leveraging these technologies to create robust and scalable solutions. Excited to collaborate on innovative projects and contribute to the world of software development.",
+    "I'm Jerome Villaruel officially known as Veoscript, a software engineer based in Philippines specializing in React, React Native, NextJS, NestJS, RestAPI, GraphQL, tRPC, Prisma, Supabase, and PlanetScale. I enjoy building dynamic web applications and leveraging these technologies to create robust and scalable solutions. Excited to collaborate on innovative projects and contribute to the world of software development.",
   metadataBase: new URL(
     process.env.NODE_ENV === "development" ? `${process.env.DEV_URL}` : `${process.env.PROD_URL}`,
   ),
@@ -26,14 +26,14 @@ export const metadata: Metadata = {
       process.env.NODE_ENV === "development" ? `${process.env.DEV_URL}` : `${process.env.PROD_URL}`,
     title: "Jerome Villaruel",
     description:
-      "I'm Jerome Villaruel officially known as Veoscript, a software developer based in Philippines specializing in React, React Native, NextJS, NestJS, RestAPI, GraphQL, tRPC, Prisma, Supabase, and PlanetScale. I enjoy building dynamic web applications and leveraging these technologies to create robust and scalable solutions. Excited to collaborate on innovative projects and contribute to the world of software development.",
+      "I'm Jerome Villaruel officially known as Veoscript, a software engineer based in Philippines specializing in React, React Native, NextJS, NestJS, RestAPI, GraphQL, tRPC, Prisma, Supabase, and PlanetScale. I enjoy building dynamic web applications and leveraging these technologies to create robust and scalable solutions. Excited to collaborate on innovative projects and contribute to the world of software development.",
     siteName: "Jerome Villaruel",
     images: "/images/jeromevillaruel.webp",
   },
   twitter: {
     title: "Jerome Villaruel",
     description:
-      "I'm Jerome Villaruel officially known as Veoscript, a software developer based in Philippines specializing in React, React Native, NextJS, NestJS, RestAPI, GraphQL, tRPC, Prisma, Supabase, and PlanetScale. I enjoy building dynamic web applications and leveraging these technologies to create robust and scalable solutions. Excited to collaborate on innovative projects and contribute to the world of software development.",
+      "I'm Jerome Villaruel officially known as Veoscript, a software engineer based in Philippines specializing in React, React Native, NextJS, NestJS, RestAPI, GraphQL, tRPC, Prisma, Supabase, and PlanetScale. I enjoy building dynamic web applications and leveraging these technologies to create robust and scalable solutions. Excited to collaborate on innovative projects and contribute to the world of software development.",
     creator: "Jerome Villaruel (Veoscript)",
     site: "Jerome Villaruel",
     images: "/images/jeromevillaruel.webp",
