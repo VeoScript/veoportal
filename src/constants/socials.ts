@@ -12,10 +12,10 @@ export const socialLinks: SocialList[] = [
     name: "Github",
     link: "https://github.com/veoscript",
   },
-  {
-    name: "Instagram",
-    link: "https://www.instagram.com/veoscript",
-  },
+  // {
+  //   name: "Instagram",
+  //   link: "https://www.instagram.com/veoscript",
+  // },
   // {
   //   name: "Magaaazine",
   //   link: "https://magaaazine.vercel.app/veoscript",
