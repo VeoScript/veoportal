@@ -114,7 +114,7 @@ const Services = (): JSX.Element | null => {
                   connection!
                 </p>
                 <div className="flex flex-row items-center gap-x-2">
-                  <Link
+                  {/* <Link
                     className="flex h-[2rem] w-auto items-center gap-x-2 transition duration-200 ease-in-out hover:opacity-50"
                     href="https://www.facebook.com/profile.php?id=61577619353457"
                     target="_blank"
@@ -127,7 +127,7 @@ const Services = (): JSX.Element | null => {
                       height={100}
                       quality={100}
                     />
-                  </Link>
+                  </Link> */}
                   <Link
                     className="transition duration-200 ease-in-out hover:opacity-50"
                     href="https://play.google.com/store/apps/details?id=com.veoscript.PandanPOS"
