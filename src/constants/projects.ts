@@ -21,7 +21,7 @@ export const projects: ProjectList[] = [
     description:
       "Discover, connect and share, with feature of sending messages, images, and files anonymously. Using NextJS 13, Tailwind CSS, Uploadthing, Resend, Prisma, Tanstack, tRPC, Supabase and PostgreSQL.",
     sourceCode: "https://github.com/VeoScript/magaaazine",
-    demo: "https://www.magaaazine.online/",
+    demo: "https://magaaazine.jeromevillaruel.com",
   },
   {
     src: "/images/projects/papino-cover.webp",
