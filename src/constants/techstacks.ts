@@ -11,6 +11,11 @@ export const techstacks: TechStackList[] = [
     link: "https://aws.amazon.com/",
   },
   {
+    img: "/images/techstacks/cloudflare.png",
+    alt: "Cloudflare",
+    link: "https://www.cloudflare.com/",
+  },
+  {
     img: "/images/techstacks/nextjs.png",
     alt: "Next JS",
     link: "https://nextjs.org/",
