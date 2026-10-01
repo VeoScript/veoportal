@@ -4,16 +4,16 @@
 
 @layer components {
   .custom-button-white {
-    @apply rounded-full bg-default-white text-center font-semibold text-default-black transition duration-300 ease-in-out hover:opacity-70;
+    @apply inline-flex items-center justify-center rounded-md bg-default-white text-center font-semibold text-default-black transition duration-200 ease-out hover:-translate-y-px hover:shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-600 focus-visible:ring-offset-2;
   }
   .custom-button-black {
-    @apply rounded-full bg-default-black text-center font-semibold text-default-white transition duration-300 ease-in-out hover:opacity-70;
+    @apply inline-flex items-center justify-center rounded-md bg-default-black text-center font-semibold text-default-white transition duration-200 ease-out hover:-translate-y-px hover:shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-600 focus-visible:ring-offset-2;
   }
   .custom-button-gray {
-    @apply rounded-full bg-default-gray text-center font-semibold text-default-black transition duration-300 ease-in-out hover:opacity-70;
+    @apply inline-flex items-center justify-center rounded-md bg-default-gray text-center font-semibold text-default-black transition duration-200 ease-out hover:-translate-y-px hover:shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-600 focus-visible:ring-offset-2;
   }
   .custom-button-dim-gray {
-    @apply bg-default-dim-black rounded-full text-center font-semibold text-default-white transition duration-300 ease-in-out hover:opacity-70;
+    @apply inline-flex items-center justify-center rounded-md bg-default-dim-black text-center font-semibold text-default-white transition duration-200 ease-out hover:-translate-y-px hover:shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 focus-visible:ring-offset-2;
   }
 }
 

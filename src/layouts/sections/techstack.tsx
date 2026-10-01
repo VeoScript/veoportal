@@ -5,7 +5,7 @@ import { techstacks } from "~/constants/techstacks";
 
 const TechStack = (): JSX.Element => {
   return (
-    <div className="z-10 flex w-full flex-col items-center overflow-hidden rounded-b-[7rem] border-b border-neutral-200 bg-default-white px-1 py-[5rem] dark:border-neutral-700 dark:bg-default-dim-black">
+    <div className="z-10 flex w-full flex-col items-center overflow-hidden bg-default-white px-1 py-[5rem] dark:bg-default-dim-black">
       <div className="flex w-full items-center justify-center overflow-hidden">
         <div className="flex animate-marquee whitespace-nowrap">
           <div className="flex items-center justify-center gap-x-[1rem] md:gap-x-[3rem]">

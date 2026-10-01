@@ -1,47 +1,62 @@
 "use client";
 
-import ProfileHolder from "./profile-holder";
+import Image from "next/image";
+import Link from "next/link";
+
 import VoicePronounciation from "./voice-pronounciation";
-import PortfolioModal from "./portfolio-modal";
 
 const AboutMe = (): JSX.Element => {
   const pronounceText = "vee-oh-skript";
 
   return (
-    <div className="mt-0 flex w-full flex-col items-center justify-between gap-x-0 gap-y-[2rem] md:-mt-[5rem] md:flex-row md:gap-x-[3rem] md:gap-y-0">
-      <figure className="h-auto w-0 bg-none md:h-screen md:w-full md:bg-[url('/images/veo_abroad.webp')] md:bg-contain md:bg-center md:bg-no-repeat" />
-      <div className="relative flex w-full justify-center md:hidden">
-        <ProfileHolder src="/images/veo_abroad.webp" />
-        <span className="absolute left-[58%] top-14 z-10 -rotate-12 md:hidden">
-          <span className="flex animate-bounce rounded-full bg-default-white bg-opacity-80 p-3 text-center text-xs font-semibold md:hidden dark:bg-default-dim-black dark:bg-opacity-80">
-            Happy Coding! 👋
-          </span>
-        </span>
-      </div>
-      <div className="flex w-full flex-col items-center gap-y-10 md:items-start">
-        <div className="flex w-full flex-col items-center gap-y-2 md:items-start">
-          <h1 className="text-center md:text-left">
-            Hello! I&apos;m{" "}
-            <span className="font-bold text-black dark:text-white">Jerome Villaruel</span> also
-            known as Veoscript
+    <div className="mx-auto grid w-full max-w-6xl flex-1 grid-cols-1 items-center gap-10 py-14 md:grid-cols-[minmax(0,1fr)_minmax(18rem,0.78fr)] md:gap-16 md:py-16">
+      <div className="flex flex-col items-start gap-7">
+        <div className="flex flex-col items-start gap-3">
+          <p className="text-sm font-semibold uppercase text-emerald-700 dark:text-emerald-400">
+            Full-stack software engineer
+          </p>
+          <h1 className="max-w-3xl text-4xl font-semibold leading-tight md:text-6xl md:leading-[1.08]">
+            I build software that holds up in production.
           </h1>
-          <h2 className="text-xl font-bold text-neutral-600 dark:text-zinc-200">
-            Software Engineer
-          </h2>
-          <VoicePronounciation
-            pronounceText={pronounceText}
-            textClassName="text-zinc-500 dark:text-zinc-400"
-          />
+          <div className="flex items-center gap-3 text-sm text-neutral-600 dark:text-neutral-300">
+            <span>Jerome Villaruel</span>
+            <span aria-hidden="true" className="h-1 w-1 rounded-full bg-emerald-600" />
+            <VoicePronounciation
+              pronounceText={pronounceText}
+              textClassName="text-neutral-600 dark:text-neutral-300"
+            />
+          </div>
         </div>
-        <h1 className="text-center text-[2rem] font-medium leading-10 tracking-tight md:text-left md:text-[3rem] md:leading-[3.5rem]">
-          Full-stack developer building scalable{" "}
-          <span className="font-bold text-blue-600">web</span>,{" "}
-          <span className="font-bold text-violet-500">desktop</span>,{" "}
-          <span className="font-bold text-orange-600">mobile</span>, and{" "}
-          <span className="font-bold text-green-500">backend</span> systems.
-        </h1>
-        <PortfolioModal />
+        <p className="max-w-xl text-base leading-7 text-neutral-600 md:text-lg dark:text-neutral-300">
+          From product interfaces to backend systems, I work across the stack to turn complex
+          workflows into dependable, usable software.
+        </p>
+        <div className="flex flex-wrap items-center gap-5">
+          <Link
+            href="/files/jeromevillaruel.pdf"
+            target="_blank"
+            className="custom-button-black rounded-md bg-emerald-800 px-5 py-3 text-sm hover:bg-emerald-700 dark:bg-emerald-400 dark:text-default-black dark:hover:bg-emerald-300"
+          >
+            View resume
+          </Link>
+          <Link
+            href="#projects"
+            className="border-b border-emerald-700 pb-1 text-sm font-semibold text-emerald-800 transition hover:text-emerald-600 dark:border-emerald-400 dark:text-emerald-300"
+          >
+            Explore selected work
+          </Link>
+        </div>
       </div>
+      <figure className="relative mx-auto aspect-[4/5] w-full max-w-[26rem] overflow-hidden rounded-md bg-neutral-200 md:justify-self-end dark:bg-neutral-800">
+        <Image
+          src="/images/veo_abroad.webp"
+          alt="Jerome Villaruel"
+          fill
+          priority
+          sizes="(max-width: 768px) 100vw, 40vw"
+          className="object-cover"
+        />
+      </figure>
     </div>
   );
 };

@@ -18,11 +18,11 @@ const config: Config = {
     },
     extend: {
       colors: {
-        "default-black": "#242424",
-        "default-dim-black": "#383838",
-        "default-white": "#FFFFFE",
-        "default-ghost-white": "#F1F0EF",
-        "default-gray": "#CBC8C5",
+        "default-black": "#18231D",
+        "default-dim-black": "#101713",
+        "default-white": "#FCFDFC",
+        "default-ghost-white": "#F3F6F3",
+        "default-gray": "#DCE4DE",
       },
       fontFamily: {
         raleway: ["var(--font-raleway)", ...fontFamily.sans],
