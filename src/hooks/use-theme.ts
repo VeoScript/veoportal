@@ -1,22 +1,8 @@
-import { useEffect, useState } from "react";
+"use client";
+
+import { useTheme as useNextTheme } from "next-themes";
 
 export const useTheme = (): "light" | "dark" => {
-  const [theme, setTheme] = useState<"light" | "dark">("light");
-
-  useEffect(() => {
-    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
-    setTheme(mediaQuery.matches ? "dark" : "light");
-
-    const handleChange = (e: MediaQueryListEvent) => {
-      setTheme(e.matches ? "dark" : "light");
-    };
-
-    mediaQuery.addEventListener("change", handleChange);
-
-    return () => {
-      mediaQuery.removeEventListener("change", handleChange);
-    };
-  }, []);
-
-  return theme;
+  const { resolvedTheme } = useNextTheme();
+  return resolvedTheme === "dark" ? "dark" : "light";
 };

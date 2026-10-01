@@ -2,163 +2,130 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import type { JSX } from "react";
 
 import { services } from "~/constants/services";
 import { experiences } from "~/constants/experiences";
 import { useTheme } from "~/hooks/use-theme";
-import { useLazyLoadOnScroll } from "~/hooks/use-lazyload-on-scroll";
 
 const HAS_PROMOTION = process.env.PROMOTION_FLAG === "true" ? true : false;
 
-const Services = (): JSX.Element | null => {
+const Services = (): JSX.Element => {
   const theme = useTheme();
-  const isLazyLoad = useLazyLoadOnScroll();
-
-  if (!isLazyLoad) return null;
 
   return (
-    <div className="-mt-[10rem] flex w-full flex-col items-center bg-default-ghost-white px-3 pb-[5rem] pt-[15rem] md:px-0 dark:bg-default-black">
-      <div className="flex w-full max-w-5xl flex-col items-center gap-y-[7rem]">
-        <h2 className="w-full max-w-full text-center text-xl font-semibold leading-6 md:max-w-2xl md:text-[2rem] md:leading-[2.5rem]">
-          Excited to collaborate on innovative projects and contribute to the world of software
-          development.
-        </h2>
-
-        <div className="relative w-full">
-          <span className="absolute w-full border border-neutral-200 dark:border-neutral-700" />
-          <div className="absolute -top-5 z-10 flex w-full flex-row items-center justify-center">
-            <p className="flex w-[10rem] -rotate-12 justify-center rounded-full border border-neutral-200 bg-default-white px-10 py-4 text-sm font-semibold dark:border-neutral-500 dark:bg-default-dim-black">
-              Services
-            </p>
-          </div>
+    <section className="bg-[#f5f7f5] px-5 py-20 md:px-10 dark:bg-default-black">
+      <div className="mx-auto flex w-full max-w-6xl flex-col">
+        <div className="max-w-2xl">
+          <p className="text-theme-accent-text text-sm font-semibold uppercase">Experience</p>
+          <h2 className="mt-3 text-3xl font-semibold md:text-4xl">
+            A career built across the stack
+          </h2>
+          <p className="mt-4 leading-7 text-neutral-600 dark:text-neutral-300">
+            Roles spanning product engineering, mobile development, and IT operations.
+          </p>
         </div>
-        <div className="flex w-full flex-col items-center justify-center gap-10 px-3 md:flex-row md:items-start md:px-0">
-          {services.map((item, index) => (
-            <div key={index} className="flex w-full flex-col items-center gap-y-5 md:items-start">
-              <Image
-                className="h-[10rem] w-auto object-cover"
-                src={theme === "dark" ? item.src : item.srcDark || item.src}
-                alt={item.alt}
-                width={100}
-                height={100}
-                quality={100}
-              />
-              <h3 className="mt-3 text-xl font-bold">{item.title}</h3>
-              <p className="text-center text-base text-default-dim-black md:text-left dark:text-neutral-300">
-                {item.description}
-              </p>
-            </div>
+
+        <div className="mt-10">
+          {experiences.map((item) => (
+            <article
+              key={item.company}
+              className="grid gap-5 border-t border-neutral-300 py-7 last:border-b md:grid-cols-[12rem_minmax(0,1fr)] md:gap-10 dark:border-neutral-700"
+            >
+              <div className="flex flex-wrap items-center gap-3 md:flex-col md:items-start md:gap-2">
+                <p className="text-sm text-neutral-500 dark:text-neutral-400">
+                  {item.experienceDate}
+                </p>
+                {item.isCurrent && (
+                  <span className="bg-theme-accent-soft text-theme-accent-text rounded-sm px-2 py-1 text-xs font-semibold">
+                    Current
+                  </span>
+                )}
+              </div>
+              <div className="flex items-start gap-4">
+                <Image
+                  className="h-12 w-12 shrink-0 rounded-md bg-white object-contain p-1 dark:bg-neutral-100"
+                  src={item.src}
+                  alt={`${item.company} logo`}
+                  width={48}
+                  height={48}
+                  quality={90}
+                />
+                <div className="min-w-0">
+                  <h3 className="text-lg font-semibold">{item.position}</h3>
+                  <Link
+                    href={item.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-theme-accent-text mt-1 inline-block text-sm font-medium hover:underline"
+                  >
+                    {item.company}
+                  </Link>
+                  <p className="mt-3 max-w-3xl text-sm leading-6 text-neutral-600 dark:text-neutral-300">
+                    {item.description}
+                  </p>
+                </div>
+              </div>
+            </article>
           ))}
         </div>
 
-        <div className="relative w-full">
-          <span className="absolute w-full border border-neutral-200 dark:border-neutral-700" />
-          <div className="absolute -top-5 z-10 flex w-full flex-row items-center justify-center">
-            <p className="flex w-[10rem] -rotate-12 justify-center rounded-full border border-neutral-200 bg-default-white px-10 py-4 text-sm font-semibold dark:border-neutral-500 dark:bg-default-dim-black">
-              Experiences
-            </p>
-          </div>
-        </div>
-        <div className="flex w-full flex-col flex-wrap items-center justify-between gap-10 px-3 md:flex-row md:items-start md:px-0">
-          {experiences.map((item, index) => {
-            return (
-              <div key={index} className="flex flex-col items-center gap-y-1">
+        <div className="mt-20">
+          <p className="text-theme-accent-text text-sm font-semibold uppercase">What I do</p>
+          <h2 className="mt-3 text-3xl font-semibold md:text-4xl">Engineering across the stack</h2>
+          <div className="mt-8 grid gap-8 md:grid-cols-3">
+            {services.map((item) => (
+              <article
+                key={item.title}
+                className="border-t border-neutral-300 pt-5 dark:border-neutral-700"
+              >
                 <Image
-                  className="h-[2rem] w-auto object-cover"
-                  src={item.src}
-                  alt={item.company}
-                  width={200}
-                  height={200}
-                  quality={100}
+                  className="h-12 w-12 object-contain"
+                  src={theme === "dark" ? item.src : item.srcDark || item.src}
+                  alt={item.alt}
+                  width={48}
+                  height={48}
+                  quality={90}
                 />
-                <p className="text-[10px] text-neutral-400">{item.experienceDate}</p>
-                <h3 className="text-sm">{item.position}</h3>
-              </div>
-            );
-          })}
+                <h3 className="mt-5 text-lg font-semibold">{item.title}</h3>
+                <p className="mt-2 text-sm leading-6 text-neutral-600 dark:text-neutral-300">
+                  {item.description}
+                </p>
+              </article>
+            ))}
+          </div>
         </div>
 
         {HAS_PROMOTION && (
-          <>
-            <div className="relative w-full">
-              <span className="absolute w-full border border-neutral-200 dark:border-neutral-700" />
-              <div className="absolute -top-5 z-10 flex w-full flex-row items-center justify-center">
-                <p className="flex w-[10rem] -rotate-12 justify-center rounded-full border border-neutral-200 bg-default-white px-10 py-4 text-sm font-semibold dark:border-neutral-500 dark:bg-default-dim-black">
-                  Promotion
-                </p>
-              </div>
+          <div className="mt-20 grid gap-8 border-t border-neutral-300 pt-8 md:grid-cols-2 md:items-center dark:border-neutral-700">
+            <div>
+              <p className="text-theme-accent-text text-sm font-semibold uppercase">Product</p>
+              <h2 className="mt-3 text-3xl font-semibold">Pandan POS</h2>
+              <p className="mt-4 max-w-xl leading-7 text-neutral-600 dark:text-neutral-300">
+                An offline point-of-sale system for small businesses, entrepreneurs, and mobile
+                vendors. Manage sales, orders, and inventory without an internet connection.
+              </p>
+              <Link
+                href="https://play.google.com/store/apps/details?id=com.veoscript.PandanPOS"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-theme-accent-text border-theme-accent mt-5 inline-block border-b pb-1 text-sm font-semibold"
+              >
+                Get it on Google Play
+              </Link>
             </div>
-            <div className="-mt-10 flex w-full flex-col items-center justify-between gap-10 px-3 md:flex-row md:items-center md:px-0">
-              <div className="flex w-full flex-col items-center gap-y-5 text-center md:items-start md:text-left">
-                <div className="flex flex-col items-center gap-3 md:flex-row">
-                  <Image
-                    className="h-[5rem] w-[5rem] rounded-xl object-cover"
-                    src="/images/promotions/pandan-logo.webp"
-                    alt="Pandan POS"
-                    width={100}
-                    height={100}
-                    quality={50}
-                  />
-                  <span className="flex flex-col">
-                    <h2 className="text-[2rem] font-bold">Introducing Pandan POS</h2>
-                    <h3 className="text-[1rem] font-semibold text-neutral-500 dark:text-neutral-400">
-                      Your pocket POS
-                    </h3>
-                  </span>
-                </div>
-                <p>
-                  Take your business anywhere with Pandan POS, the ultimate offline point-of-sale
-                  system designed for small businesses, entrepreneurs, and mobile vendors. Whether
-                  you run a retail shop, food stall, or service-based business, Pandan POS helps you
-                  manage sales, orders and track inventory—all without needing an internet
-                  connection!
-                </p>
-                <div className="flex flex-row items-center gap-x-2">
-                  <Link
-                    className="flex h-[2rem] w-auto items-center gap-x-2 transition duration-200 ease-in-out hover:opacity-50"
-                    href="https://www.facebook.com/profile.php?id=61577619353457"
-                    target="_blank"
-                  >
-                    <Image
-                      className="h-[2rem] w-[2rem] object-cover"
-                      src="/images/svgs/facebook.svg"
-                      alt="Follow us on facebook button"
-                      width={100}
-                      height={100}
-                      quality={100}
-                    />
-                  </Link>
-                  <Link
-                    className="transition duration-200 ease-in-out hover:opacity-50"
-                    href="https://play.google.com/store/apps/details?id=com.veoscript.PandanPOS"
-                    target="_blank"
-                  >
-                    <Image
-                      className="h-auto w-auto object-cover"
-                      src="/images/promotions/google-play-button.webp"
-                      alt="Google Play Button"
-                      width={100}
-                      height={100}
-                      quality={50}
-                    />
-                  </Link>
-                </div>
-              </div>
-              <div className="flex h-auto w-full flex-col">
-                <Image
-                  className="h-full w-auto object-cover"
-                  src="/images/promotions/pandan-phones.webp"
-                  alt="Pandan POS"
-                  width={828}
-                  height={1170}
-                  quality={100}
-                />
-              </div>
-            </div>
-          </>
+            <Image
+              className="mx-auto h-auto max-h-[28rem] w-full object-contain"
+              src="/images/promotions/pandan-phones.webp"
+              alt="Pandan POS running on mobile devices"
+              width={828}
+              height={1170}
+              quality={90}
+            />
+          </div>
         )}
       </div>
-    </div>
+    </section>
   );
 };
 

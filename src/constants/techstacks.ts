@@ -26,6 +26,11 @@ export const techstacks: TechStackList[] = [
     link: "https://expo.dev/",
   },
   {
+    img: "/images/techstacks/flutter.png",
+    alt: "Flutter",
+    link: "https://flutter.dev/",
+  },
+  {
     img: "/images/techstacks/reactjs.png",
     alt: "React JS",
     link: "https://react.dev/",
