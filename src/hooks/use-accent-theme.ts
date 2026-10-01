@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useSyncExternalStore } from "react";
 
-export const ACCENT_COLORS = ["green", "purple", "orange", "blue"] as const;
+export const ACCENT_COLORS = ["green", "purple", "orange", "blue", "yellow"] as const;
 export type AccentColor = (typeof ACCENT_COLORS)[number];
 
 const STORAGE_KEY = "veoportal-accent-color";

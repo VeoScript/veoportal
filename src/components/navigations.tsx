@@ -3,7 +3,6 @@
 import Link from "next/link";
 import type { JSX } from "react";
 
-import AppearanceControls from "./appearance-controls";
 import SocialNavs from "./social-navs";
 
 import { useMediaQuery, Breakpoints } from "~/hooks/use-media-query";
@@ -20,7 +19,7 @@ const Navigations = (): JSX.Element | null => {
       <div className="flex w-full flex-col items-center justify-between gap-y-3 md:flex-row md:gap-y-0">
         <nav className="flex h-[3rem] w-full flex-row items-center justify-center gap-x-1 md:w-auto md:justify-start">
           {isMediumScreen && (
-            <div className="hidden items-center gap-x-5 rounded-md bg-neutral-200 p-1 md:flex dark:bg-default-dim-black">
+            <div className="hidden items-center gap-x-5 rounded-md bg-neutral-200 p-1 dark:bg-default-dim-black md:flex">
               <h3 className="pl-3 text-xs font-semibold">{myEmail}</h3>
               <button
                 className="custom-button-white dark:custom-button-black w-[5rem] px-5 py-3.5 text-xs"
@@ -43,7 +42,7 @@ const Navigations = (): JSX.Element | null => {
             </Link>
           )}
           {isMediumScreen && (
-            <div className="hidden rounded-md bg-neutral-200 p-1 md:flex dark:bg-default-dim-black">
+            <div className="hidden rounded-md bg-neutral-200 p-1 dark:bg-default-dim-black md:flex">
               <Link
                 href={myResume}
                 target="_blank"
@@ -69,7 +68,6 @@ const Navigations = (): JSX.Element | null => {
         </nav>
         <SocialNavs />
       </div>
-      <AppearanceControls />
     </div>
   );
 };
