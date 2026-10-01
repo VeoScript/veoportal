@@ -50,7 +50,7 @@ const AboutMe = (): JSX.Element => {
       </div>
       <figure className="relative mx-auto aspect-[4/5] w-full max-w-[26rem] overflow-hidden rounded-md bg-neutral-200 md:justify-self-end dark:bg-neutral-800">
         <Image
-          src="/images/veo_abroad.webp"
+          src="/images/jeromevillaruel_v3.webp"
           alt="Jerome Villaruel"
           fill
           priority
