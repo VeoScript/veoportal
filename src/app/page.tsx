@@ -1,4 +1,5 @@
 import dynamic from "next/dynamic";
+import type { JSX } from "react";
 
 import MainLayout from "~/layouts/main-layout";
 import Banner from "~/layouts/sections/banner";

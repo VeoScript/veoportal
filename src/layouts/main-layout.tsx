@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import type { JSX, ReactNode } from "react";
 import dynamic from "next/dynamic";
 
 const PromotionFlag = dynamic(() => import("~/components/promotion-flag"));

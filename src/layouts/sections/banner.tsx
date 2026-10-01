@@ -1,3 +1,5 @@
+import type { JSX } from "react";
+
 import AboutMe from "~/components/about-me";
 import Navigations from "~/components/navigations";
 

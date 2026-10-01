@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import type { JSX } from "react";
 
 import { services } from "~/constants/services";
 import { experiences } from "~/constants/experiences";

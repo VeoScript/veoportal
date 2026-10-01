@@ -1,22 +1,16 @@
-import { useEffect, useState } from "react";
+import { useSyncExternalStore } from "react";
 
-export const useTheme = (): "light" | "dark" => {
-  const [theme, setTheme] = useState<"light" | "dark">("light");
+const subscribe = (onChange: () => void) => {
+  const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+  mediaQuery.addEventListener("change", onChange);
 
-  useEffect(() => {
-    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
-    setTheme(mediaQuery.matches ? "dark" : "light");
-
-    const handleChange = (e: MediaQueryListEvent) => {
-      setTheme(e.matches ? "dark" : "light");
-    };
-
-    mediaQuery.addEventListener("change", handleChange);
-
-    return () => {
-      mediaQuery.removeEventListener("change", handleChange);
-    };
-  }, []);
-
-  return theme;
+  return () => mediaQuery.removeEventListener("change", onChange);
 };
+
+const getSnapshot = (): "light" | "dark" =>
+  window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+
+const getServerSnapshot = (): "light" | "dark" => "light";
+
+export const useTheme = (): "light" | "dark" =>
+  useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
