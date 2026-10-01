@@ -46,7 +46,7 @@ export const techstacks: TechStackList[] = [
     link: "https://nuxt.com/",
   },
   {
-    img: "/images/techstacks/reactquery.png",
+    img: "/images/techstacks/tanstack-query.png",
     alt: "Tanstack Query",
     link: "https://tanstack.com/query/latest",
   },
