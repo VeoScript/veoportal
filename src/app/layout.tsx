@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import type { JSX, ReactNode } from "react";
 
 import clsx from "clsx";
 import { Toaster } from "sonner";
@@ -43,14 +44,18 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: ReactNode;
 }>): JSX.Element {
   return (
-    <html lang="en">
+    <html
+      lang="en"
+      className="scroll-smooth motion-reduce:scroll-auto"
+      data-scroll-behavior="smooth"
+    >
       <body
         className={clsx(
           raleway.variable,
-          "overflow-x-hidden bg-default-white font-raleway text-default-black selection:bg-slate-300 dark:bg-default-dim-black dark:text-default-white dark:selection:bg-slate-700",
+          "overflow-x-hidden bg-default-white font-raleway text-default-black selection:bg-emerald-200 dark:bg-default-dim-black dark:text-default-white dark:selection:bg-emerald-800",
         )}
       >
         <Toaster richColors position="top-right" />

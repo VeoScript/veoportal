@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import type { JSX } from "react";
 
 type Props = {
   pronounceText: string;

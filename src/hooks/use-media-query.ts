@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useCallback, useSyncExternalStore } from "react";
 
 export enum Breakpoints {
   sm = 640,
@@ -9,25 +9,19 @@ export enum Breakpoints {
 }
 
 export const useMediaQuery = (query: Breakpoints): boolean => {
-  const [matches, setMatches] = useState<boolean>(false);
-
-  useEffect(() => {
-    if (typeof window !== "undefined") {
+  const subscribe = useCallback(
+    (onChange: () => void) => {
       const mediaQueryList = window.matchMedia(`(min-width: ${query}px)`);
+      mediaQueryList.addEventListener("change", onChange);
 
-      const handleMediaChange = (event: MediaQueryListEvent) => {
-        setMatches(event.matches);
-      };
+      return () => mediaQueryList.removeEventListener("change", onChange);
+    },
+    [query],
+  );
+  const getSnapshot = useCallback(
+    () => window.matchMedia(`(min-width: ${query}px)`).matches,
+    [query],
+  );
 
-      setMatches(mediaQueryList.matches);
-
-      mediaQueryList.addEventListener("change", handleMediaChange);
-
-      return () => {
-        mediaQueryList.removeEventListener("change", handleMediaChange);
-      };
-    }
-  }, [query]);
-
-  return matches;
+  return useSyncExternalStore(subscribe, getSnapshot, () => false);
 };

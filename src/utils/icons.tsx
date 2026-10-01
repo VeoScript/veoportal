@@ -1,3 +1,5 @@
+import type { JSX } from "react";
+
 export const Facebook = (): JSX.Element => {
   return (
     <svg
@@ -149,6 +151,27 @@ export const CloseIcon = ({ className }: { className: string }): JSX.Element => 
       className={className}
     >
       <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
+    </svg>
+  );
+};
+
+export const ExternalLinkIcon = ({ className }: { className?: string }): JSX.Element => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={1.8}
+      className={className}
+      aria-hidden="true"
+    >
+      <path strokeLinecap="round" strokeLinejoin="round" d="M14 4h6v6m0-6-9 9" />
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M18 13v5a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h5"
+      />
     </svg>
   );
 };

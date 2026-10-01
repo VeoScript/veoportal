@@ -1,5 +1,6 @@
 "use client";
 
+import type { JSX } from "react";
 import { Fragment } from "react";
 
 import Link from "next/link";
@@ -38,7 +39,7 @@ const SocialNavs = (): JSX.Element => {
                 href={social.link}
                 target="_blank"
                 aria-label={`${social.name} link`}
-                className="dark:bg-default-dim-black flex rounded-full bg-default-white p-3 text-sm hover:underline md:hidden"
+                className="flex rounded-full bg-default-white p-3 text-sm hover:underline md:hidden dark:bg-default-dim-black"
               >
                 {index === 0 && <LinkedIn />}
                 {index === 1 && <Github />}

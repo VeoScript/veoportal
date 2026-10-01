@@ -10,18 +10,18 @@ export const services: ServicesList[] = [
   {
     src: "/images/services/web-development.png",
     srcDark: "/images/services/web-development.png",
-    alt: "Web Development",
-    title: "Web Development",
+    alt: "Backend Development",
+    title: "Backend Development",
     description:
-      "Consider as a full-stack developer using Git, NextJS, NuxtJS, NestJS, Prisma, PostgreSQL, MySQL, MSSQL, PlanetScale, GraphQL, and Rest-API.",
+      "Experienced as a full-stack developer working with Git, Next.js, Nuxt.js, NestJS, Prisma, PostgreSQL, MySQL, MSSQL, PlanetScale, GraphQL, and REST APIs, with hands-on experience using Docker, Redis, AWS Lambda, and Cloudflare Workers for containerization, caching, serverless computing, and edge-based application development.",
   },
   {
     src: "/images/services/software-development.png",
     srcDark: "/images/services/software-development.png",
-    alt: "Software Development",
-    title: "Software Development",
+    alt: "Mobile, Desktop, and Web Development",
+    title: "Mobile, Desktop, and Web Development",
     description:
-      "Provide business app for desktop applications using Tauri, and Mobile applications both iOS & Android using React Native and Ionic.",
+      "Developed and maintained cross-platform and native applications for desktop, iOS, and Android using Tauri, Expo React Native, Flutter, Swift, and Kotlin. Built business applications with a focus on performance, scalability, usability, and platform-specific capabilities, delivering reliable solutions across multiple operating systems and devices.",
   },
   {
     src: "/images/services/it-networking.png",
@@ -29,6 +29,6 @@ export const services: ServicesList[] = [
     alt: "I.T. Networking",
     title: "I.T. Networking",
     description:
-      "Manage network topology, network security, microservices, database administration, computer maintenance, and Local Area Network (LAN) operations.",
+      "Configured and maintained network infrastructure, LAN environments, network topology, security, and connectivity. Performed network troubleshooting, hardware and software maintenance, system administration, and technical support to ensure stable, secure, and reliable IT operations.",
   },
 ];
