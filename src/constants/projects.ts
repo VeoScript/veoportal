@@ -16,6 +16,14 @@ export const projects: ProjectList[] = [
     demo: "https://play.google.com/store/apps/details?id=com.veoscript.PandanPOS",
   },
   {
+    src: "/images/projects/pandanpos-docs.webp",
+    title: "Pandan POS Documentation",
+    description:
+      "A comprehensive documentation website for Pandan POS, built with React.js and Docusaurus. Provides developers, users, and business owners with clear guides, setup instructions, feature documentation, API references, and technical resources to help them understand, configure, and effectively use the Pandan POS ecosystem.",
+    sourceCode: "https://github.com/VeoScript/pandan-pos-docs",
+    demo: "https://pandanpos-docs.jeromevillaruel.com",
+  },
+  {
     src: "/images/projects/magaaazine.webp",
     title: "Magaaazine",
     description:

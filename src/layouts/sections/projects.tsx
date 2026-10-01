@@ -48,7 +48,7 @@ const ProjectsSection = (): JSX.Element => {
                         className="bg-theme-accent text-theme-accent-foreground hover:bg-theme-accent-hover focus-visible:ring-theme-accent inline-flex min-h-10 items-center justify-center gap-2 rounded-md px-4 py-2 text-sm font-semibold transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2"
                       >
                         <ExternalLinkIcon className="h-4 w-4" />
-                        View demo
+                        View Live
                       </Link>
                     )}
                     {project.sourceCode && (
