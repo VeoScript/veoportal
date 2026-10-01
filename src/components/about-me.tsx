@@ -13,7 +13,7 @@ const AboutMe = (): JSX.Element => {
     <div className="mx-auto grid w-full max-w-6xl flex-1 grid-cols-1 items-center gap-10 py-14 md:grid-cols-[minmax(0,1fr)_minmax(18rem,0.78fr)] md:gap-16 md:py-16">
       <div className="flex flex-col items-start gap-7">
         <div className="flex flex-col items-start gap-3">
-          <p className="text-theme-accent-text text-sm font-semibold uppercase">
+          <p className="text-sm font-semibold uppercase text-theme-accent-text">
             Full-stack software engineer
           </p>
           <h1 className="max-w-3xl text-4xl font-semibold leading-tight md:text-6xl md:leading-[1.08]">
@@ -21,14 +21,14 @@ const AboutMe = (): JSX.Element => {
           </h1>
           <div className="flex items-center gap-3 text-sm text-neutral-600 dark:text-neutral-300">
             <span>Jerome Villaruel</span>
-            <span aria-hidden="true" className="bg-theme-accent h-1 w-1 rounded-full" />
+            <span aria-hidden="true" className="h-1 w-1 rounded-full bg-theme-accent" />
             <VoicePronounciation
               pronounceText={pronounceText}
               textClassName="text-neutral-600 dark:text-neutral-300"
             />
           </div>
         </div>
-        <p className="max-w-xl text-base leading-7 text-neutral-600 md:text-lg dark:text-neutral-300">
+        <p className="max-w-xl text-base leading-7 text-neutral-600 dark:text-neutral-300 md:text-lg">
           From product interfaces to backend systems, I work across the stack to turn complex
           workflows into dependable, usable software.
         </p>
@@ -42,22 +42,34 @@ const AboutMe = (): JSX.Element => {
           </Link>
           <Link
             href="#projects"
-            className="text-theme-accent-text border-theme-accent hover:text-theme-accent-hover border-b pb-1 text-sm font-semibold transition"
+            className="border-b border-theme-accent pb-1 text-sm font-semibold text-theme-accent-text transition hover:text-theme-accent-hover"
           >
             Explore selected work
           </Link>
         </div>
       </div>
-      <figure className="relative mx-auto aspect-[4/5] w-full max-w-[26rem] overflow-hidden rounded-md bg-neutral-200 md:justify-self-end dark:bg-neutral-800">
-        <Image
-          src="/images/jeromevillaruel_v3.webp"
-          alt="Jerome Villaruel"
-          fill
-          priority
-          sizes="(max-width: 768px) 100vw, 40vw"
-          className="object-cover"
-        />
-      </figure>
+      <div className="relative mx-auto aspect-[4/5] w-full max-w-[26rem] md:justify-self-end">
+        <figure className="absolute right-0 top-0 z-10 aspect-[4/5] w-[60%] overflow-hidden rounded-2xl bg-neutral-200 dark:bg-neutral-800">
+          <Image
+            src="/images/jeromevillaruel_v3.webp"
+            alt="Jerome Villaruel"
+            fill
+            priority
+            sizes="(max-width: 768px) 60vw, 25vw"
+            className="object-cover"
+          />
+        </figure>
+        <figure className="absolute bottom-0 left-0 aspect-[4/5] w-[60%] overflow-hidden rounded-2xl bg-neutral-200 dark:bg-neutral-800">
+          <Image
+            src="/images/jeromevillaruel_v4.webp"
+            alt="Jerome Villaruel"
+            fill
+            priority
+            sizes="(max-width: 768px) 60vw, 25vw"
+            className="object-cover"
+          />
+        </figure>
+      </div>
     </div>
   );
 };
