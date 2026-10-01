@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     description:
       "I'm Jerome Villaruel officially known as Veoscript, a software engineer based in Philippines specializing in React, React Native, NextJS, NestJS, RestAPI, GraphQL, tRPC, Prisma, Supabase, and PlanetScale. I enjoy building dynamic web applications and leveraging these technologies to create robust and scalable solutions. Excited to collaborate on innovative projects and contribute to the world of software development.",
     siteName: "Jerome Villaruel",
-    images: "/images/jeromevillaruel_v3.webp",
+    images: "/images/jeromevillaruel_v4.webp",
   },
   twitter: {
     title: "Jerome Villaruel",
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
       "I'm Jerome Villaruel officially known as Veoscript, a software engineer based in Philippines specializing in React, React Native, NextJS, NestJS, RestAPI, GraphQL, tRPC, Prisma, Supabase, and PlanetScale. I enjoy building dynamic web applications and leveraging these technologies to create robust and scalable solutions. Excited to collaborate on innovative projects and contribute to the world of software development.",
     creator: "Jerome Villaruel (Veoscript)",
     site: "Jerome Villaruel",
-    images: "/images/jeromevillaruel_v3.webp",
+    images: "/images/jeromevillaruel_v4.webp",
   },
 };
 

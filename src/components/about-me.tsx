@@ -6,6 +6,11 @@ import type { JSX } from "react";
 
 import VoicePronounciation from "./voice-pronounciation";
 
+const portraitBlurDataUrls = {
+  v3: "data:image/webp;base64,UklGRkoAAABXRUJQVlA4ID4AAACQAwCdASoQABMAPzmQvlWvKqajMAgB4CcJZwAAW+jsIoqyj+mgAPJTmDtf0nc0siZ/7ReBM2M76msUo/QAAA==",
+  v4: "data:image/webp;base64,UklGRkwAAABXRUJQVlA4IEAAAADQAwCdASoQABUAPzmMvlUvKaajMAgB4CcJYwC7ABuDLBsFgfB1a94A/hEqYH7HBzKe0up6M7l9dO8Yd327JYAA",
+};
+
 const AboutMe = (): JSX.Element => {
   const pronounceText = "vee-oh-skript";
 
@@ -54,6 +59,8 @@ const AboutMe = (): JSX.Element => {
             src="/images/jeromevillaruel_v3.webp"
             alt="Jerome Villaruel"
             fill
+            placeholder="blur"
+            blurDataURL={portraitBlurDataUrls.v3}
             priority
             sizes="(max-width: 768px) 60vw, 25vw"
             className="object-cover"
@@ -64,6 +71,8 @@ const AboutMe = (): JSX.Element => {
             src="/images/jeromevillaruel_v4.webp"
             alt="Jerome Villaruel"
             fill
+            placeholder="blur"
+            blurDataURL={portraitBlurDataUrls.v4}
             priority
             sizes="(max-width: 768px) 60vw, 25vw"
             className="object-cover"
