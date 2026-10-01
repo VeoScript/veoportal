@@ -10,6 +10,16 @@ export type ServicesList = {
 
 export const experiences: ServicesList[] = [
   {
+    src: "/images/experiences/pandan-pos.webp",
+    company: "Pandan POS",
+    position: "Founder & Lead Software Engineer",
+    description:
+      "Founded and built Pandan POS, an offline-first POS platform designed to simplify daily operations for small businesses and sari-sari stores. Developed the mobile application for Android and iOS, featuring sales and order management, inventory tracking, barcode scanning, digital receipts, reporting, and reliable offline workflows. Led the product from architecture and development to integrations, testing, deployment, and continuous improvement. Successfully launched the product commercially, with the platform already generating revenue from active users.",
+    link: "https://pandanpos-docs.jeromevillaruel.com",
+    experienceDate: "January 2026 - Present",
+    isCurrent: true,
+  },
+  {
     src: "/images/experiences/tailwind-systems.webp",
     company: "Tailwind Systems Pty Ltd",
     position: "Senior Software Engineer",
