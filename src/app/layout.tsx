@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import type { JSX, ReactNode } from "react";
 
 import clsx from "clsx";
+import { ThemeProvider } from "next-themes";
 import { Toaster } from "sonner";
 
 import { Raleway } from "next/font/google";
@@ -51,15 +52,24 @@ export default function RootLayout({
       lang="en"
       className="scroll-smooth motion-reduce:scroll-auto"
       data-scroll-behavior="smooth"
+      data-accent="green"
+      suppressHydrationWarning
     >
       <body
         className={clsx(
           raleway.variable,
-          "overflow-x-hidden bg-default-white font-raleway text-default-black selection:bg-emerald-200 dark:bg-default-dim-black dark:text-default-white dark:selection:bg-emerald-800",
+          "selection:bg-theme-accent-soft overflow-x-hidden bg-default-white font-raleway text-default-black dark:bg-default-dim-black dark:text-default-white",
         )}
       >
-        <Toaster richColors position="top-right" />
-        {children}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Toaster richColors position="top-right" />
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );

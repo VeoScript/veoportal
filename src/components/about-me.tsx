@@ -13,7 +13,7 @@ const AboutMe = (): JSX.Element => {
     <div className="mx-auto grid w-full max-w-6xl flex-1 grid-cols-1 items-center gap-10 py-14 md:grid-cols-[minmax(0,1fr)_minmax(18rem,0.78fr)] md:gap-16 md:py-16">
       <div className="flex flex-col items-start gap-7">
         <div className="flex flex-col items-start gap-3">
-          <p className="text-sm font-semibold uppercase text-emerald-700 dark:text-emerald-400">
+          <p className="text-theme-accent-text text-sm font-semibold uppercase">
             Full-stack software engineer
           </p>
           <h1 className="max-w-3xl text-4xl font-semibold leading-tight md:text-6xl md:leading-[1.08]">
@@ -21,7 +21,7 @@ const AboutMe = (): JSX.Element => {
           </h1>
           <div className="flex items-center gap-3 text-sm text-neutral-600 dark:text-neutral-300">
             <span>Jerome Villaruel</span>
-            <span aria-hidden="true" className="h-1 w-1 rounded-full bg-emerald-600" />
+            <span aria-hidden="true" className="bg-theme-accent h-1 w-1 rounded-full" />
             <VoicePronounciation
               pronounceText={pronounceText}
               textClassName="text-neutral-600 dark:text-neutral-300"
@@ -36,13 +36,13 @@ const AboutMe = (): JSX.Element => {
           <Link
             href="/files/jeromevillaruel.pdf"
             target="_blank"
-            className="custom-button-black rounded-md bg-emerald-800 px-5 py-3 text-sm hover:bg-emerald-700 dark:bg-emerald-400 dark:text-default-black dark:hover:bg-emerald-300"
+            className="custom-button-accent px-5 py-3 text-sm"
           >
             View resume
           </Link>
           <Link
             href="#projects"
-            className="border-b border-emerald-700 pb-1 text-sm font-semibold text-emerald-800 transition hover:text-emerald-600 dark:border-emerald-400 dark:text-emerald-300"
+            className="text-theme-accent-text border-theme-accent hover:text-theme-accent-hover border-b pb-1 text-sm font-semibold transition"
           >
             Explore selected work
           </Link>

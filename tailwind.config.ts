@@ -2,6 +2,7 @@ import type { Config } from "tailwindcss";
 import { fontFamily } from "tailwindcss/defaultTheme";
 
 const config: Config = {
+  darkMode: "class",
   content: [
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -23,6 +24,12 @@ const config: Config = {
         "default-white": "#FCFDFC",
         "default-ghost-white": "#F3F6F3",
         "default-gray": "#DCE4DE",
+        "theme-accent": "var(--theme-accent)",
+        "theme-accent-hover": "var(--theme-accent-hover)",
+        "theme-accent-soft": "var(--theme-accent-soft)",
+        "theme-accent-text": "var(--theme-accent-text)",
+        "theme-accent-foreground": "var(--theme-accent-foreground)",
+        "theme-accent-surface": "var(--theme-accent-surface)",
       },
       fontFamily: {
         raleway: ["var(--font-raleway)", ...fontFamily.sans],

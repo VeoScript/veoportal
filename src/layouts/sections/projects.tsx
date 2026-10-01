@@ -10,9 +10,7 @@ const ProjectsSection = (): JSX.Element => {
     <section id="projects" className="bg-white px-5 py-20 md:px-10 dark:bg-default-dim-black">
       <div className="mx-auto w-full max-w-6xl">
         <div className="max-w-2xl">
-          <p className="text-sm font-semibold uppercase text-emerald-700 dark:text-emerald-400">
-            Selected work
-          </p>
+          <p className="text-theme-accent-text text-sm font-semibold uppercase">Selected work</p>
           <h2 className="mt-3 text-3xl font-semibold md:text-4xl">Projects</h2>
           <p className="mt-4 leading-7 text-neutral-600 dark:text-neutral-300">
             A selection of products, tools, and experiments built for real-world workflows.
@@ -47,7 +45,7 @@ const ProjectsSection = (): JSX.Element => {
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label={`View ${project.title} demo`}
-                        className="inline-flex min-h-10 items-center justify-center gap-2 rounded-md bg-emerald-800 px-4 py-2 text-sm font-semibold text-white transition hover:bg-emerald-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-600 focus-visible:ring-offset-2 dark:bg-emerald-400 dark:text-default-black dark:hover:bg-emerald-300"
+                        className="bg-theme-accent text-theme-accent-foreground hover:bg-theme-accent-hover focus-visible:ring-theme-accent inline-flex min-h-10 items-center justify-center gap-2 rounded-md px-4 py-2 text-sm font-semibold transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2"
                       >
                         <ExternalLinkIcon className="h-4 w-4" />
                         View demo
@@ -59,7 +57,7 @@ const ProjectsSection = (): JSX.Element => {
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label={`View ${project.title} source code`}
-                        className="inline-flex min-h-10 items-center justify-center gap-2 rounded-md border border-neutral-300 px-4 py-2 text-sm font-semibold text-neutral-700 transition hover:border-neutral-500 hover:bg-neutral-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-600 focus-visible:ring-offset-2 dark:border-neutral-600 dark:text-neutral-200 dark:hover:border-neutral-400 dark:hover:bg-neutral-800"
+                        className="focus-visible:ring-theme-accent inline-flex min-h-10 items-center justify-center gap-2 rounded-md border border-neutral-300 px-4 py-2 text-sm font-semibold text-neutral-700 transition hover:border-neutral-500 hover:bg-neutral-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 dark:border-neutral-600 dark:text-neutral-200 dark:hover:border-neutral-400 dark:hover:bg-neutral-800"
                       >
                         <Github />
                         Source code

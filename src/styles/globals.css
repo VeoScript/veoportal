@@ -2,18 +2,96 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  :root,
+  :root[data-accent="green"] {
+    --theme-accent: #047857;
+    --theme-accent-hover: #065f46;
+    --theme-accent-soft: #d1fae5;
+    --theme-accent-text: #047857;
+    --theme-accent-foreground: #ffffff;
+    --theme-accent-surface: #e7f0e8;
+  }
+
+  :root[data-accent="purple"] {
+    --theme-accent: #6d28d9;
+    --theme-accent-hover: #5b21b6;
+    --theme-accent-soft: #ede9fe;
+    --theme-accent-text: #6b21a8;
+    --theme-accent-foreground: #ffffff;
+    --theme-accent-surface: #f2eafb;
+  }
+
+  :root[data-accent="orange"] {
+    --theme-accent: #c2410c;
+    --theme-accent-hover: #9a3412;
+    --theme-accent-soft: #ffedd5;
+    --theme-accent-text: #c2410c;
+    --theme-accent-foreground: #ffffff;
+    --theme-accent-surface: #fff0e4;
+  }
+
+  :root[data-accent="blue"] {
+    --theme-accent: #1d4ed8;
+    --theme-accent-hover: #1e40af;
+    --theme-accent-soft: #dbeafe;
+    --theme-accent-text: #1d4ed8;
+    --theme-accent-foreground: #ffffff;
+    --theme-accent-surface: #e9f0fe;
+  }
+
+  :root.dark[data-accent="green"] {
+    --theme-accent: #6ee7b7;
+    --theme-accent-hover: #a7f3d0;
+    --theme-accent-soft: #23392d;
+    --theme-accent-text: #6ee7b7;
+    --theme-accent-foreground: #10231a;
+    --theme-accent-surface: #19271f;
+  }
+
+  :root.dark[data-accent="purple"] {
+    --theme-accent: #c4b5fd;
+    --theme-accent-hover: #ddd6fe;
+    --theme-accent-soft: #382a4b;
+    --theme-accent-text: #ddd6fe;
+    --theme-accent-foreground: #211531;
+    --theme-accent-surface: #2a1d3a;
+  }
+
+  :root.dark[data-accent="orange"] {
+    --theme-accent: #fdba74;
+    --theme-accent-hover: #fed7aa;
+    --theme-accent-soft: #4a3020;
+    --theme-accent-text: #fdba74;
+    --theme-accent-foreground: #2d1a0d;
+    --theme-accent-surface: #352216;
+  }
+
+  :root.dark[data-accent="blue"] {
+    --theme-accent: #93c5fd;
+    --theme-accent-hover: #bfdbfe;
+    --theme-accent-soft: #273b58;
+    --theme-accent-text: #bfdbfe;
+    --theme-accent-foreground: #14233b;
+    --theme-accent-surface: #1c2b43;
+  }
+}
+
 @layer components {
   .custom-button-white {
-    @apply inline-flex items-center justify-center rounded-md bg-default-white text-center font-semibold text-default-black transition duration-200 ease-out hover:-translate-y-px hover:shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-600 focus-visible:ring-offset-2;
+    @apply focus-visible:ring-theme-accent inline-flex items-center justify-center rounded-md bg-default-white text-center font-semibold text-default-black transition duration-200 ease-out hover:-translate-y-px hover:shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2;
   }
   .custom-button-black {
-    @apply inline-flex items-center justify-center rounded-md bg-default-black text-center font-semibold text-default-white transition duration-200 ease-out hover:-translate-y-px hover:shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-600 focus-visible:ring-offset-2;
+    @apply focus-visible:ring-theme-accent inline-flex items-center justify-center rounded-md bg-default-black text-center font-semibold text-default-white transition duration-200 ease-out hover:-translate-y-px hover:shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2;
   }
   .custom-button-gray {
-    @apply inline-flex items-center justify-center rounded-md bg-default-gray text-center font-semibold text-default-black transition duration-200 ease-out hover:-translate-y-px hover:shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-600 focus-visible:ring-offset-2;
+    @apply focus-visible:ring-theme-accent inline-flex items-center justify-center rounded-md bg-default-gray text-center font-semibold text-default-black transition duration-200 ease-out hover:-translate-y-px hover:shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2;
   }
   .custom-button-dim-gray {
-    @apply inline-flex items-center justify-center rounded-md bg-default-dim-black text-center font-semibold text-default-white transition duration-200 ease-out hover:-translate-y-px hover:shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 focus-visible:ring-offset-2;
+    @apply focus-visible:ring-theme-accent inline-flex items-center justify-center rounded-md bg-default-dim-black text-center font-semibold text-default-white transition duration-200 ease-out hover:-translate-y-px hover:shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2;
+  }
+  .custom-button-accent {
+    @apply bg-theme-accent text-theme-accent-foreground hover:bg-theme-accent-hover focus-visible:ring-theme-accent inline-flex items-center justify-center rounded-md text-center font-semibold transition duration-200 ease-out hover:-translate-y-px hover:shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2;
   }
 }
 

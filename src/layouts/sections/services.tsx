@@ -17,9 +17,7 @@ const Services = (): JSX.Element => {
     <section className="bg-[#f5f7f5] px-5 py-20 md:px-10 dark:bg-default-black">
       <div className="mx-auto flex w-full max-w-6xl flex-col">
         <div className="max-w-2xl">
-          <p className="text-sm font-semibold uppercase text-emerald-700 dark:text-emerald-400">
-            Experience
-          </p>
+          <p className="text-theme-accent-text text-sm font-semibold uppercase">Experience</p>
           <h2 className="mt-3 text-3xl font-semibold md:text-4xl">
             A career built across the stack
           </h2>
@@ -39,7 +37,7 @@ const Services = (): JSX.Element => {
                   {item.experienceDate}
                 </p>
                 {item.isCurrent && (
-                  <span className="rounded-sm bg-emerald-100 px-2 py-1 text-xs font-semibold text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300">
+                  <span className="bg-theme-accent-soft text-theme-accent-text rounded-sm px-2 py-1 text-xs font-semibold">
                     Current
                   </span>
                 )}
@@ -59,7 +57,7 @@ const Services = (): JSX.Element => {
                     href={item.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-1 inline-block text-sm font-medium text-emerald-800 hover:underline dark:text-emerald-300"
+                    className="text-theme-accent-text mt-1 inline-block text-sm font-medium hover:underline"
                   >
                     {item.company}
                   </Link>
@@ -73,9 +71,7 @@ const Services = (): JSX.Element => {
         </div>
 
         <div className="mt-20">
-          <p className="text-sm font-semibold uppercase text-emerald-700 dark:text-emerald-400">
-            What I do
-          </p>
+          <p className="text-theme-accent-text text-sm font-semibold uppercase">What I do</p>
           <h2 className="mt-3 text-3xl font-semibold md:text-4xl">Engineering across the stack</h2>
           <div className="mt-8 grid gap-8 md:grid-cols-3">
             {services.map((item) => (
@@ -103,9 +99,7 @@ const Services = (): JSX.Element => {
         {HAS_PROMOTION && (
           <div className="mt-20 grid gap-8 border-t border-neutral-300 pt-8 md:grid-cols-2 md:items-center dark:border-neutral-700">
             <div>
-              <p className="text-sm font-semibold uppercase text-emerald-700 dark:text-emerald-400">
-                Product
-              </p>
+              <p className="text-theme-accent-text text-sm font-semibold uppercase">Product</p>
               <h2 className="mt-3 text-3xl font-semibold">Pandan POS</h2>
               <p className="mt-4 max-w-xl leading-7 text-neutral-600 dark:text-neutral-300">
                 An offline point-of-sale system for small businesses, entrepreneurs, and mobile
@@ -115,7 +109,7 @@ const Services = (): JSX.Element => {
                 href="https://play.google.com/store/apps/details?id=com.veoscript.PandanPOS"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-5 inline-block border-b border-emerald-700 pb-1 text-sm font-semibold text-emerald-800 dark:border-emerald-400 dark:text-emerald-300"
+                className="text-theme-accent-text border-theme-accent mt-5 inline-block border-b pb-1 text-sm font-semibold"
               >
                 Get it on Google Play
               </Link>
