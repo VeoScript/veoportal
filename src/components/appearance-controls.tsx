@@ -2,14 +2,10 @@
 
 import { useTheme } from "next-themes";
 import type { JSX } from "react";
-import { useSyncExternalStore } from "react";
+import { useEffect, useState } from "react";
 
 import { useAccentTheme } from "~/hooks/use-accent-theme";
 import { MoonIcon, SunIcon } from "~/utils/icons";
-
-const subscribeToMount = () => () => {};
-const getClientSnapshot = () => true;
-const getServerSnapshot = () => false;
 
 const accentSwatches = [
   { value: "purple", label: "Purple", color: "#7c3aed" },
@@ -21,7 +17,14 @@ const accentSwatches = [
 const AppearanceControls = (): JSX.Element => {
   const { theme, resolvedTheme, setTheme } = useTheme();
   const { accent, setAccent } = useAccentTheme();
-  const isMounted = useSyncExternalStore(subscribeToMount, getClientSnapshot, getServerSnapshot);
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    // Theme preference is browser-only; render neutral mode controls until hydration completes.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setIsMounted(true);
+  }, []);
+
   const currentMode = isMounted
     ? theme === "system" || !theme
       ? resolvedTheme
