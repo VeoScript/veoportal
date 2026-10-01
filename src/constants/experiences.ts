@@ -24,7 +24,7 @@ export const experiences: ServicesList[] = [
     company: "Tailwind Systems Pty Ltd",
     position: "Senior Software Engineer",
     description:
-      "Developed and maintained cross-platform applications across web, mobile, Android, iOS, and desktop, focusing on performance, usability, and scalable architecture. Collaborated with designers, backend engineers, and product stakeholders to deliver reliable solutions aligned with business requirements. Implemented new features, optimized existing functionality, and ensured application stability through testing, debugging, and continuous improvement. Integrated RESTful APIs and third-party services, managed application deployments and releases, and contributed to code reviews and agile development processes.",
+      "Led the development and delivery of scalable software solutions across web, mobile, Android, iOS, and desktop platforms. Worked closely with product, design, and engineering teams to translate business requirements into reliable, maintainable applications. Focused on architecture, performance optimization, feature development, API integrations, and production deployments while contributing to technical decisions, code reviews, testing, and continuous improvements across the product ecosystem.",
     link: "https://tailwindsystems.com.au",
     experienceDate: "August 2026 - Present",
     isCurrent: true,
@@ -34,7 +34,7 @@ export const experiences: ServicesList[] = [
     company: "Reakt Solutions Pty Ltd",
     position: "Software Engineer",
     description:
-      "Developed and maintained cross-platform and native mobile applications for Android and iOS, focusing on performance, usability, and scalable architecture. Collaborated with designers, backend engineers, and product managers to deliver high-quality mobile solutions aligned with client and business requirements. Implemented new features, optimized existing functionality, and ensured application stability through testing, debugging, and continuous improvement. Integrated RESTful APIs, managed app deployments, and contributed to code reviews and agile development processes.",
+      "Built and enhanced mobile applications for Android and iOS using React Native, with a focus on responsive user experiences and reliable application behavior. Implemented mobile features, integrated backend APIs and third-party services, resolved production issues, and improved existing functionality based on client requirements. Participated in testing, debugging, code reviews, and app release processes to support stable and consistent mobile deployments.",
     link: "https://www.reakt.net.au",
     experienceDate: "March 2026 - Present",
     isCurrent: true,
