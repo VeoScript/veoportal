@@ -19,11 +19,11 @@ const config: Config = {
     },
     extend: {
       colors: {
-        "default-black": "#18231D",
-        "default-dim-black": "#101713",
-        "default-white": "#FCFDFC",
-        "default-ghost-white": "#F3F6F3",
-        "default-gray": "#DCE4DE",
+        "default-black": "#1A1A1A",
+        "default-dim-black": "#111111",
+        "default-white": "#FFFFFF",
+        "default-ghost-white": "#F5F5F5",
+        "default-gray": "#D4D4D4",
         "theme-accent": "var(--theme-accent)",
         "theme-accent-hover": "var(--theme-accent-hover)",
         "theme-accent-soft": "var(--theme-accent-soft)",
