@@ -12,7 +12,7 @@ const raleway = Raleway({
   subsets: ["latin"],
   weight: ["200", "400", "600", "800"],
   preload: true,
-  variable: "--font-raleway",
+  variable: "--font-raleway-next",
 });
 
 export const metadata: Metadata = {
@@ -58,7 +58,7 @@ export default function RootLayout({
       <body
         className={clsx(
           raleway.variable,
-          "overflow-x-hidden bg-default-white font-raleway text-default-black selection:bg-theme-accent-soft dark:bg-default-dim-black dark:text-default-white",
+          "bg-default-white font-raleway text-default-black selection:bg-theme-accent-soft dark:bg-default-dim-black dark:text-default-white overflow-x-hidden",
         )}
       >
         <ThemeProvider
