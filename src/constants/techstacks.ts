@@ -41,6 +41,11 @@ export const techstacks: TechStackList[] = [
     link: "https://react.dev/",
   },
   {
+    img: "/images/techstacks/solidjs.png",
+    alt: "Solid JS",
+    link: "https://www.solidjs.com/",
+  },
+  {
     img: "/images/techstacks/vuejs.png",
     alt: "Vue JS",
     link: "https://vuejs.org/",
