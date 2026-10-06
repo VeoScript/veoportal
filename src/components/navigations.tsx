@@ -16,7 +16,7 @@ const Navigations = (): JSX.Element | null => {
 
   return (
     <div className="relative z-10 flex w-full flex-col items-center gap-y-3 md:gap-y-4">
-      <div className="flex w-full flex-col items-center justify-between gap-y-3 md:flex-row md:gap-y-0">
+      <div className="mx-auto flex w-full max-w-6xl flex-col items-center justify-between gap-y-3 md:flex-row md:gap-y-0">
         <nav className="flex h-[3rem] w-full flex-row items-center justify-center gap-x-1 md:w-auto md:justify-start">
           {isMediumScreen && (
             <div className="hidden items-center gap-x-5 rounded-md bg-neutral-200 p-1 dark:bg-default-dim-black md:flex">
