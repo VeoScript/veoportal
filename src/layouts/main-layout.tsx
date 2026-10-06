@@ -13,7 +13,7 @@ type Props = {
 
 const MainLayout = ({ children }: Props): JSX.Element => {
   return (
-    <main className="container mx-auto">
+    <main className="mx-auto w-full min-[1920px]:max-w-[1920px]">
       {HAS_PROMOTION && <PromotionFlag />}
       <AppearanceControls />
       <div className="flex h-full w-full flex-col border-x border-neutral-200 dark:border-neutral-700">
