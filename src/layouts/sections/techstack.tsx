@@ -8,7 +8,7 @@ const TechStack = (): JSX.Element => {
   return (
     <div className="z-10 flex w-full flex-col items-center overflow-hidden bg-default-white px-1 py-[5rem] dark:bg-default-dim-black">
       <div className="w-full overflow-hidden">
-        <div className="flex w-max shrink-0 animate-marquee whitespace-nowrap motion-reduce:animate-none">
+        <div className="flex w-max shrink-0 animate-marquee whitespace-nowrap">
           {[false, true].map((isDuplicate) => (
             <div
               key={String(isDuplicate)}
