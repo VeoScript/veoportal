@@ -16,6 +16,11 @@ export const techstacks: TechStackList[] = [
     link: "https://www.cloudflare.com/",
   },
   {
+    img: "/images/techstacks/astro.png",
+    alt: "Astro",
+    link: "https://astro.build/",
+  },
+  {
     img: "/images/techstacks/nextjs.png",
     alt: "Next JS",
     link: "https://nextjs.org/",
