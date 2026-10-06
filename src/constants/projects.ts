@@ -4,9 +4,74 @@ export type ProjectList = {
   description: string;
   sourceCode?: string;
   demo?: string;
+  isCompanyProject?: boolean;
+  role?: "Project Lead" | "Contributing Developer";
 };
 
 export const projects: ProjectList[] = [
+  {
+    src: "/images/projects/elog66.webp",
+    title: "eLog66",
+    description:
+      "Led the development of eLog66, a secure, auditable digital logbook for CASA Part 66 aircraft maintenance engineers. The platform replaces paper-based records with a mobile-first solution built for tracking maintenance experience and approvals.",
+    demo: "https://tailwind-elog66.com",
+    isCompanyProject: true,
+    role: "Project Lead",
+  },
+  {
+    src: "/images/projects/elog66-app.webp",
+    title: "eLog66 App",
+    description:
+      "Led the development of the eLog66 mobile app for aircraft maintenance engineers working on the hangar floor, in line maintenance, or at remote sites. It helps engineers capture tasks, request supervisor sign-offs, and track progress, including when offline.",
+    demo: "https://tailwind-elog66.com/mobile-app",
+    isCompanyProject: true,
+    role: "Project Lead",
+  },
+  {
+    src: "/images/projects/booky.webp",
+    title: "Booky",
+    description:
+      "Contributed as part of the Booky development team to a popular lifestyle and food platform in the Philippines that offers exclusive discount vouchers and deals of up to 50% off across thousands of partner merchants.",
+    demo: "https://booky.ph",
+    isCompanyProject: true,
+    role: "Contributing Developer",
+  },
+  {
+    src: "/images/projects/booky-app.webp",
+    title: "Booky App",
+    description:
+      "Worked as part of the Booky app development team on a popular lifestyle and food platform in the Philippines, helping deliver exclusive discount vouchers and deals of up to 50% off across thousands of partner merchants.",
+    demo: "https://booky.ph/app",
+    isCompanyProject: true,
+    role: "Contributing Developer",
+  },
+  {
+    src: "/images/projects/angels-pizza.webp",
+    title: "Angel's Pizza App",
+    description:
+      "Contributed as part of the development team to the Angel's Pizza mobile app, which lets customers browse the menu, order for delivery or pickup, and access available deals and promotions.",
+    demo: "https://apps.apple.com/ph/app/angels-pizza/id6755482564",
+    isCompanyProject: true,
+    role: "Contributing Developer",
+  },
+  {
+    src: "/images/projects/mimosa-plus-golf.webp",
+    title: "Mimosa Plus Golf",
+    description:
+      "Contributed as part of the development team to the Mimosa Plus Golf app, a mobile product supporting the digital experience for golfers at Mimosa Plus Golf Course.",
+    demo: "https://apps.apple.com/ph/app/mimosa-plus-golf/id1474605606",
+    isCompanyProject: true,
+    role: "Contributing Developer",
+  },
+  {
+    src: "/images/projects/ideal-controls.webp",
+    title: "Ideal Controls",
+    description:
+      "Contributed as part of the development team to the Ideal Controls project. Ideal Controls provides customized control and automation systems, including systems integration tailored to client needs.",
+    demo: "https://idealcontrols.com.ph",
+    isCompanyProject: true,
+    role: "Contributing Developer",
+  },
   {
     src: "/images/projects/pandan-pos.webp",
     title: "Pandan POS",

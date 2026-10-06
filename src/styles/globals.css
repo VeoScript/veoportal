@@ -49,6 +49,33 @@
     --theme-accent-surface: #fff8e1;
   }
 
+  :root[data-accent="teal"] {
+    --theme-accent: #0f766e;
+    --theme-accent-hover: #115e59;
+    --theme-accent-soft: #ccfbf1;
+    --theme-accent-text: #0f766e;
+    --theme-accent-foreground: #ffffff;
+    --theme-accent-surface: #e6fffa;
+  }
+
+  :root[data-accent="red"] {
+    --theme-accent: #b91c1c;
+    --theme-accent-hover: #991b1b;
+    --theme-accent-soft: #fee2e2;
+    --theme-accent-text: #b91c1c;
+    --theme-accent-foreground: #ffffff;
+    --theme-accent-surface: #fff1f2;
+  }
+
+  :root[data-accent="pink"] {
+    --theme-accent: #be123c;
+    --theme-accent-hover: #9f1239;
+    --theme-accent-soft: #ffe4e6;
+    --theme-accent-text: #be123c;
+    --theme-accent-foreground: #ffffff;
+    --theme-accent-surface: #fff1f2;
+  }
+
   :root.dark[data-accent="green"] {
     --theme-accent: #6ee7b7;
     --theme-accent-hover: #a7f3d0;
@@ -92,6 +119,33 @@
     --theme-accent-text: #fde68a;
     --theme-accent-foreground: #422006;
     --theme-accent-surface: #2b2719;
+  }
+
+  :root.dark[data-accent="teal"] {
+    --theme-accent: #5eead4;
+    --theme-accent-hover: #99f6e4;
+    --theme-accent-soft: #1f3b39;
+    --theme-accent-text: #99f6e4;
+    --theme-accent-foreground: #0f2927;
+    --theme-accent-surface: #172e2c;
+  }
+
+  :root.dark[data-accent="red"] {
+    --theme-accent: #fca5a5;
+    --theme-accent-hover: #fecaca;
+    --theme-accent-soft: #482525;
+    --theme-accent-text: #fecaca;
+    --theme-accent-foreground: #3b1515;
+    --theme-accent-surface: #321d1d;
+  }
+
+  :root.dark[data-accent="pink"] {
+    --theme-accent: #fda4af;
+    --theme-accent-hover: #fecdd3;
+    --theme-accent-soft: #482832;
+    --theme-accent-text: #fecdd3;
+    --theme-accent-foreground: #3b1520;
+    --theme-accent-surface: #321d24;
   }
 }
 
