@@ -28,7 +28,7 @@ const ProjectCard = ({
     <div
       className={`relative aspect-[16/10] overflow-hidden ${
         featured
-          ? "bg-gradient-to-br from-neutral-100 via-white to-theme-accent/10 dark:from-neutral-900 dark:via-neutral-800 dark:to-neutral-900"
+          ? "to-theme-accent/10 bg-gradient-to-br from-neutral-100 via-white dark:from-neutral-900 dark:via-neutral-800 dark:to-neutral-900"
           : "bg-neutral-100 dark:bg-neutral-800"
       }`}
     >
@@ -161,7 +161,7 @@ const ProjectsSection = (): JSX.Element => {
               </button>
             </div>
           </div>
-          <div className="mt-7 rounded-3xl border border-neutral-200/80 bg-gradient-to-br from-white via-neutral-50 to-theme-accent/10 p-4 shadow-xl shadow-neutral-900/5 dark:border-neutral-800 dark:from-neutral-900 dark:via-neutral-950 dark:to-default-black md:p-6">
+          <div className="to-theme-accent/10 mt-7 rounded-3xl border border-neutral-200/80 bg-gradient-to-br from-white via-neutral-50 p-4 shadow-xl shadow-neutral-900/5 dark:border-neutral-800 dark:from-neutral-900 dark:via-neutral-950 dark:to-default-black md:p-6">
             <div
               ref={companyCarouselRef}
               role="region"
