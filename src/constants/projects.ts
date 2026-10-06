@@ -59,7 +59,7 @@ export const projects: ProjectList[] = [
     title: "Mimosa Plus Golf",
     description:
       "Contributed as part of the development team to the Mimosa Plus Golf app, a mobile product supporting the digital experience for golfers at Mimosa Plus Golf Course.",
-    demo: "https://idealcontrols.com.ph",
+    demo: "https://apps.apple.com/ph/app/mimosa-plus-golf/id1474605606",
     isCompanyProject: true,
     role: "Contributing Developer",
   },

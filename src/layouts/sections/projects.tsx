@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { JSX } from "react";
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 import { projects, type ProjectList } from "~/constants/projects";
 import { ExternalLinkIcon, Github } from "~/utils/icons";
@@ -11,12 +11,27 @@ import { ExternalLinkIcon, Github } from "~/utils/icons";
 const companyProjects = projects.filter((project) => project.isCompanyProject);
 const personalProjects = projects.filter((project) => !project.isCompanyProject);
 
-const ProjectCard = ({ project }: { project: ProjectList }): JSX.Element => (
+const ProjectCard = ({
+  project,
+  featured = false,
+}: {
+  project: ProjectList;
+  featured?: boolean;
+}): JSX.Element => (
   <article
-    key={project.title}
-    className="group overflow-hidden rounded-md border border-neutral-200 bg-white dark:border-neutral-700 dark:bg-default-black"
+    className={`group h-full overflow-hidden border bg-white transition duration-300 dark:bg-default-black ${
+      featured
+        ? "rounded-2xl border-neutral-200 shadow-lg shadow-neutral-900/5 hover:-translate-y-1 hover:shadow-xl dark:border-neutral-800 dark:shadow-black/20"
+        : "rounded-md border-neutral-200 dark:border-neutral-700"
+    }`}
   >
-    <div className="relative aspect-[16/10] overflow-hidden bg-neutral-100 dark:bg-neutral-800">
+    <div
+      className={`relative aspect-[16/10] overflow-hidden ${
+        featured
+          ? "bg-gradient-to-br from-neutral-100 via-white to-theme-accent/10 dark:from-neutral-900 dark:via-neutral-800 dark:to-neutral-900"
+          : "bg-neutral-100 dark:bg-neutral-800"
+      }`}
+    >
       <Image
         src={project.src}
         alt={`${project.title} screenshot`}
@@ -69,6 +84,20 @@ const ProjectCard = ({ project }: { project: ProjectList }): JSX.Element => (
 
 const ProjectsSection = (): JSX.Element => {
   const [visibleCount, setVisibleCount] = useState(5);
+  const companyCarouselRef = useRef<HTMLDivElement>(null);
+
+  const scrollCompanyProjects = (direction: -1 | 1): void => {
+    const carousel = companyCarouselRef.current;
+    const firstCard = carousel?.firstElementChild;
+
+    if (!(firstCard instanceof HTMLElement) || !carousel) return;
+
+    const gap = Number.parseFloat(getComputedStyle(carousel).columnGap) || 0;
+    carousel.scrollBy({
+      left: direction * (firstCard.getBoundingClientRect().width + gap),
+      behavior: "smooth",
+    });
+  };
 
   return (
     <section
@@ -85,14 +114,71 @@ const ProjectsSection = (): JSX.Element => {
         </div>
 
         <div className="mt-10">
-          <h3 className="text-2xl font-semibold">Company Projects</h3>
-          <p className="mt-2 text-sm leading-6 text-neutral-600 dark:text-neutral-300">
-            Built with a team. My role is noted on each project.
-          </p>
-          <div className="mt-6 grid gap-x-6 gap-y-12 sm:grid-cols-2 xl:grid-cols-3">
-            {companyProjects.map((project) => (
-              <ProjectCard key={project.title} project={project} />
-            ))}
+          <div className="flex flex-col justify-between gap-5 sm:flex-row sm:items-end">
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-theme-accent-text">
+                Team-built products
+              </p>
+              <h3 className="mt-2 text-2xl font-semibold md:text-3xl">Company Projects</h3>
+              <p className="mt-2 max-w-xl text-sm leading-6 text-neutral-600 dark:text-neutral-300">
+                Built with a team. My role is noted on each project.
+              </p>
+            </div>
+            <div className="flex gap-3">
+              <button
+                type="button"
+                aria-label="Show previous company project"
+                onClick={() => scrollCompanyProjects(-1)}
+                className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-neutral-300 bg-white text-neutral-800 shadow-sm transition hover:border-theme-accent hover:bg-theme-accent hover:text-theme-accent-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-theme-accent focus-visible:ring-offset-2 dark:border-neutral-700 dark:bg-neutral-900 dark:text-white"
+              >
+                <svg aria-hidden="true" viewBox="0 0 24 24" className="h-5 w-5">
+                  <path
+                    d="m15 18-6-6 6-6"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="1.8"
+                  />
+                </svg>
+              </button>
+              <button
+                type="button"
+                aria-label="Show next company project"
+                onClick={() => scrollCompanyProjects(1)}
+                className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-neutral-300 bg-white text-neutral-800 shadow-sm transition hover:border-theme-accent hover:bg-theme-accent hover:text-theme-accent-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-theme-accent focus-visible:ring-offset-2 dark:border-neutral-700 dark:bg-neutral-900 dark:text-white"
+              >
+                <svg aria-hidden="true" viewBox="0 0 24 24" className="h-5 w-5">
+                  <path
+                    d="m9 18 6-6-6-6"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="1.8"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div className="mt-7 rounded-3xl border border-neutral-200/80 bg-gradient-to-br from-white via-neutral-50 to-theme-accent/10 p-4 shadow-xl shadow-neutral-900/5 dark:border-neutral-800 dark:from-neutral-900 dark:via-neutral-950 dark:to-default-black md:p-6">
+            <div
+              ref={companyCarouselRef}
+              role="region"
+              aria-label="Company projects"
+              aria-roledescription="carousel"
+              className="flex snap-x snap-mandatory gap-6 overflow-x-auto overscroll-x-contain pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+              tabIndex={0}
+            >
+              {companyProjects.map((project) => (
+                <div
+                  key={project.title}
+                  className="w-[88%] min-w-0 shrink-0 snap-start sm:w-[calc((100%-1.5rem)/2)] xl:w-[calc((100%-3rem)/3)]"
+                >
+                  <ProjectCard project={project} featured />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
 
