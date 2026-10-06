@@ -13,6 +13,9 @@ const accentSwatches = [
   { value: "orange", label: "Orange", color: "#ea580c" },
   { value: "blue", label: "Blue", color: "#2563eb" },
   { value: "yellow", label: "Yellow", color: "#eab308" },
+  { value: "teal", label: "Teal", color: "#0f766e" },
+  { value: "red", label: "Red", color: "#b91c1c" },
+  { value: "pink", label: "Pink", color: "#be123c" },
 ] as const;
 
 const AppearanceControls = (): JSX.Element => {
@@ -53,10 +56,14 @@ const AppearanceControls = (): JSX.Element => {
       {isOpen && (
         <div
           id="appearance-settings-panel"
-          className="absolute bottom-full right-0 mb-3 max-w-[calc(100vw-2.5rem)] rounded-md border border-neutral-200 bg-default-white p-1.5 shadow-lg dark:border-neutral-700 dark:bg-default-dim-black"
+          className="absolute bottom-full right-0 mb-3 w-[min(20rem,calc(100vw-2.5rem))] rounded-md border border-neutral-200 bg-default-white p-3 shadow-lg dark:border-neutral-700 dark:bg-default-dim-black"
         >
-          <div role="group" aria-label="Appearance settings" className="flex items-center gap-2">
-            <div role="group" aria-label="Accent color" className="flex items-center gap-1">
+          <div className="flex flex-col gap-3">
+            <div
+              role="group"
+              aria-label="Accent color"
+              className="flex items-center justify-between gap-1"
+            >
               {accentSwatches.map((swatch) => (
                 <button
                   key={swatch.value}
@@ -82,41 +89,73 @@ const AppearanceControls = (): JSX.Element => {
                 </button>
               ))}
             </div>
-            <span aria-hidden="true" className="h-5 w-px bg-neutral-200 dark:bg-neutral-700" />
+            <span aria-hidden="true" className="h-px w-full bg-neutral-200 dark:bg-neutral-700" />
             <div role="group" aria-label="Color mode" className="flex items-center gap-1">
               <button
                 type="button"
                 aria-label="Light mode"
-                aria-pressed={currentMode === "light"}
+                aria-pressed={isMounted && theme === "light"}
                 title="Light mode"
                 onClick={() => {
                   setTheme("light");
                   setIsOpen(false);
                 }}
-                className={`flex h-8 w-8 items-center justify-center rounded-md transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-theme-accent focus-visible:ring-offset-2 ${
-                  currentMode === "light"
+                className={`flex h-9 flex-1 items-center justify-center gap-1.5 rounded-md px-2 text-xs font-medium transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-theme-accent focus-visible:ring-offset-2 ${
+                  isMounted && theme === "light"
                     ? "bg-neutral-100 text-default-black dark:bg-neutral-800 dark:text-default-white"
                     : "text-neutral-500 hover:bg-neutral-100 dark:text-neutral-400 dark:hover:bg-neutral-800"
                 }`}
               >
                 <SunIcon className="h-4 w-4" />
+                <span>Light</span>
               </button>
               <button
                 type="button"
                 aria-label="Dark mode"
-                aria-pressed={currentMode === "dark"}
+                aria-pressed={isMounted && theme === "dark"}
                 title="Dark mode"
                 onClick={() => {
                   setTheme("dark");
                   setIsOpen(false);
                 }}
-                className={`flex h-8 w-8 items-center justify-center rounded-md transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-theme-accent focus-visible:ring-offset-2 ${
-                  currentMode === "dark"
+                className={`flex h-9 flex-1 items-center justify-center gap-1.5 rounded-md px-2 text-xs font-medium transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-theme-accent focus-visible:ring-offset-2 ${
+                  isMounted && theme === "dark"
                     ? "bg-neutral-100 text-default-black dark:bg-neutral-800 dark:text-default-white"
                     : "text-neutral-500 hover:bg-neutral-100 dark:text-neutral-400 dark:hover:bg-neutral-800"
                 }`}
               >
                 <MoonIcon className="h-4 w-4" />
+                <span>Dark</span>
+              </button>
+              <button
+                type="button"
+                aria-label="Use system color mode"
+                aria-pressed={isMounted && theme === "system"}
+                title="Use system color mode"
+                onClick={() => {
+                  setTheme("system");
+                  setIsOpen(false);
+                }}
+                className={`flex h-9 flex-1 items-center justify-center gap-1.5 rounded-md px-2 text-xs font-medium transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-theme-accent focus-visible:ring-offset-2 ${
+                  isMounted && theme === "system"
+                    ? "bg-neutral-100 text-default-black dark:bg-neutral-800 dark:text-default-white"
+                    : "text-neutral-500 hover:bg-neutral-100 dark:text-neutral-400 dark:hover:bg-neutral-800"
+                }`}
+              >
+                <svg
+                  aria-hidden="true"
+                  viewBox="0 0 24 24"
+                  className="h-4 w-4"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="1.8"
+                >
+                  <rect x="3" y="4" width="18" height="13" rx="2" />
+                  <path d="M8 21h8m-4-4v4" />
+                </svg>
+                <span>System</span>
               </button>
             </div>
           </div>
