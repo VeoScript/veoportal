@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { JSX } from "react";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import { projects, type ProjectList } from "~/constants/projects";
 import { ExternalLinkIcon, Github } from "~/utils/icons";
@@ -84,7 +84,32 @@ const ProjectCard = ({
 
 const ProjectsSection = (): JSX.Element => {
   const [visibleCount, setVisibleCount] = useState(5);
+  const [canScrollCompanyPrevious, setCanScrollCompanyPrevious] = useState(false);
+  const [canScrollCompanyNext, setCanScrollCompanyNext] = useState(false);
   const companyCarouselRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const carousel = companyCarouselRef.current;
+
+    if (!carousel) return;
+
+    const updateScrollButtons = (): void => {
+      const maxScrollLeft = carousel.scrollWidth - carousel.clientWidth;
+      setCanScrollCompanyPrevious(carousel.scrollLeft > 1);
+      setCanScrollCompanyNext(carousel.scrollLeft < maxScrollLeft - 1);
+    };
+
+    updateScrollButtons();
+    carousel.addEventListener("scroll", updateScrollButtons, { passive: true });
+
+    const resizeObserver = new ResizeObserver(updateScrollButtons);
+    resizeObserver.observe(carousel);
+
+    return () => {
+      carousel.removeEventListener("scroll", updateScrollButtons);
+      resizeObserver.disconnect();
+    };
+  }, []);
 
   const scrollCompanyProjects = (direction: -1 | 1): void => {
     const carousel = companyCarouselRef.current;
@@ -128,8 +153,9 @@ const ProjectsSection = (): JSX.Element => {
               <button
                 type="button"
                 aria-label="Show previous company project"
+                disabled={!canScrollCompanyPrevious}
                 onClick={() => scrollCompanyProjects(-1)}
-                className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-neutral-300 bg-white text-neutral-800 shadow-sm transition hover:border-theme-accent hover:bg-theme-accent hover:text-theme-accent-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-theme-accent focus-visible:ring-offset-2 dark:border-neutral-700 dark:bg-neutral-900 dark:text-white"
+                className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-neutral-300 bg-white text-neutral-800 shadow-sm transition hover:border-theme-accent hover:bg-theme-accent hover:text-theme-accent-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-theme-accent focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:border-neutral-300 disabled:hover:bg-white disabled:hover:text-neutral-800 dark:border-neutral-700 dark:bg-neutral-900 dark:text-white dark:disabled:hover:border-neutral-700 dark:disabled:hover:bg-neutral-900 dark:disabled:hover:text-white"
               >
                 <svg aria-hidden="true" viewBox="0 0 24 24" className="h-5 w-5">
                   <path
@@ -145,8 +171,9 @@ const ProjectsSection = (): JSX.Element => {
               <button
                 type="button"
                 aria-label="Show next company project"
+                disabled={!canScrollCompanyNext}
                 onClick={() => scrollCompanyProjects(1)}
-                className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-neutral-300 bg-white text-neutral-800 shadow-sm transition hover:border-theme-accent hover:bg-theme-accent hover:text-theme-accent-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-theme-accent focus-visible:ring-offset-2 dark:border-neutral-700 dark:bg-neutral-900 dark:text-white"
+                className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-neutral-300 bg-white text-neutral-800 shadow-sm transition hover:border-theme-accent hover:bg-theme-accent hover:text-theme-accent-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-theme-accent focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:border-neutral-300 disabled:hover:bg-white disabled:hover:text-neutral-800 dark:border-neutral-700 dark:bg-neutral-900 dark:text-white dark:disabled:hover:border-neutral-700 dark:disabled:hover:bg-neutral-900 dark:disabled:hover:text-white"
               >
                 <svg aria-hidden="true" viewBox="0 0 24 24" className="h-5 w-5">
                   <path
