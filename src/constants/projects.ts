@@ -19,7 +19,7 @@ export const projects: ProjectList[] = [
     role: "Project Lead",
   },
   {
-    src: "/images/projects/elog66-app.webp",
+    src: "/images/projects/elog66-app-2.webp",
     title: "eLog66 App",
     description:
       "Led the development of the eLog66 mobile app for aircraft maintenance engineers working on the hangar floor, in line maintenance, or at remote sites. It helps engineers capture tasks, request supervisor sign-offs, and track progress, including when offline.",
