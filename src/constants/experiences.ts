@@ -22,7 +22,7 @@ export const experiences: ServicesList[] = [
   {
     src: "/images/experiences/tailwind-systems.webp",
     company: "Tailwind Systems Pty Ltd",
-    position: "Senior Software Engineer",
+    position: "Senior Software Engineer (Consultant)",
     description:
       "Led the development and delivery of scalable software solutions across web, mobile, Android, iOS, and desktop platforms. Worked closely with product, design, and engineering teams to translate business requirements into reliable, maintainable applications. Focused on architecture, performance optimization, feature development, API integrations, and production deployments while contributing to technical decisions, code reviews, testing, and continuous improvements across the product ecosystem.",
     link: "https://tailwindsystems.com.au",
