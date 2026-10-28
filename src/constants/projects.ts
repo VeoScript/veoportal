@@ -73,6 +73,22 @@ export const projects: ProjectList[] = [
     role: "Contributing Developer",
   },
   {
+    src: "/images/projects/elementra.webp",
+    title: "Elementra iOS & Android",
+    description:
+      "Offline-first chemistry exploration with a searchable periodic table, sourced element details, a virtual Mixing Lab, and a small curated compound and reaction catalog.",
+    sourceCode: "https://github.com/VeoScript/elementra",
+    demo: "https://drive.google.com/file/d/1hWKnu67AMvVYAR-KKGCq8m-13CCtqvCF/view?usp=sharing",
+  },
+  {
+    src: "/images/projects/elementra-web.webp",
+    title: "Elementra Web App",
+    description:
+      "Web-based offline-first chemistry exploration with a searchable periodic table, sourced element details, a virtual Mixing Lab, and a small curated compound and reaction catalog.",
+    sourceCode: "https://github.com/VeoScript/elementra",
+    demo: "https://elementra.jeromevillaruel.com",
+  },
+  {
     src: "/images/projects/pandan-pos.webp",
     title: "Pandan POS",
     description:
