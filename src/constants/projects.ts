@@ -74,11 +74,11 @@ export const projects: ProjectList[] = [
   },
   {
     src: "/images/projects/elementra.webp",
-    title: "Elementra iOS & Android",
+    title: "Elementra App",
     description:
       "Offline-first chemistry exploration with a searchable periodic table, sourced element details, a virtual Mixing Lab, and a small curated compound and reaction catalog.",
     sourceCode: "https://github.com/VeoScript/elementra",
-    demo: "https://drive.google.com/file/d/1hWKnu67AMvVYAR-KKGCq8m-13CCtqvCF/view?usp=sharing",
+    demo: "https://play.google.com/store/apps/details?id=com.veoscript.elementra",
   },
   {
     src: "/images/projects/elementra-web.webp",
