@@ -14,7 +14,7 @@ const Services = (): JSX.Element => {
   const theme = useTheme();
 
   return (
-    <section id="experience" className="bg-theme-accent-surface px-5 py-20 md:px-10">
+    <section id="experience" className="bg-[#f7f8f6] px-5 py-20 dark:bg-[#151916] md:px-10">
       <div className="mx-auto flex w-full max-w-6xl flex-col">
         <div className="max-w-2xl">
           <p className="text-theme-accent-text text-sm font-semibold uppercase">Experience</p>

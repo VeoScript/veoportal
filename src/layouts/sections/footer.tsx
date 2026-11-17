@@ -14,8 +14,8 @@ const Footer = (): JSX.Element => {
   const myNumber = "+639753286466";
 
   return (
-    <footer className="flex w-full bg-theme-accent-surface">
-      <div className="mx-auto flex w-full max-w-6xl flex-col items-center bg-theme-accent-surface px-5 md:px-10">
+    <footer className="flex w-full bg-[#f7f8f6] dark:bg-[#151916]">
+      <div className="mx-auto flex w-full max-w-6xl flex-col items-center px-5 md:px-10">
         <div className="flex w-full max-w-md flex-col items-center gap-y-[2rem] py-[5rem] md:gap-y-[3rem]">
           <div className="rounded-full bg-default-ghost-white p-5 dark:bg-default-black">
             <HandShakeIcon />

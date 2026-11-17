@@ -125,4 +125,14 @@ export const techstacks: TechStackList[] = [
     alt: "tRPC",
     link: "https://trpc.io/",
   },
+  {
+    img: "/images/techstacks/mysql.png",
+    alt: "MySQL",
+    link: "https://www.mysql.com/",
+  },
+  {
+    img: "/images/techstacks/postgresql.png",
+    alt: "PostgreSQL",
+    link: "https://www.postgresql.org/",
+  },
 ];
