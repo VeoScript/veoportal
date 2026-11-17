@@ -9,16 +9,16 @@ export type ServicesList = {
 };
 
 export const experiences: ServicesList[] = [
-  {
-    src: "/images/experiences/veoscript-labs.webp",
-    company: "Veoscript Labs, Inc.",
-    position: "Founder & Lead Software Engineer",
-    description:
-      "Independently conceptualized, architected, and built Pandan POS and Elementra from the ground up under Veoscript Labs, Inc. Took both products from initial ideas to fully developed, production-ready platforms now actively used by real users and generating revenue. Personally led the entire product lifecycle, including system architecture, UI/UX design, frontend and backend development, database engineering, integrations, testing, deployment, and ongoing maintenance. Built Pandan POS as an offline-first point-of-sale solution for small businesses and sari-sari stores, featuring sales and order management, inventory tracking, barcode scanning, digital receipts, and business reporting. Focused on building practical, scalable software products that solve real business problems, deliver value to users, and generate sustainable revenue.",
-    link: "https://jeromevillaruel.com",
-    experienceDate: "January 2026 - Present",
-    isCurrent: true,
-  },
+  // {
+  //   src: "/images/experiences/veoscript-labs.webp",
+  //   company: "Veoscript Labs, Inc.",
+  //   position: "Founder & Lead Software Engineer",
+  //   description:
+  //     "Independently conceptualized, architected, and built Pandan POS and Elementra from the ground up under Veoscript Labs, Inc. Took both products from initial ideas to fully developed, production-ready platforms now actively used by real users and generating revenue. Personally led the entire product lifecycle, including system architecture, UI/UX design, frontend and backend development, database engineering, integrations, testing, deployment, and ongoing maintenance. Built Pandan POS as an offline-first point-of-sale solution for small businesses and sari-sari stores, featuring sales and order management, inventory tracking, barcode scanning, digital receipts, and business reporting. Focused on building practical, scalable software products that solve real business problems, deliver value to users, and generate sustainable revenue.",
+  //   link: "https://jeromevillaruel.com",
+  //   experienceDate: "January 2026 - Present",
+  //   isCurrent: true,
+  // },
   {
     src: "/images/experiences/tailwind-systems.webp",
     company: "Tailwind Systems Pty Ltd",

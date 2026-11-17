@@ -127,7 +127,7 @@ const ProjectsSection = (): JSX.Element => {
   return (
     <section
       id="projects"
-      className="bg-default-ghost-white px-5 py-20 dark:bg-default-black md:px-10"
+      className="bg-white px-5 py-20 dark:bg-[#111412] md:px-10"
     >
       <div className="mx-auto w-full max-w-6xl">
         <div className="max-w-2xl">
